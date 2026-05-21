@@ -3,58 +3,95 @@ import image from '../../../assets/image';
 
 const StatsSection = () => {
   return (
-    <section className="bg-[#1C1C1C] text-white py-20 px-6 md:px-12">
-      <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center text-secondary font-bold text-xl italic">
-              P
+    <section id="about" className="w-full bg-[#191919] text-white py-[100px] flex justify-center items-center overflow-hidden">
+      <div className="w-full max-w-[1320px] px-4 md:px-[60px] flex flex-col relative">
+        
+        {/* Header Row: Logo & Subtitle */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full mb-16 lg:mb-24">
+          <div className="lg:col-span-7 flex items-center">
+            {/* Logo */}
+            <div className="text-white">
+              <svg className="w-14 h-14" viewBox="0 0 64 64" fill="currentColor">
+                <path d="M10 14L32 4l22 10v24L32 60 10 38V14zm6 4.5v16.7l16 11.4 16-11.4V18.5L32 11.2 16 18.5z" />
+                <path d="M24 26h16v4H24zm0 8h10v4H24z" />
+              </svg>
             </div>
           </div>
-          <div className="text-gray-400 text-sm tracking-widest uppercase font-medium mt-6 md:mt-0">
-            What Makes Us Different
+          <div className="lg:col-span-5 flex items-center justify-start lg:justify-end mt-4 lg:mt-0">
+            {/* Label Kanan Atas */}
+            <span className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-400">
+              WHAT MAKES US DIFFERENT
+            </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="flex gap-16 mb-12 border-b border-gray-800 pb-12">
-              <div>
-                <h3 className="text-5xl font-light mb-2">200<span className="text-primary">+</span></h3>
-                <p className="text-gray-400 text-sm">Global Partners</p>
+        {/* Content Row: 2 Columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* KIRI: Konten Teks & Statistik */}
+          <div className="lg:col-span-7 flex flex-col gap-20">
+            
+            {/* Angka Statistik Utama */}
+            <div className="flex items-center gap-[40px] md:gap-[60px]">
+              <div className="flex flex-col gap-3">
+                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none font-sans">
+                  200+
+                </h2>
+                <p className="text-sm md:text-base text-gray-400 font-inter font-semibold">
+                  Global Partners
+                </p>
               </div>
-              <div>
-                <h3 className="text-5xl font-light mb-2">1.2M</h3>
-                <p className="text-gray-400 text-sm">Successful Deliveries</p>
+              
+              {/* Garis Pembatas Vertikal */}
+              <div className="w-[2px] h-[70px] bg-gray-500/30"></div>
+
+              <div className="flex flex-col gap-3">
+                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none font-sans">
+                  1.2M
+                </h2>
+                <p className="text-sm md:text-base text-gray-400 font-inter font-semibold">
+                  Successful Deliveries
+                </p>
               </div>
             </div>
 
-            <h2 className="text-3xl font-semibold mb-6">
-              Optimizing complex supply chains with digital precision
-            </h2>
-            <p className="text-gray-400 leading-relaxed text-sm max-w-md">
-              We provide end-to-end logistics solutions designed for the modern era. From intelligent warehousing to real-time fleet management, we streamline your operations for scalability.
-            </p>
+            {/* Deskripsi & Judul Pendek Bawah */}
+            <div className="flex flex-col gap-6 max-w-[540px]">
+              <h3 className="text-[32px] md:text-[40px] font-medium leading-[1.2] tracking-tight font-sans">
+                Optimizing complex supply chains with digital precision
+              </h3>
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-semibold">
+                We provide end-to-end logistics solutions designed for the modern era. From intelligent warehousing to real-time fleet management, we streamline your operations for scalability.
+              </p>
+            </div>
           </div>
 
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden h-[500px]">
-              {/* Note: Placeholder for actual truck image from design */}
-              <img
-                src={image.roadTruck}
-                alt="Logistics Truck"
-                className="w-full h-full object-cover object-right"
+          {/* KANAN: Gambar Utama & Card Badge Tumpang Tindih */}
+          <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end mt-16 lg:mt-0">
+            
+            {/* Bingkai Gambar Besar */}
+            <div className="w-full max-w-[480px] h-[540px] rounded-[32px] overflow-hidden relative z-0">
+              <img 
+                src={image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
+                alt="Logistics Operations" 
+                className="w-full h-full object-cover"
               />
             </div>
 
-            <div className="absolute -bottom-8 -left-8 md:-left-12 bg-[#2D3394] p-8 rounded-2xl shadow-xl max-w-[240px]">
-              <p className="text-sm text-blue-200 mb-6 font-medium">
+            {/* Card Badge Persentase Biru (Tumpang Tindih / Absolute) */}
+            <div className="absolute -left-4 lg:-left-16 bottom-16 z-10 w-[220px] h-[220px] bg-[#2A2A7C] rounded-[24px] p-6 flex flex-col justify-between shadow-2xl">
+              <p className="text-sm font-medium text-white/90 leading-snug font-inter">
                 On-time delivery rate across our global network
               </p>
-              <h3 className="text-5xl font-bold text-white">99.9%</h3>
+              <h4 className="text-[44px] md:text-[48px] font-medium tracking-tight leading-none font-sans text-white">
+                99.9%
+              </h4>
             </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

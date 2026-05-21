@@ -2,11 +2,13 @@ import React from 'react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import HeroSection from './components/HeroSection';
+import LogoTicker from './components/LogoTicker'; 
 import StatsSection from './components/StatsSection';
 import ServicesSection from './components/ServicesSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
 import CalculatorSection from './components/CalculatorSection';
 import MapTestimonialSection from './components/MapTestimonialSection';
+import PlatformSection from './components/PlatformSection';
 
 const LandingPage = () => {
   return (
@@ -15,8 +17,10 @@ const LandingPage = () => {
       
       <main>
         <HeroSection />
+        <LogoTicker />
         <StatsSection />
         <ServicesSection />
+        <PlatformSection />
         <WhyChooseUsSection />
         <CalculatorSection />
         <MapTestimonialSection />
