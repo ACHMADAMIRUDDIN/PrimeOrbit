@@ -25,7 +25,7 @@ const TrackingFaq = () => {
   ];
 
   return (
-    <section className="w-full bg-white flex flex-col p-[40px] md:p-[100px_80px_105px] gap-[37px] text-[#2d2d2d] font-sans">
+    <section data-theme="light" className="w-full bg-white flex flex-col p-[40px] md:p-[100px_80px_105px] gap-[37px] text-[#2d2d2d] font-sans">
       
       {/* Title */}
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between gap-[20px]">

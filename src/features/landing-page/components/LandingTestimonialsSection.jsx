@@ -3,7 +3,7 @@ import image from '../../../assets/image';
 
 const LandingTestimonialsSection = () => {
   return (
-    <section className="w-full bg-white flex flex-col p-[40px] md:p-[106px_80px] gap-[75px] text-[#2d2d2d] font-sans">
+    <section data-theme="light" className="w-full bg-white flex flex-col p-[40px] md:p-[106px_80px] gap-[75px] text-[#2d2d2d] font-sans">
       
       {/* Title */}
       <div className="w-full max-w-[1317px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-[20px]">

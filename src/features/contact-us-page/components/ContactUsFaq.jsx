@@ -29,7 +29,7 @@ const ContactUsFaq = () => {
   };
 
   return (
-    <section className="w-full bg-white flex flex-col p-[40px] lg:p-[100px_80px_105px] gap-[40px] font-sans text-black max-w-[1440px] mx-auto">
+    <section data-theme="light" className="w-full bg-white flex flex-col p-[40px] lg:p-[100px_80px_105px] gap-[40px] font-sans text-black max-w-[1440px] mx-auto">
       
       {/* Title Area */}
       <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-[20px]">

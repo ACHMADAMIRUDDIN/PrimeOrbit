@@ -3,7 +3,7 @@ import image from '../../../assets/image';
 
 const StatsSection = () => {
   return (
-    <section id="about" className="w-full bg-[#191919] text-white py-[100px] flex justify-center items-center overflow-hidden">
+    <section id="about" data-theme="dark" className="w-full bg-[#191919] text-white py-[100px] flex justify-center items-center overflow-hidden">
       <div className="w-full max-w-[1320px] px-4 md:px-[60px] flex flex-col relative">
         
         {/* Header Row: Logo & Subtitle */}
@@ -11,15 +11,16 @@ const StatsSection = () => {
           <div className="lg:col-span-7 flex items-center">
             {/* Logo */}
             <div className="text-white">
-              <svg className="w-14 h-14" viewBox="0 0 64 64" fill="currentColor">
-                <path d="M10 14L32 4l22 10v24L32 60 10 38V14zm6 4.5v16.7l16 11.4 16-11.4V18.5L32 11.2 16 18.5z" />
-                <path d="M24 26h16v4H24zm0 8h10v4H24z" />
+              <svg className="w-[58px] h-[66px] text-white" viewBox="0 0 76 86" fill="currentColor">
+                <path d="M75.17 0L60.5741 16.4533L60.6188 48.1305L35.7186 18.5547L23.7826 30.85L50.3369 61.2976L46.2911 66.104L16.6076 67.0205L0 86L53.265 82.9374L75.17 56.223V0Z" />
+                <path d="M0 69.5955V2.54712H16.8073V56.614L0 69.5955Z" />
+                <path d="M65.4532 1.76953L22.9927 1.76953L22.9927 14.1538L54.838 14.1538L65.4532 1.76953Z" />
               </svg>
             </div>
           </div>
           <div className="lg:col-span-5 flex items-center justify-start lg:justify-end mt-4 lg:mt-0">
             {/* Label Kanan Atas */}
-            <span className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-400">
+            <span className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-400 font-inter">
               WHAT MAKES US DIFFERENT
             </span>
           </div>
@@ -34,7 +35,7 @@ const StatsSection = () => {
             {/* Angka Statistik Utama */}
             <div className="flex items-center gap-[40px] md:gap-[60px]">
               <div className="flex flex-col gap-3">
-                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none font-sans">
+                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none text-white font-sans">
                   200+
                 </h2>
                 <p className="text-sm md:text-base text-gray-400 font-inter font-semibold">
@@ -43,10 +44,10 @@ const StatsSection = () => {
               </div>
               
               {/* Garis Pembatas Vertikal */}
-              <div className="w-[2px] h-[70px] bg-gray-500/30"></div>
+              <div className="w-[1px] h-[70px] bg-white/20"></div>
 
               <div className="flex flex-col gap-3">
-                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none font-sans">
+                <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none text-white font-sans">
                   1.2M
                 </h2>
                 <p className="text-sm md:text-base text-gray-400 font-inter font-semibold">
@@ -57,7 +58,7 @@ const StatsSection = () => {
 
             {/* Deskripsi & Judul Pendek Bawah */}
             <div className="flex flex-col gap-6 max-w-[540px]">
-              <h3 className="text-[32px] md:text-[40px] font-medium leading-[1.2] tracking-tight font-sans">
+              <h3 className="text-[32px] md:text-[40px] font-medium leading-[1.2] tracking-tight font-sans text-white">
                 Optimizing complex supply chains with digital precision
               </h3>
               <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-semibold">
@@ -67,25 +68,30 @@ const StatsSection = () => {
           </div>
 
           {/* KANAN: Gambar Utama & Card Badge Tumpang Tindih */}
-          <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end mt-16 lg:mt-0">
+          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end mt-16 lg:mt-0">
             
-            {/* Bingkai Gambar Besar */}
-            <div className="w-full max-w-[480px] h-[540px] rounded-[32px] overflow-hidden relative z-0">
-              <img 
-                src={image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
-                alt="Logistics Operations" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Wrapper Relatif yang membungkus gambar dan badge agar badge diposisikan relatif terhadap gambar */}
+            <div className="relative w-full max-w-[480px]">
+              
+              {/* Bingkai Gambar Besar */}
+              <div className="w-full h-[500px] rounded-[32px] overflow-hidden relative z-0">
+                <img 
+                  src={image.kontener || image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
+                  alt="Logistics Operations" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Card Badge Persentase Biru (Tumpang Tindih / Absolute) */}
-            <div className="absolute -left-4 lg:-left-16 bottom-16 z-10 w-[220px] h-[220px] bg-[#2A2A7C] rounded-[24px] p-6 flex flex-col justify-between shadow-2xl">
-              <p className="text-sm font-medium text-white/90 leading-snug font-inter">
-                On-time delivery rate across our global network
-              </p>
-              <h4 className="text-[44px] md:text-[48px] font-medium tracking-tight leading-none font-sans text-white">
-                99.9%
-              </h4>
+              {/* Card Badge Persentase Biru (Tumpang Tindih / Absolute) */}
+              <div className="absolute -left-8 lg:-left-[150px] bottom-0 z-10 w-[220px] h-[280px] bg-[#2A2A7C] rounded-[32px] p-6 flex flex-col justify-between shadow-2xl hover:scale-[1.02] transition-transform duration-300">
+                <p className="text-sm font-medium text-white/90 leading-snug font-inter">
+                  On-time delivery rate across our global network
+                </p>
+                <h4 className="text-[44px] md:text-[48px] font-medium tracking-tight leading-none font-sans text-white">
+                  99.9%
+                </h4>
+              </div>
+
             </div>
 
           </div>

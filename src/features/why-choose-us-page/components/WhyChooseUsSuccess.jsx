@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react';
 
 const WhyChooseUsSuccess = () => {
   return (
-    <section className="w-full relative bg-[#f5f5f5] overflow-hidden flex flex-col items-center pt-[100px] pb-[100px] font-sans text-black min-h-[1024px]">
+    <section data-theme="light" className="w-full relative bg-[#f5f5f5] overflow-hidden flex flex-col items-center pt-[100px] pb-[100px] font-sans text-black min-h-[1024px]">
       
       <div className="w-full max-w-[1320px] px-4 mx-auto flex flex-col gap-[78px] z-10">
         

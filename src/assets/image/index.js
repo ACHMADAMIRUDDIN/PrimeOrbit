@@ -4,6 +4,7 @@ import Homepagepng from './Homepage.png';
 import Servicespng from './Services.png';
 import Trackingpng from './Tracking.png';
 import whychooseuspng from './whychooseus.png';
+import kontenerpng from './kontener.png';
 
 import gambar_0 from './gambar/018e16abe81cb6aa47945513e7d1c45dc127f75f.png';
 import gambar_1 from './gambar/1a1378a26a489846263a4e1779ce749298c8222b.png';
@@ -48,6 +49,7 @@ const image = {
   Servicespng,
   Trackingpng,
   whychooseuspng,
+  kontener: kontenerpng,
   deliveryDocs: gambar_0,
   containerYard: gambar_1,
   sideBoxTruck: gambar_2,

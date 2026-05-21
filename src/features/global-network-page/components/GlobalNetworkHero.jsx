@@ -4,7 +4,7 @@ import image from '../../../assets/image';
 
 const GlobalNetworkHero = () => {
   return (
-    <section className="w-full h-auto min-h-[917px] relative overflow-hidden bg-[#f7f8f9] flex flex-col items-center pt-[180px] md:pt-[224px] px-4 font-sans text-black">
+    <section data-theme="light" className="w-full h-auto min-h-[917px] relative overflow-hidden bg-[#f7f8f9] flex flex-col items-center pt-[180px] md:pt-[224px] px-4 font-sans text-black">
       
       {/* Main Text Content */}
       <div className="flex flex-col items-center gap-[40px] md:gap-[48px] z-10 w-full max-w-[973px] text-center">

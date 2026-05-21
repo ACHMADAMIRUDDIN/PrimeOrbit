@@ -4,7 +4,7 @@ import { Zap, ArrowRight } from 'lucide-react';
 
 const GlobalNetworkFeatures = () => {
   return (
-    <section className="w-full bg-[#1b1b1b] flex flex-col lg:flex-row items-center justify-between p-[40px] md:p-[76px_104px_77px_124px] gap-[40px] lg:gap-[20px] text-white font-sans">
+    <section data-theme="dark" className="w-full bg-[#1b1b1b] flex flex-col lg:flex-row items-center justify-between p-[40px] md:p-[76px_104px_77px_124px] gap-[40px] lg:gap-[20px] text-white font-sans">
       
       {/* Left Side: Image Card */}
       <div className="w-full lg:w-[596px] h-[400px] md:h-[500px] rounded-[24px] bg-gray-800 relative overflow-hidden flex flex-col justify-end p-[20px] md:p-[30px_29px] gap-[18px]">

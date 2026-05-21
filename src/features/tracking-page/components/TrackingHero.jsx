@@ -3,7 +3,7 @@ import image from '../../../assets/image';
 
 const TrackingHero = () => {
   return (
-    <section className="w-full h-[880px] bg-[#191919] relative overflow-hidden flex flex-col items-center pt-[228px] text-white">
+    <section data-theme="dark" className="w-full h-[880px] bg-[#191919] relative overflow-hidden flex flex-col items-center pt-[228px] text-white">
       
       {/* Background Graphic elements from Figma */}
       <img src={image.truckBadge} alt="" className="absolute top-[367px] left-[81%] w-[146.8px] h-[57.2px] object-contain opacity-20" />

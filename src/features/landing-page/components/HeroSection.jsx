@@ -3,7 +3,7 @@ import image from '../../../assets/image';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative w-full h-[888px] flex items-center justify-center overflow-hidden bg-[#1c1c1c]">
+    <section id="home" data-theme="dark" className="relative w-full h-[888px] flex items-center justify-center overflow-hidden bg-[#1c1c1c]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={image.cargoShipAerial} alt="Hero Background" className="w-full h-full object-cover object-top opacity-80" />

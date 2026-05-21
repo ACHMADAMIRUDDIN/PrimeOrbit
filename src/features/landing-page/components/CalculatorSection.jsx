@@ -3,10 +3,10 @@ import image from '../../../assets/image';
 
 const CalculatorSection = () => {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
+    <section data-theme="light" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background Image menggunakan image.kontener */}
       <div
-        className="absolute inset-0 z-0 opacity-20 bg-cover bg-center"
+        className="absolute inset-0 z-0 opacity-100 bg-cover bg-center"
         style={{ backgroundImage: `url(${image.kontener})` }}
       ></div>
 

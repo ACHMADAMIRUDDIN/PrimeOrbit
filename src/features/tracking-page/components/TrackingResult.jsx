@@ -3,7 +3,7 @@ import { Download } from 'lucide-react';
 
 const TrackingResult = () => {
   return (
-    <section className="w-full bg-white flex flex-col items-center py-[80px] px-4 md:px-[90px] gap-[69px] font-sans">
+    <section data-theme="light" className="w-full bg-white flex flex-col items-center py-[80px] px-4 md:px-[90px] gap-[69px] font-sans">
       
       {/* Heading */}
       <div className="w-full max-w-[877px] flex flex-col items-center gap-[20px] text-center">

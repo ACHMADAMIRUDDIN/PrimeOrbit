@@ -4,7 +4,7 @@ import { ArrowUpRight, Cpu, LineChart } from 'lucide-react';
 
 const GlobalNetworkAbout = () => {
   return (
-    <section className="w-full bg-white flex flex-col items-center p-[40px] md:p-[80px] gap-[60px] font-sans text-black">
+    <section data-theme="light" className="w-full bg-white flex flex-col items-center p-[40px] md:p-[80px] gap-[60px] font-sans text-black">
       
       {/* Title */}
       <h2 className="w-full max-w-[1320px] text-[24px] md:text-[32px] leading-[120%] font-medium">

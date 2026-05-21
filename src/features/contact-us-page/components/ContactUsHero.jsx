@@ -4,7 +4,7 @@ import { Mail, Phone } from 'lucide-react';
 
 const ContactUsHero = () => {
   return (
-    <section className="w-full relative min-h-[833px] overflow-hidden flex flex-col justify-center px-[20px] lg:px-[86px] pt-[150px] pb-[80px] font-sans text-white">
+    <section data-theme="dark" className="w-full relative min-h-[833px] overflow-hidden flex flex-col justify-center px-[20px] lg:px-[86px] pt-[150px] pb-[80px] font-sans text-white">
       
       {/* Background Image & Gradient */}
       <div className="absolute inset-0 z-0">

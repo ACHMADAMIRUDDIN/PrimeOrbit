@@ -4,7 +4,7 @@ import { Search, ArrowRight } from 'lucide-react';
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" data-theme="light" className="py-24 bg-white">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         
         {/* Header Section */}

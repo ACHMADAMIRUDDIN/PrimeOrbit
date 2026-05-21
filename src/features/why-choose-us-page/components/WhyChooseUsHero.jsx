@@ -4,7 +4,7 @@ import { PackageSearch, Activity } from 'lucide-react';
 
 const WhyChooseUsHero = () => {
   return (
-    <section className="w-full relative min-h-[900px] md:min-h-[1024px] bg-[#f5f5f5] overflow-hidden flex flex-col items-center pt-[180px] md:pt-[270px] pb-[40px] px-4 font-sans text-black">
+    <section data-theme="light" className="w-full relative min-h-[900px] md:min-h-[1024px] bg-[#f5f5f5] overflow-hidden flex flex-col items-center pt-[180px] md:pt-[270px] pb-[40px] px-4 font-sans text-black">
       
       {/* Main Text Content */}
       <div className="flex flex-col items-center gap-[40px] z-10 w-full max-w-[973px] text-center">

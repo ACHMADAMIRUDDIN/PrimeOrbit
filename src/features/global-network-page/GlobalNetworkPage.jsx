@@ -3,6 +3,7 @@ import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 
 import GlobalNetworkHero from './components/GlobalNetworkHero';
+import LogoTicker from './components/LogoTicker';
 import GlobalNetworkStats from './components/GlobalNetworkStats';
 import GlobalNetworkFeatures from './components/GlobalNetworkFeatures';
 import GlobalNetworkAbout from './components/GlobalNetworkAbout';
@@ -20,6 +21,7 @@ const GlobalNetworkPage = () => {
       
       <main className="flex-1 w-full flex flex-col items-center">
         <GlobalNetworkHero />
+        <LogoTicker />
         <GlobalNetworkStats />
         <GlobalNetworkFeatures />
         <GlobalNetworkAbout />
