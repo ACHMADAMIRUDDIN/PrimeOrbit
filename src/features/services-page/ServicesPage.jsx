@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
-import MapTestimonialSection from '../landing-page/components/MapTestimonialSection';
 
 import ServicesHeroMockup from './components/ServicesHeroMockup';
-import IntegratedSolutions from './components/IntegratedSolutions';
+import ServicesGlobalFootprintSection from './components/ServicesGlobalFootprintSection';
+import ServicesTestimonialsSection from './components/ServicesTestimonialsSection';
 import TailoredLogistics from './components/TailoredLogistics';
 import SectorSolutions from './components/SectorSolutions';
 
@@ -15,10 +15,10 @@ const ServicesPage = () => {
       
       <main>
         <ServicesHeroMockup />
-        <IntegratedSolutions />
         <TailoredLogistics />
         <SectorSolutions />
-        <MapTestimonialSection />
+        <ServicesGlobalFootprintSection />
+        <ServicesTestimonialsSection />
       </main>
 
       <Footer />

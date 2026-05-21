@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../../../assets/image';
 
-const GlobalFootprint = () => {
+const ServicesGlobalFootprintSection = () => {
   return (
     <section className="flex w-full flex-col gap-[74px] bg-[#ffffff] px-4 py-[100px] font-sans text-black md:px-[60px]">
       <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between gap-[7px]">
@@ -29,4 +29,4 @@ const GlobalFootprint = () => {
   );
 };
 
-export default GlobalFootprint;
+export default ServicesGlobalFootprintSection;

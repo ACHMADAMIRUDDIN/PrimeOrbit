@@ -10,15 +10,31 @@ const Navbar = ({ theme = 'dark' }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navPositionClass = isScrolled
+    ? 'top-0 px-0'
+    : 'top-[44px] px-4 md:px-6';
+
+  const containerClass = isScrolled
+    ? `w-full rounded-none px-4 py-[16px] md:px-[40px] lg:px-[60px] ${
+        isLight
+          ? 'bg-white/96 shadow-[0px_12px_40px_rgba(15,23,42,0.12)]'
+          : 'border-b border-white/10 bg-[#191919]/92 shadow-[0px_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-[28px]'
+      }`
+    : `w-[1118px] max-w-[95%] rounded-[100px] px-[24px] py-[18px] ${
+        isLight
+          ? 'bg-white shadow-[0px_0px_24px_rgba(0,0,0,0.08)]'
+          : 'border border-white/20 bg-white/10 backdrop-blur-[58px]'
+      }`;
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'top-0 py-2' : 'top-[44px]'} flex justify-center`}>
-      <div className={`w-[1118px] max-w-[95%] rounded-[100px] flex justify-between items-center px-[24px] py-[18px] transition-all duration-300 ${
-        isLight ? 'bg-white shadow-[0px_0px_24px_rgba(0,0,0,0.08)]' : 'backdrop-blur-[58px] bg-white/10 border border-white/20'
-      } ${isScrolled && !isLight ? 'shadow-lg' : ''}`}>
+    <nav className={`fixed inset-x-0 z-50 flex justify-center transition-all duration-300 ${navPositionClass}`}>
+      <div className={`flex w-full items-center justify-between transition-all duration-300 ${containerClass}`}>
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-[16px]">
@@ -45,7 +61,7 @@ const Navbar = ({ theme = 'dark' }) => {
         </div>
 
         {/* Mobile Menu Button - simple for now */}
-        <button className="lg:hidden text-white">
+        <button className={`lg:hidden ${isLight ? 'text-black' : 'text-white'}`}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
         </button>
       </div>

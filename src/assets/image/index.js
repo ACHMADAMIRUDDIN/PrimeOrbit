@@ -37,6 +37,9 @@ import gambar_28 from './gambar/f1f201ade6591238af0be3a7dc2e22652dabe9dd.png';
 import gambar_29 from './gambar/fbefef65e13dfb01832120f2f136c2e4123ebb3a.png';
 import gambar_30 from './gambar/Logo (1).svg';
 import gambar_31 from './gambar/Logo.svg';
+import gambar_32 from './gambar/9754ee0b-a871-45af-b497-9bca7da701bd.png';
+import gambar_33 from './gambar/5788fed9-c888-4d49-aa35-538d71d3204a.png';
+import gambar_34 from './gambar/23432453253453tret3t-76856.png';
 
 const image = {
   contactuspng,
@@ -63,6 +66,9 @@ const image = {
   clientPortraitWoman: gambar_27,
   containerSupervisor: gambar_28,
   airCargoPlane: gambar_8,
+  servicesDashboardMockup: gambar_32,
+  landingGlobalFootprintMap: gambar_33,
+  trackingGlobalFootprintMap: gambar_34,
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
     '1a1378a26a489846263a4e1779ce749298c8222b.png': gambar_1,
@@ -96,6 +102,9 @@ const image = {
     'fbefef65e13dfb01832120f2f136c2e4123ebb3a.png': gambar_29,
     'Logo (1).svg': gambar_30,
     'Logo.svg': gambar_31,
+    '9754ee0b-a871-45af-b497-9bca7da701bd.png': gambar_32,
+    '5788fed9-c888-4d49-aa35-538d71d3204a.png': gambar_33,
+    '23432453253453tret3t-76856.png': gambar_34,
   }
 };
 

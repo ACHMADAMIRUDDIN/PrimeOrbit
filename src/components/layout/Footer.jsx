@@ -1,49 +1,73 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
+const MENU_ITEMS = [
+  { href: '#home', label: 'Home' },
+  { href: '#services', label: 'Services' },
+  { href: '#tracking', label: 'Tracking' },
+  { href: '#global-network', label: 'Global Network' },
+  { href: '#why-choose-us', label: 'Why Choose Us' },
+];
+
+const CONTACT_ITEMS = [
+  {
+    Icon: Mail,
+    label: 'PrimeOrbit@gmail.com',
+  },
+  {
+    Icon: Phone,
+    label: '+101899120',
+  },
+  {
+    Icon: MapPin,
+    label: 'PrimeOrbit',
+  },
+];
+
 const Footer = () => {
   return (
-    <footer className="bg-[#1C1C1C] text-white pt-16 pb-8 border-t border-gray-800">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-primary mb-4">Reliable Logistics Always On Time Delivery</h2>
-            <p className="text-gray-400 mt-8 text-sm">© 2025 PrimeOrbit. All right reserved</p>
+    <footer className="w-full overflow-hidden bg-[#1c1c1c] text-white">
+      <div className="mx-auto max-w-[1320px] px-4 pt-[68px] md:px-[60px] md:pt-[78px]">
+        <div className="grid grid-cols-1 gap-y-[44px] md:grid-cols-2 md:gap-x-[36px] lg:grid-cols-[minmax(0,1.7fr)_170px_220px] lg:gap-x-[56px]">
+          <div className="max-w-[520px]">
+            <h2 className="max-w-[470px] font-sans text-[34px] font-medium leading-[96%] tracking-[-0.04em] text-primary md:text-[46px] lg:text-[52px]">
+              Reliable Logistics Always On Time Delivery
+            </h2>
+            <p className="mt-[54px] text-[11px] leading-none tracking-[-0.02em] text-white/72">
+              © 2025 PRIMEORBIT, All right reserved
+            </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Menu</h4>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#tracking" className="hover:text-primary transition-colors">Tracking</a></li>
-              <li><a href="#global-network" className="hover:text-primary transition-colors">Global Network</a></li>
-              <li><a href="#why-choose-us" className="hover:text-primary transition-colors">Why Choose Us</a></li>
+          <div className="lg:pt-[4px]">
+            <h4 className="mb-[18px] text-[15px] font-medium leading-none text-white">Menu</h4>
+            <ul className="space-y-[7px] text-[11px] leading-[140%] text-white/68">
+              {MENU_ITEMS.map(({ href, label }) => (
+                <li key={label}>
+                  <a className="transition-colors hover:text-primary" href={href}>
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Contact Us</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>89th world St.</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-primary shrink-0" />
-                <span>PrimeOrbit@gmail.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-primary shrink-0" />
-                <span>+101899120</span>
-              </li>
+          <div className="lg:pt-[4px]">
+            <h4 className="mb-[18px] text-[15px] font-medium leading-none text-white">Contact Us</h4>
+            <ul className="space-y-[10px] text-[11px] leading-[140%] text-white/68">
+              {CONTACT_ITEMS.map(({ Icon, label }) => (
+                <li key={label} className="flex items-center gap-[9px]">
+                  <Icon className="shrink-0 text-white/82" size={13} strokeWidth={1.8} />
+                  <span>{label}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Big Background Text */}
-        <div className="w-full overflow-hidden flex justify-center border-t border-gray-800 pt-8 opacity-20">
-          <h1 className="text-[10vw] font-bold tracking-tighter leading-none text-gray-600">PRIMEORBIT</h1>
+        <div className="mt-[58px] h-[72px] overflow-hidden  border-white/10 pt-[18px] md:mt-[80px] md:h-[118px] md:pt-[22px] lg:h-[154px] lg:pt-[28px]">
+          <p className="whitespace-nowrap font-geist text-[76px] font-medium leading-none tracking-[-0.08em] text-white/[0.14] md:text-[148px] lg:text-[218px]">
+            PRIMEORBIT
+          </p>
         </div>
       </div>
     </footer>

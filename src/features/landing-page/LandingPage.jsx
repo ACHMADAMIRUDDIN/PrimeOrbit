@@ -7,8 +7,8 @@ import StatsSection from './components/StatsSection';
 import ServicesSection from './components/ServicesSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
 import CalculatorSection from './components/CalculatorSection';
-import MapTestimonialSection from './components/MapTestimonialSection';
-import PlatformSection from './components/PlatformSection';
+import LandingGlobalFootprintSection from './components/LandingGlobalFootprintSection';
+import LandingTestimonialsSection from './components/LandingTestimonialsSection';
 
 const LandingPage = () => {
   return (
@@ -23,7 +23,8 @@ const LandingPage = () => {
         <PlatformSection />
         <WhyChooseUsSection />
         <CalculatorSection />
-        <MapTestimonialSection />
+        <LandingGlobalFootprintSection />
+        <LandingTestimonialsSection />
       </main>
 
       <Footer />

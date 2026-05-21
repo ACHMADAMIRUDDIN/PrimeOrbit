@@ -3,7 +3,6 @@ import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 
 import TrackingHero from './components/TrackingHero';
-import TrackingClientLogos from './components/TrackingClientLogos';
 import TrackingResult from './components/TrackingResult';
 import GlobalFootprint from './components/GlobalFootprint';
 import TrackingFaq from './components/TrackingFaq';
@@ -16,7 +15,6 @@ const TrackingPage = () => {
       
       <main className="flex-1 w-full flex flex-col items-center">
         <TrackingHero />
-        <TrackingClientLogos />
         <TrackingResult />
         <GlobalFootprint />
         <TrackingFaq />

@@ -1,5 +1,4 @@
 import React from 'react';
-import image from '../../../assets/image';
 import { ArrowUpRight } from 'lucide-react';
 
 const TailoredLogistics = () => {
@@ -17,7 +16,13 @@ const TailoredLogistics = () => {
             PrimeOrbit is a global logistics company specializing in ocean freight, inland transport, warehousing, and integrated supply chain solutions. With a worldwide network and smart technology, we help businesses grow across borders with speed and efficiency.
           </p>
         </div>
-        <img src={image.truckBadge} alt="Decorative" className="w-[120px] h-[120px] md:w-[271.5px] md:h-[271.5px] object-contain opacity-15" />
+        <div className="flex h-[120px] w-[120px] shrink-0 items-start justify-end md:h-[271.5px] md:w-[271.5px]">
+          <ArrowUpRight
+            aria-hidden="true"
+            className="h-full w-full text-white/10"
+            strokeWidth={1.2}
+          />
+        </div>
       </div>
 
       {/* Cards Grid */}
