@@ -1,0 +1,30 @@
+@import '@fontsource/work-sans';
+@import '@fontsource/inter';
+@import '@fontsource/poppins';
+@import '@fontsource/inter-tight';
+@import '@fontsource/urbanist';
+@import '@fontsource/plus-jakarta-sans';
+@import '@fontsource/geist-sans';
+@import '@fontsource/figtree';
+@import '@fontsource/gugi';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-dark bg-white;
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+/* Hide scrollbar for cleaner look if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
