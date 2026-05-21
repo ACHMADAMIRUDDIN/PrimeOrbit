@@ -3,15 +3,17 @@ import image from '../../../assets/image';
 
 const CalculatorSection = () => {
   return (
-    <section className="py-24 bg-gray-50 relative">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background Image menggunakan image.kontener */}
       <div
         className="absolute inset-0 z-0 opacity-20 bg-cover bg-center"
-        style={{ backgroundImage: `url(${image.seaAirCargo})` }}
+        style={{ backgroundImage: `url(${image.kontener})` }}
       ></div>
 
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">
 
+          {/* Left Column - Text Content */}
           <div className="lg:w-1/2">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary leading-tight mb-6">
               Get Accurate <br />
@@ -26,6 +28,7 @@ const CalculatorSection = () => {
             </button>
           </div>
 
+          {/* Right Column - Form */}
           <div className="lg:w-1/2 w-full">
             <div className="bg-[#F8F9FA] rounded-3xl p-6 md:p-8 border border-gray-100 shadow-inner">
               <div className="flex items-center gap-3 mb-8 pb-4 border-b border-gray-200">
@@ -48,11 +51,19 @@ const CalculatorSection = () => {
 
                 <div>
                   <label className="block text-xs text-gray-500 mb-2 font-medium">Type</label>
-                  <select className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 appearance-none">
-                    <option>Industrial Equipment</option>
-                    <option>Electronics</option>
-                    <option>Medical Supplies</option>
-                  </select>
+                  <div className="relative">
+                    <select className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 appearance-none">
+                      <option>Industrial Equipment</option>
+                      <option>Electronics</option>
+                      <option>Medical Supplies</option>
+                    </select>
+                    {/* Arrow custom untuk select option */}
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                      <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex gap-4">
