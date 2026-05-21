@@ -3,40 +3,48 @@ import image from '../../../assets/image';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative w-full h-[888px] flex items-center justify-center overflow-hidden bg-[#1c1c1c]">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src={image.cargoShipAerial} alt="Hero Background" className="w-full h-full object-cover object-top opacity-80" />
-        <div className="absolute inset-0 bg-secondary/30 bg-gradient-to-t from-[#191919] via-[#191919]/50 to-transparent"></div>
-      </div>
+    // Mengurangi px-4 menjadi px-2 (atau md:px-4) agar pada layar kecil tidak terlalu banyak memakan ruang di kiri-kanan
+    <section id="home" className="w-full bg-white px-2 pb-[34px] pt-[22px] md:px-4 md:pb-[40px]">
+      
+      <div className="mx-auto w-full max-w-[1600px]">
+        <div className="relative min-h-[560px] overflow-hidden rounded-[28px] bg-[#6f8798] md:min-h-[650px] lg:min-h-[690px]">
+          <img
+            src={image.cargoShipAerial}
+            alt="PrimeOrbit cargo ship"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
 
-      <div className="w-full max-w-[1320px] px-4 md:px-[60px] relative z-10 flex flex-col items-start gap-[54px] pt-[120px]">
-        
-        {/* Main Content */}
-        <div className="flex flex-col items-start gap-[44px] max-w-[854px]">
-          
-          <div className="flex flex-col items-start gap-[16px]">
-            <div className="bg-white/20 rounded-[100px] px-[20px] py-[10px] text-white text-[16px] leading-[150%] font-medium backdrop-blur-sm">
-              Moving Business Forward
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(122,147,166,0.58)_0%,rgba(70,103,128,0.16)_28%,rgba(10,15,20,0.38)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,13,18,0.26)_0%,rgba(8,13,18,0.04)_44%,rgba(8,13,18,0.14)_100%)]" />
+
+          {/* 2. Menyesuaikan padding konten dalam (px) agar tulisan bisa lebih mepet ke tepi kiri-kanan kartu */}
+          <div className="relative flex h-full min-h-[560px] flex-col justify-end px-[16px] pb-[26px] pt-[148px] md:min-h-[650px] md:px-[32px] md:pb-[34px] md:pt-[176px] lg:min-h-[690px] lg:px-[40px] lg:pb-[40px] lg:pt-[194px]">
+            {/* max-w teks ditingkatkan sedikit agar memanfaatkan ruang baru yang lebih lebar */}
+            <div className="flex flex-col gap-[30px] lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-[760px]">
+                <p className="mb-[14px] text-[12px] font-medium uppercase leading-none tracking-[0.34em] text-white md:text-[14px]">
+                  Moving Business Forward
+                </p>
+
+                <h1 className="max-w-[760px] font-sans text-[48px] font-medium leading-[92%] tracking-[-0.055em] text-white md:text-[66px] lg:text-[70px] xl:text-[76px]">
+                  Fast. Reliable.
+                  <br />
+                  Hassle-Free Delivery
+                </h1>
+              </div>
+
+              <div className="flex w-full max-w-[318px] flex-col items-start gap-[14px] lg:pb-[18px]">
+                <button className="rounded-full bg-primary px-[34px] py-[16px] font-sans text-[18px] font-medium leading-none text-[#111111] transition-colors hover:bg-primary/90 md:px-[42px] md:py-[18px] md:text-[19px]">
+                  Start Shipping
+                </button>
+
+                <p className="max-w-[318px] font-inter text-[16px] leading-[125%] tracking-[-0.02em] text-white/90 md:text-[17px]">
+                  Streamlining your end-to-end operations with precision-driven logistics solutions
+                </p>
+              </div>
             </div>
-            
-            <h1 className="text-[50px] md:text-[78px] font-medium text-white leading-[110%] tracking-[-2px] font-sans">
-              Fast. Reliable.<br />
-              Hassle-Free Delivery
-            </h1>
           </div>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[28px]">
-            <button className="bg-primary text-[#191919] font-medium text-[20px] leading-[150%] px-[48px] py-[20px] rounded-[100px] hover:bg-primary/90 transition-colors">
-              Start Shipping
-            </button>
-            <p className="text-[#a5a5a5] text-[16px] leading-[160%] font-inter max-w-[382px]">
-              Streamlining your end-to-end operations with precision-driven logistics solutions
-            </p>
-          </div>
-
         </div>
-
       </div>
     </section>
   );

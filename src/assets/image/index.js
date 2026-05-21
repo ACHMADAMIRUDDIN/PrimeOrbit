@@ -40,6 +40,7 @@ import gambar_31 from './gambar/Logo.svg';
 import gambar_32 from './gambar/9754ee0b-a871-45af-b497-9bca7da701bd.png';
 import gambar_33 from './gambar/5788fed9-c888-4d49-aa35-538d71d3204a.png';
 import gambar_34 from './gambar/23432453253453tret3t-76856.png';
+import gambar_35 from './gambar/3243rew-htru65rut-ytf6556r7657ytur67.png';
 
 const image = {
   contactuspng,
@@ -69,6 +70,7 @@ const image = {
   servicesDashboardMockup: gambar_32,
   landingGlobalFootprintMap: gambar_33,
   trackingGlobalFootprintMap: gambar_34,
+  whyChooseUsSuccessMap: gambar_35,
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
     '1a1378a26a489846263a4e1779ce749298c8222b.png': gambar_1,
@@ -105,6 +107,7 @@ const image = {
     '9754ee0b-a871-45af-b497-9bca7da701bd.png': gambar_32,
     '5788fed9-c888-4d49-aa35-538d71d3204a.png': gambar_33,
     '23432453253453tret3t-76856.png': gambar_34,
+    '3243rew-htru65rut-ytf6556r7657ytur67.png': gambar_35,
   }
 };
 
