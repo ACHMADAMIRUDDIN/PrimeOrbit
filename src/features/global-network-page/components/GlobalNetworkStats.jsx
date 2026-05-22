@@ -4,7 +4,7 @@ import { Ship, Plane, Truck } from 'lucide-react';
 
 const GlobalNetworkStats = () => {
   return (
-    <section className="w-full flex flex-col font-sans">
+    <section data-theme="light" className="w-full flex flex-col font-sans">
       {/* Statistics & Cards */}
       <div className="w-full bg-white flex flex-col p-[40px] md:p-[80px_120px] gap-[76px] text-black">
         

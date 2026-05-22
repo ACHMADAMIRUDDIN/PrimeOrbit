@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const TailoredLogistics = () => {
   return (
-    <section className="bg-[#191919] w-full py-[80px] px-4 md:px-[80px] flex flex-col gap-[80px] text-white">
+    <section data-theme="dark" className="bg-[#191919] w-full py-[80px] px-4 md:px-[80px] flex flex-col gap-[80px] text-white">
       
       {/* Header */}
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-[40px] md:gap-[20px]">

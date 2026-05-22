@@ -3,7 +3,7 @@ import { ArrowRight, QrCode, FileText, BarChart2, Share2 } from 'lucide-react';
 
 const GlobalNetworkShowcase = () => {
   return (
-    <section className="w-full bg-[#f5f5f5] flex flex-col p-[40px] md:p-[80px_60px] gap-[40px] md:gap-[64px] font-sans">
+    <section data-theme="light" className="w-full bg-[#f5f5f5] flex flex-col p-[40px] md:p-[80px_60px] gap-[40px] md:gap-[64px] font-sans">
       
       {/* Title */}
       <h2 className="w-full max-w-[1320px] mx-auto text-[32px] md:text-[50px] leading-[120%] font-medium text-[#191919]">

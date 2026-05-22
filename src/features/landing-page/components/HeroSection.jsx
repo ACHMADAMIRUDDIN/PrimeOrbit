@@ -3,8 +3,7 @@ import image from '../../../assets/image';
 
 const HeroSection = () => {
   return (
-    // Mengurangi px-4 menjadi px-2 (atau md:px-4) agar pada layar kecil tidak terlalu banyak memakan ruang di kiri-kanan
-    <section id="home" className="w-full bg-white px-2 pb-[34px] pt-[22px] md:px-4 md:pb-[40px]">
+    <section id="home" data-theme="dark" className="w-full bg-white px-2 pb-[34px] pt-[22px] md:px-4 md:pb-[40px]">
       
       <div className="mx-auto w-full max-w-[1600px]">
         <div className="relative min-h-[560px] overflow-hidden rounded-[28px] bg-[#6f8798] md:min-h-[650px] lg:min-h-[690px]">

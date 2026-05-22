@@ -6,6 +6,7 @@ const SURFACE_COLOR = '#f8f8f8';
 const WhyChooseUsSuccess = () => {
   return (
     <section
+      data-theme="light"
       className="relative flex w-full flex-col items-center overflow-hidden pb-[100px] pt-[100px] font-sans text-black"
       style={{ backgroundColor: SURFACE_COLOR }}
     >

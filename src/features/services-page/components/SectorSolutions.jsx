@@ -4,7 +4,7 @@ import { ShieldCheck } from 'lucide-react';
 
 const SectorSolutions = () => {
   return (
-    <section className="bg-[#f5f5f5] w-full py-[80px] px-4 md:px-[120px] flex flex-col gap-[80px] text-black overflow-hidden">
+    <section data-theme="light" className="bg-[#f5f5f5] w-full py-[80px] px-4 md:px-[120px] flex flex-col gap-[80px] text-black overflow-hidden">
 
       {/* Header */}
       <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-[20px]">

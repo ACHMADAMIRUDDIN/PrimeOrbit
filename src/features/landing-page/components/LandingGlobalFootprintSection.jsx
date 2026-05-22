@@ -3,7 +3,7 @@ import image from '../../../assets/image';
 
 const LandingGlobalFootprintSection = () => {
   return (
-    <section className="flex w-full flex-col gap-[74px] bg-[#ffffff] px-4 py-[100px] font-sans text-black md:px-[60px]">
+    <section data-theme="light" className="flex w-full flex-col gap-[74px] bg-[#ffffff] px-4 py-[100px] font-sans text-black md:px-[60px]">
       <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between gap-[7px]">
         <span className="whitespace-nowrap text-[20px] font-medium leading-[140%] opacity-60">GLOBAL FOOTPRINT</span>
         <div className="h-[1px] flex-1 bg-[#d9d9d9]"></div>
