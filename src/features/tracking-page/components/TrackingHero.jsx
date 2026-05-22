@@ -37,7 +37,7 @@ const TrackingHero = () => {
     <section data-theme="dark" className="w-full h-[880px] bg-[#191919] relative overflow-hidden flex flex-col items-center pt-[228px] text-white">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={image.trackingHeroBg} alt="Tracking Hero Background" className="w-full h-full object-cover object-center" />
+        <img src={image.containerStacks} alt="Tracking Hero Background" className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-[#0d0f14]/30 bg-gradient-to-t from-[#191919] via-[#191919]/20 to-black/40"></div>
       </div>
       

@@ -1,43 +1,44 @@
 import React from 'react';
 import { Settings, Car } from 'lucide-react';
+import image from '../../../assets/image';
 
 const FleetDriverView = () => {
   const fleetData = [
     {
       id: 1,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop',
+      image: image.fleetVan,
       theme: 'bg-[#0F0F12]'
     },
     {
       id: 2,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=800&auto=format&fit=crop',
+      image: image.sideBoxTruck,
       theme: 'bg-[#242A5C]',
       hasLightning: true
     },
     {
       id: 3,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+      image: image.roadTruck,
       theme: 'bg-[#0F0F12]'
     },
     {
       id: 4,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?q=80&w=800&auto=format&fit=crop',
+      image: image.truk,
       theme: 'bg-[#0F0F12]'
     },
     {
       id: 5,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1592838064821-7ec1455e097e?q=80&w=800&auto=format&fit=crop',
+      image: image.containerYard,
       theme: 'bg-[#0F0F12]'
     },
     {
       id: 6,
       name: 'Blind Van',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+      image: image.sideBoxTruck,
       theme: 'bg-[#0F0F12]'
     }
   ];
@@ -87,7 +88,7 @@ const FleetDriverView = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-24 h-14 rounded-xl overflow-hidden relative border border-gray-200 bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=200&auto=format&fit=crop" 
+                  src={image.sideBoxTruck}
                   alt="Van" 
                   className="w-full h-full object-cover" 
                 />
@@ -132,7 +133,7 @@ const FleetDriverView = () => {
 
             <div className="flex items-center gap-4 mb-5">
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <img src="https://i.pravatar.cc/150?img=11" alt="Driver" className="w-full h-full object-cover" />
+                <img src={image.clientPortraitMan} alt="Driver" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 className="font-bold text-secondary text-base">Johnathan Smath</h4>
