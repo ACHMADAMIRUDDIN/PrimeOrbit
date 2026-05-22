@@ -126,38 +126,62 @@ const InventoryView = () => {
 
         {/* Highlight Logistics */}
         <div className="space-y-6">
-          <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col">
-            <h3 className="text-xl font-bold text-secondary mb-2">Highlight Logistics</h3>
-            <div className="flex items-end gap-2 mb-6">
-              <span className="text-4xl font-bold text-secondary">88%</span>
-              <span className="text-gray-500 text-sm mb-1">Total Product Spending</span>
+          <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex flex-col transition-all hover:shadow-md">
+            <h3 className="text-lg font-bold text-secondary mb-2">Highlight Logistics</h3>
+            <div className="flex items-center gap-[16px] mb-6">
+              <span className="text-[42px] font-bold text-[#1b1c5c] leading-none">88%</span>
+              <span className="text-[#989dab] text-[13px] font-medium leading-none mt-1">Total Product Spending</span>
             </div>
-            <div className="h-48 w-full relative">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie data={donutData} cx="50%" cy="100%" startAngle={180} endAngle={0} innerRadius={60} outerRadius={80} paddingAngle={2} dataKey="value" stroke="none">
-                    {donutData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
-              {/* Decorative inner rings */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 mt-4 w-32 h-16 border-t-[12px] border-l-[12px] border-r-[12px] rounded-t-full border-[#4338CA] opacity-80 pointer-events-none"></div>
+            
+            <div className="w-full flex items-center justify-center mt-2 relative">
+              <svg 
+                viewBox="0 0 240 120" 
+                className="w-full max-w-[220px] h-auto pointer-events-none" 
+                strokeWidth="14" 
+                fill="none" 
+                strokeLinecap="butt"
+              >
+                {/* Outer Ring */}
+                <path d="M 220,120 A 100,100 0 0,0 20,120" stroke="#f3ebe9" />
+                <path 
+                  d="M 220,120 A 100,100 0 0,0 20,120" 
+                  stroke="#20236a" 
+                  strokeDasharray="314.16" 
+                  strokeDashoffset="84.82" 
+                />
+
+                {/* Middle Ring */}
+                <path d="M 202,120 A 82,82 0 0,0 38,120" stroke="#f3ebe9" />
+                <path 
+                  d="M 202,120 A 82,82 0 0,0 38,120" 
+                  stroke="#2c33ac" 
+                  strokeDasharray="257.61" 
+                  strokeDashoffset="133.96" 
+                />
+
+                {/* Inner Ring */}
+                <path d="M 184,120 A 64,64 0 0,0 56,120" stroke="#f3ebe9" />
+                <path 
+                  d="M 184,120 A 64,64 0 0,0 56,120" 
+                  stroke="#1f2aa4" 
+                  strokeDasharray="201.06" 
+                  strokeDashoffset="40.21" 
+                />
+              </svg>
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
-            <div className="flex justify-between items-start mb-2">
-              <div className="flex items-center gap-2 text-secondary font-bold">
-                <div className="bg-indigo-100 text-indigo-600 p-1.5 rounded-lg">
-                  <AlertCircle size={16} />
+          <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+            <div className="flex justify-between items-center mb-3">
+              <div className="flex items-center gap-[12px] text-secondary font-bold text-[16px]">
+                <div className="w-[32px] h-[32px] rounded-[10px] bg-[#20236a] text-white flex items-center justify-center shrink-0">
+                  <BellRing size={16} className="text-white animate-pulse" />
                 </div>
-                Geofencing Alert
+                <span>Geofencing Alert</span>
               </div>
-              <span className="text-gray-400 text-xs">13:48</span>
+              <span className="text-[#989dab] text-xs font-semibold">13:48</span>
             </div>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-[#989dab] text-[13px] leading-relaxed font-normal mt-3">
               Lorem ipsum dolor sit amet consectetur. Eros sagittis duis massa amet mauris vel at aliquet. Venenatis pellentesque sit.
             </p>
           </div>

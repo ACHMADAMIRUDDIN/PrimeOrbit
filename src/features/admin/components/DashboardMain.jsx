@@ -241,108 +241,165 @@ const DashboardMain = () => {
       </div>
 
       {/* Shipment Tracker Map Card */}
-      <div className="w-full h-[380px] rounded-[24px] bg-white relative overflow-hidden flex shadow-sm border border-gray-100">
+      <div className="w-full h-[380px] rounded-[24px] bg-[#f8f9fa] relative overflow-hidden flex shadow-sm border border-gray-100">
          
-         {/* Map Background Placeholder */}
-         <div className="absolute inset-0 z-0">
-           <img src={image.Globalnetworkpng} alt="Map" className="w-full h-full object-cover opacity-50 filter grayscale" />
-           {/* Fade overlay on right side to match Figma */}
-           <div className="absolute right-0 top-0 bottom-0 w-[50%] bg-gradient-to-l from-white to-transparent z-10"></div>
-         </div>
-
-         {/* Left Side: Map UI Pins */}
-         <div className="absolute left-[10%] top-[30%] z-20 flex flex-col items-center">
-            <div className="w-[18px] h-[18px] rounded-full bg-[#2a2a7c] border-[3px] border-white shadow-md"></div>
-            {/* Dashed line to next pin */}
-            <svg className="absolute top-[18px] left-[15px] w-[400px] h-[150px] pointer-events-none" style={{zIndex: -1}}>
-              <path d="M0,0 Q 200,-50 400,100" fill="none" stroke="#2a2a7c" strokeWidth="2" strokeDasharray="5,5" />
+         {/* Custom SVG Street Map Background */}
+         <div className="absolute inset-0 z-0 opacity-80">
+            <svg 
+              className="w-full h-full pointer-events-none" 
+              stroke="#e6e7eb" 
+              strokeWidth="2" 
+              fill="none" 
+              preserveAspectRatio="none"
+              viewBox="0 0 1000 380"
+            >
+              {/* Horizontal/diagonal main street grids */}
+              <path d="M-50,80 L1100,80" />
+              <path d="M-50,220 L1100,220" />
+              <path d="M-50,300 L1100,300" strokeWidth="1.5" />
+              <path d="M150,-50 L150,450" />
+              <path d="M300,-50 L300,450" />
+              <path d="M520,-50 L520,450" strokeWidth="2.5" />
+              <path d="M780,-50 L780,450" />
+              
+              {/* Diagonal streets */}
+              <path d="M-50,0 L400,450" strokeWidth="1.5" />
+              <path d="M100,-50 L-50,100" />
+              <path d="M350,-50 L750,350" strokeWidth="3" />
+              <path d="M800,-50 L500,250" />
+              <path d="M450,-50 L950,400" />
+              <path d="M100,430 L900,100" strokeWidth="1.5" />
+              
+              {/* Winding local streets */}
+              <path d="M-20,180 Q100,140 220,180 T400,180" strokeWidth="1" />
+              <path d="M300,320 Q420,360 550,320" strokeWidth="1" />
+              
+              {/* Neighborhood blocks */}
+              <path d="M150,150 L200,120 L250,150" />
+              <path d="M220,80 L220,130" />
+              <path d="M250,220 L250,290" />
+              <path d="M50,220 L50,350 L120,380" />
+              <path d="M300,120 L400,120 L450,150" />
+              <path d="M520,180 L620,180" />
+              <path d="M520,290 L700,290" strokeWidth="1" />
+              <path d="M600,80 L700,120 L800,80" />
+              <path d="M620,180 L620,250" />
+              <path d="M720,220 L720,330" />
             </svg>
          </div>
-         <div className="absolute left-[50%] top-[45%] z-20 flex flex-col items-center">
-            <div className="w-[28px] h-[28px] rounded-full bg-[#2a2a7c] text-white flex items-center justify-center shadow-lg border-[3px] border-white">
-              <Truck size={14} />
+
+         {/* Delivery Route SVG overlay */}
+         <svg 
+           viewBox="0 0 1000 380" 
+           preserveAspectRatio="none"
+           className="absolute inset-0 w-full h-full z-10 pointer-events-none"
+         >
+           {/* The delivery route in high-contrast yellow/orange */}
+           <path 
+             d="M 90,60 L 220,180 L 300,260 L 325,260 L 350,210 L 415,210 L 440,90 L 480,95 L 500,120 L 530,115 L 550,165 L 565,160 L 620,210" 
+             fill="none" 
+             stroke="#ffb703" 
+             strokeWidth="3.5" 
+             strokeLinecap="round"
+             strokeLinejoin="round"
+           />
+           
+           {/* Departure Terminal Circle (Top Left) */}
+           <circle cx="90" cy="60" r="7" fill="#1b1c5c" stroke="#ffffff" strokeWidth="3" />
+           
+           {/* Destination Terminal Circle (Bottom Right) */}
+           <circle cx="620" cy="210" r="7" fill="#1b1c5c" stroke="#ffffff" strokeWidth="3" />
+           
+           {/* Active Tracker Pulse / Outer Ring */}
+           <circle cx="508" cy="123" r="14" fill="#1b1c5c" fillOpacity="0.1" />
+           
+           {/* Active Tracker Badge */}
+           <circle cx="508" cy="123" r="10" fill="#ebebf5" stroke="#ffffff" strokeWidth="2" />
+           
+           {/* Active Tracker Chevron pointing southeast (rotate 135 deg) */}
+           <g transform="translate(508, 123) rotate(135)">
+             <path d="M0,-4.5 L3.5,4.5 L0,2.2 L-3.5,4.5 Z" fill="#1b1c5c" />
+           </g>
+         </svg>
+
+         {/* Left Side: Floating Stats Card */}
+         <div className="hidden md:flex flex-col gap-[14px] absolute left-[20px] bottom-[20px] z-20 w-[200px] bg-white rounded-[24px] p-5 shadow-[0px_4px_25px_rgba(0,0,0,0.06)] border border-gray-100/50 transition-all hover:shadow-[0px_8px_30px_rgba(0,0,0,0.1)]">
+            <div className="flex flex-col gap-[2px]">
+              <span className="text-[#989dab] text-[11px] uppercase tracking-wider font-semibold">Distance</span>
+              <span className="text-[18px] font-semibold text-[#121336]">153 km</span>
+            </div>
+            <div className="w-full h-[1px] bg-gray-100"></div>
+            <div className="flex flex-col gap-[2px]">
+              <span className="text-[#989dab] text-[11px] uppercase tracking-wider font-semibold">Est. delivery time</span>
+              <span className="text-[18px] font-semibold text-[#121336]">2 hours 22 minutes</span>
+            </div>
+            <div className="w-full h-[1px] bg-gray-100"></div>
+            <div className="flex flex-col gap-[2px]">
+              <span className="text-[#989dab] text-[11px] uppercase tracking-wider font-semibold">Total weight</span>
+              <span className="text-[18px] font-semibold text-[#121336]">29.86 kg</span>
             </div>
          </div>
-         <div className="absolute left-[85%] md:left-[60%] top-[65%] z-20 flex flex-col items-center">
-            <div className="w-[18px] h-[18px] rounded-full bg-[#2a2a7c] border-[3px] border-white shadow-md"></div>
-         </div>
 
-         {/* Right Side: Overlay Cards */}
-         <div className="absolute right-[20px] top-[18px] z-30 w-full max-w-[338px] flex flex-col gap-[16px]">
+         {/* Right Side: Floating Shipment Tracker Card */}
+         <div className="absolute right-[20px] top-[20px] bottom-[20px] z-20 w-[calc(100%-40px)] sm:w-full max-w-[340px] md:max-w-[360px] bg-white rounded-[24px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.08)] border border-gray-100/50 flex flex-col justify-between transition-all hover:shadow-[0px_12px_40px_rgba(0,0,0,0.12)]">
             
-            {/* Card 5: Main Details */}
-            <div className="rounded-[20px] bg-white border border-[#eceef1] shadow-[0px_0px_25px_rgba(0,0,0,0.08)] p-[20px] flex flex-col gap-[20px]">
-               <div className="flex items-center justify-between">
-                 <div className="flex items-center gap-[12px]">
-                   <div className="w-[31px] h-[31px] rounded-full bg-[#ebebf5] flex items-center justify-center text-gray-700">
-                     <Package size={15} />
-                   </div>
-                   <h3 className="font-medium leading-[120%] tracking-[-0.01em]">Shipment Tracker</h3>
-                 </div>
-                 <button className="w-[31px] h-[31px] rounded-md border border-[#e6e7ea] flex items-center justify-center text-gray-500 hover:bg-gray-50">
-                   <MoreVertical size={15} />
-                 </button>
-               </div>
-
-               <div className="flex items-center gap-[40px] text-[12px]">
-                 <div className="flex flex-col gap-[6px]">
-                   <span className="opacity-40">Cargo ID</span>
-                   <span className="font-semibold">#JTQ98340237D</span>
-                 </div>
-                 <div className="flex flex-col gap-[6px] text-right ml-auto">
-                   <span className="opacity-40">Date Ship</span>
-                   <span className="font-semibold">Friday, June 14 2024</span>
-                 </div>
-               </div>
-
-               <div className="flex flex-col relative font-urbanist text-[15px] pl-[10px] gap-[20px]">
-                 {/* Connecting line */}
-                 <div className="absolute left-[20px] top-[30px] bottom-[30px] w-[2px] bg-gray-200"></div>
-
-                 <div className="flex items-start gap-[12px] relative z-10">
-                   <div className="w-[20px] h-[20px] rounded-full bg-[#ebebf5] flex items-center justify-center shrink-0 mt-1 text-gray-500">
-                     <Truck size={10} />
-                   </div>
-                   <div className="flex flex-col gap-[2px]">
-                     <span className="font-semibold">Departure</span>
-                     <span className="text-[12px] text-gray-400 font-work">Boketto. Inc, Kelapa Gading, <br/>Jakarta Utara, 53428</span>
-                   </div>
-                 </div>
-
-                 <div className="flex items-start gap-[12px] relative z-10">
-                   <div className="w-[20px] h-[20px] rounded-full bg-[#121336] flex items-center justify-center shrink-0 mt-1 text-white">
-                     <MapPin size={10} />
-                   </div>
-                   <div className="flex flex-col gap-[2px]">
-                     <span className="font-semibold">Destinations</span>
-                     <span className="text-[12px] text-gray-400 font-work">Meriana. Inc, Kelapa Gading, <br/>Jakarta Utara, 53428</span>
-                   </div>
-                 </div>
-               </div>
-
-               <button className="w-full rounded-full bg-[#2a2a7c] text-white py-[12px] text-[16px] hover:bg-[#2a2a7c]/90 transition-colors mt-[10px]">
-                 See Details
-               </button>
+            {/* Header section */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-[12px]">
+                <div className="w-[36px] h-[36px] rounded-full bg-[#ebebf5] flex items-center justify-center text-[#121336]">
+                  <Package size={18} />
+                </div>
+                <h3 className="font-semibold text-[17px] text-[#121336] tracking-tight">Shipment Tracker</h3>
+              </div>
+              <button className="w-[32px] h-[32px] rounded-md border border-[#e6e7ea] flex items-center justify-center text-gray-400 hover:bg-gray-50 hover:text-gray-600 transition-colors">
+                <MoreVertical size={16} />
+              </button>
             </div>
 
-            {/* Card 6: Floating Stats */}
-            <div className="hidden lg:flex flex-col justify-between absolute right-[102%] top-[100px] w-[180px] h-[184px] bg-white rounded-[20px] shadow-[0px_0px_25px_rgba(0,0,0,0.05)] p-[16px] text-[12px] font-inter">
-               <div className="flex flex-col gap-[2px]">
-                 <span className="opacity-40">Distance</span>
-                 <span className="text-[16px] font-medium tracking-[-0.02em]">153 km</span>
-               </div>
-               <div className="w-full h-[1px] bg-gray-100"></div>
-               <div className="flex flex-col gap-[2px]">
-                 <span className="opacity-40">Est. delivery time</span>
-                 <span className="text-[16px] font-medium tracking-[-0.02em]">2 hours 22 mins</span>
-               </div>
-               <div className="w-full h-[1px] bg-gray-100"></div>
-               <div className="flex flex-col gap-[2px]">
-                 <span className="opacity-40">Total weight</span>
-                 <span className="text-[16px] font-medium tracking-[-0.02em]">29.86 kg</span>
-               </div>
+            {/* Cargo ID and Date Ship */}
+            <div className="flex items-center justify-between text-[12px] mt-2 border-b border-gray-100 pb-3">
+              <div className="flex flex-col gap-[3px]">
+                <span className="text-[#989dab] text-[10px] uppercase tracking-wider font-semibold">Cargo ID</span>
+                <span className="font-semibold text-[#121336] text-[13px]">#JTQ98340237D</span>
+              </div>
+              <div className="flex flex-col gap-[3px] text-right">
+                <span className="text-[#989dab] text-[10px] uppercase tracking-wider font-semibold">Date Ship</span>
+                <span className="font-semibold text-[#121336] text-[13px]">Friday, June 14 2024</span>
+              </div>
             </div>
 
+            {/* Vertical timeline */}
+            <div className="flex flex-col relative font-work pl-[4px] gap-[18px] my-3">
+              {/* Connecting dashed line */}
+              <div className="absolute left-[13px] top-[26px] bottom-[26px] w-[1px] border-l border-dashed border-gray-300"></div>
+
+              {/* Departure Stop */}
+              <div className="flex items-start gap-[12px] relative z-10">
+                <div className="w-[28px] h-[28px] rounded-full bg-[#ebebf5] flex items-center justify-center shrink-0 mt-0.5 text-[#121336]">
+                  <Truck size={13} />
+                </div>
+                <div className="flex flex-col gap-[1px]">
+                  <span className="font-bold text-[14px] text-[#121336]">Departure</span>
+                  <span className="text-[12px] text-[#989dab] leading-tight font-medium">Boketto. Inc, Kelapa Gading, <br/>Jakarta Utara, 53428</span>
+                </div>
+              </div>
+
+              {/* Destinations Stop */}
+              <div className="flex items-start gap-[12px] relative z-10">
+                <div className="w-[28px] h-[28px] rounded-full bg-[#121336] flex items-center justify-center shrink-0 mt-0.5 text-white">
+                  <MapPin size={13} />
+                </div>
+                <div className="flex flex-col gap-[1px]">
+                  <span className="font-bold text-[14px] text-[#121336]">Destinations</span>
+                  <span className="text-[12px] text-[#989dab] leading-tight font-medium">Meriana. Inc, Kelapa Gading, <br/>Jakarta Utara, 53428</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action pill button */}
+            <button className="w-full rounded-full bg-[#1b1c5c] text-white py-[12px] text-[15px] font-semibold hover:bg-[#1b1c5c]/90 transition-colors shadow-[0px_4px_12px_rgba(27,28,92,0.15)] active:scale-[0.98]">
+              See Details
+            </button>
          </div>
 
       </div>

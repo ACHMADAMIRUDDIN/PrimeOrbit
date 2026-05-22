@@ -27,14 +27,14 @@ const StatsSection = () => {
         </div>
 
         {/* Content Row: 2 Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           
           {/* KIRI: Konten Teks & Statistik */}
-          <div className="lg:col-span-7 flex flex-col gap-20">
+          <div className="lg:col-span-5 flex flex-col gap-16 lg:gap-20">
             
             {/* Angka Statistik Utama */}
             <div className="flex items-center gap-[40px] md:gap-[60px]">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none text-white font-sans">
                   200+
                 </h2>
@@ -44,9 +44,9 @@ const StatsSection = () => {
               </div>
               
               {/* Garis Pembatas Vertikal */}
-              <div className="w-[1px] h-[70px] bg-white/20"></div>
+              <div className="w-[1px] h-[64px] bg-white/20"></div>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <h2 className="text-[52px] md:text-[64px] font-medium tracking-tight leading-none text-white font-sans">
                   1.2M
                 </h2>
@@ -58,35 +58,35 @@ const StatsSection = () => {
 
             {/* Deskripsi & Judul Pendek Bawah */}
             <div className="flex flex-col gap-6 max-w-[540px]">
-              <h3 className="text-[32px] md:text-[40px] font-medium leading-[1.2] tracking-tight font-sans text-white">
+              <h3 className="text-[36px] md:text-[44px] font-semibold leading-[1.2] tracking-tight font-sans text-white">
                 Optimizing complex supply chains with digital precision
               </h3>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-semibold">
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-normal">
                 We provide end-to-end logistics solutions designed for the modern era. From intelligent warehousing to real-time fleet management, we streamline your operations for scalability.
               </p>
             </div>
           </div>
 
-          {/* KANAN: Gambar Utama & Card Badge Terpisah dan Lebih Kecil */}
-          <div className="lg:col-span-5 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-6 mt-12 lg:mt-0 w-full">
+          {/* KANAN: Gambar Utama & Card Badge Terpisah */}
+          <div className="lg:col-span-7 flex flex-col sm:flex-row items-end justify-center lg:justify-end gap-6 mt-12 lg:mt-0 w-full">
             
+            {/* Card Badge Persentase Biru */}
+            <div className="w-full sm:w-[200px] h-[270px] bg-[#20236a] rounded-[24px] p-6 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform duration-300 shrink-0">
+              <p className="text-xs sm:text-sm font-medium text-white/90 leading-snug font-inter">
+                On-time delivery rate across our global network
+              </p>
+              <h4 className="text-[36px] sm:text-[40px] font-semibold tracking-tight leading-none font-sans text-white">
+                99.9%
+              </h4>
+            </div>
+
             {/* Bingkai Gambar Lebih Kecil */}
-            <div className="w-[240px] h-[330px] rounded-[24px] overflow-hidden shadow-lg shrink-0">
+            <div className="w-full sm:w-[300px] md:w-[320px] lg:w-[310px] xl:w-[360px] h-[440px] sm:h-[480px] rounded-[24px] overflow-hidden shadow-lg shrink-0">
               <img 
-                src={image.kontener || image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
+                src={image.kontener || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
                 alt="Logistics Operations" 
                 className="w-full h-full object-cover"
               />
-            </div>
-
-            {/* Card Badge Persentase Biru (Terpisah, Static / Tidak Overlap) */}
-            <div className="w-[180px] h-[230px] bg-[#2A2A7C] rounded-[24px] p-6 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform duration-300 shrink-0">
-              <p className="text-xs font-medium text-white/90 leading-snug font-inter">
-                On-time delivery rate across our global network
-              </p>
-              <h4 className="text-[36px] md:text-[40px] font-medium tracking-tight leading-none font-sans text-white">
-                99.9%
-              </h4>
             </div>
 
           </div>
