@@ -272,69 +272,7 @@ const DashboardMain = () => {
 
       {/* Shipment Tracker Map Card */}
       <div className="w-full h-[380px] rounded-[24px] bg-[#f8f9fa] relative overflow-hidden flex shadow-sm border border-gray-100">
-         
-<<<<<<< HEAD
-         {/* Map Background Placeholder */}
-         <div className="absolute inset-0 z-0 overflow-hidden bg-[#f8fafc]">
-           <svg
-             viewBox="0 0 1440 760"
-             className="h-full w-full"
-             preserveAspectRatio="xMidYMid slice"
-             aria-hidden="true"
-           >
-             <defs>
-               <linearGradient id="dashboard-map-surface" x1="0" y1="0" x2="1" y2="1">
-                 <stop offset="0%" stopColor="#f9fbff" />
-                 <stop offset="100%" stopColor="#eef3fb" />
-               </linearGradient>
-               <linearGradient id="dashboard-map-route" x1="0" y1="0" x2="1" y2="0">
-                 <stop offset="0%" stopColor="#bcc8e6" stopOpacity="0.25" />
-                 <stop offset="50%" stopColor="#93a5d5" stopOpacity="0.7" />
-                 <stop offset="100%" stopColor="#bcc8e6" stopOpacity="0.2" />
-               </linearGradient>
-             </defs>
 
-             <rect width="1440" height="760" fill="url(#dashboard-map-surface)" />
-
-             <g opacity="0.88">
-               {mapLandforms.map((path, index) => (
-                 <path key={path} d={path} fill={index % 2 === 0 ? '#dbe4f2' : '#e5ebf6'} />
-               ))}
-             </g>
-
-             <g opacity="0.52">
-               <circle cx="232" cy="242" r="132" fill="#eef3fb" />
-               <circle cx="676" cy="278" r="158" fill="#edf2fb" />
-               <circle cx="1078" cy="264" r="176" fill="#edf2fb" />
-             </g>
-
-             <g stroke="url(#dashboard-map-route)" strokeWidth="2.5" strokeDasharray="7 10" strokeLinecap="round" fill="none" opacity="0.9">
-               {mapRoutes.map((path) => (
-                 <path key={path} d={path} />
-               ))}
-             </g>
-
-             <g>
-               {mapPoints.map((point, index) => (
-                 <g key={`${point.cx}-${point.cy}`}>
-                   <circle cx={point.cx} cy={point.cy} r={point.r + 5} fill="#8ea2d5" opacity={index % 3 === 0 ? 0.18 : 0.1} />
-                   <circle cx={point.cx} cy={point.cy} r={point.r} fill="#6b7fbc" opacity="0.65" />
-                 </g>
-               ))}
-             </g>
-           </svg>
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_38%,rgba(42,42,124,0.05),transparent_34%),radial-gradient(circle_at_62%_52%,rgba(42,42,124,0.04),transparent_28%)]" />
-           {/* Fade overlay on right side to match Figma */}
-           <div className="absolute right-0 top-0 bottom-0 w-[50%] bg-gradient-to-l from-white to-transparent z-10"></div>
-         </div>
-
-         {/* Left Side: Map UI Pins */}
-         <div className="absolute left-[10%] top-[30%] z-20 flex flex-col items-center">
-            <div className="w-[18px] h-[18px] rounded-full bg-[#2a2a7c] border-[3px] border-white shadow-md"></div>
-            {/* Dashed line to next pin */}
-            <svg className="absolute top-[18px] left-[15px] w-[400px] h-[150px] pointer-events-none" style={{zIndex: -1}}>
-              <path d="M0,0 Q 200,-50 400,100" fill="none" stroke="#2a2a7c" strokeWidth="2" strokeDasharray="5,5" />
-=======
          {/* Custom SVG Street Map Background */}
          <div className="absolute inset-0 z-0 opacity-80">
             <svg 
@@ -377,7 +315,6 @@ const DashboardMain = () => {
               <path d="M600,80 L700,120 L800,80" />
               <path d="M620,180 L620,250" />
               <path d="M720,220 L720,330" />
->>>>>>> dhika
             </svg>
          </div>
 
