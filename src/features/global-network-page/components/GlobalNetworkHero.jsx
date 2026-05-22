@@ -5,34 +5,34 @@ import image from '../../../assets/image';
 const GlobalNetworkHero = () => {
   return (
     <section data-theme="light" className="w-full h-auto min-h-[917px] relative overflow-hidden bg-[#f7f8f9] flex flex-col items-center pt-[180px] md:pt-[224px] px-4 font-sans text-black">
-      
+
       {/* Main Text Content */}
       <div className="flex flex-col items-center gap-[40px] md:gap-[48px] z-10 w-full max-w-[973px] text-center">
-        
+
         <h1 className="text-[48px] md:text-[76px] tracking-[-0.05em] leading-[100%] font-medium font-geist text-[#191919]">
-          Integrated <br/>
+          Integrated <br />
           Logistics Solutions Tailored
         </h1>
 
         <div className="flex flex-col items-center gap-[8px] md:gap-[4px] text-[18px] md:text-[24px] text-[#050505]">
           <div className="flex flex-col md:flex-row items-center gap-[8px]">
-             <span className="tracking-[-0.02em] leading-[120%]">From global forwarding</span>
-             <div className="w-[36px] h-[36px] bg-[#2a2a7c] rounded-full flex items-center justify-center p-[8px]">
-               <ArrowRight size={16} color="white" />
-             </div>
-             <span className="tracking-[-0.02em] leading-[120%]">to local distribution</span>
+            <span className="tracking-[-0.02em] leading-[120%]">From global forwarding</span>
+            <div className="w-[36px] h-[36px] bg-[#2a2a7c] rounded-full flex items-center justify-center p-[8px]">
+              <ArrowRight size={16} color="white" />
+            </div>
+            <span className="tracking-[-0.02em] leading-[120%]">to local distribution</span>
           </div>
           <span className="tracking-[-0.02em] leading-[120%] mt-2 md:mt-0">
-             we streamline your supply chain with precision and transparency.
+            we streamline your supply chain with precision and transparency.
           </span>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-[16px] md:gap-[8px] mt-4 font-sans text-[18px] md:text-[20px]">
           <button className="rounded-[100px] bg-[#2a2a7c] text-white flex items-center justify-center px-[30px] py-[16px] md:py-[20px] hover:bg-[#2a2a7c]/90 transition-colors w-full md:w-auto">
-             View Route Capacity
+            View Route Capacity
           </button>
           <button className="rounded-[100px] bg-[#ffcd51] text-black flex items-center justify-center px-[30px] py-[16px] md:py-[20px] hover:bg-[#ffcd51]/90 transition-colors w-full md:w-[261px]">
-             Find Nearest Hub
+            Find Nearest Hub
           </button>
         </div>
 
@@ -40,7 +40,7 @@ const GlobalNetworkHero = () => {
 
       {/* Floating Graphic Elements (Desktop only for precision, adapted for mobile) */}
       <div className="w-full max-w-[1360px] h-[400px] md:h-[500px] relative mt-[40px] md:mt-0">
-        
+
         <img
           src={image.portTerminal}
           alt="Global logistics network"
@@ -90,7 +90,7 @@ const GlobalNetworkHero = () => {
             <span className="font-medium text-[12px] leading-[120%] text-[#a5a5a5]">Brasilia, Brazil</span>
           </div>
         </div>
-        
+
         {/* Status Bubble */}
         <div className="absolute top-[30%] left-[30%] rounded-[100px] bg-[#2a2a7c] text-white flex items-center justify-center p-[8px_16px] text-[10px] hidden md:flex font-sans">
           Status: Available

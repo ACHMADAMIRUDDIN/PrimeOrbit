@@ -43,7 +43,7 @@ const GlobalNetworkAbout = () => {
 
           {/* Large Image Card */}
           <div className="w-full h-[400px] md:h-[580px] rounded-[24px] relative overflow-hidden bg-gray-200">
-             <img src={image.containerSupervisor} alt="Smart Logistics" className="absolute w-full h-full object-cover" />
+             <img src={image.containerStacks} alt="Smart Logistics" className="absolute w-full h-full object-cover" />
              
              {/* Info Box Inside Image */}
              <div className="absolute top-[20px] md:top-[40px] left-[20px] md:left-[40px] w-[90%] md:w-[475px] bg-white rounded-[24px] p-[24px] flex flex-col gap-[30px] md:gap-[40px]">
