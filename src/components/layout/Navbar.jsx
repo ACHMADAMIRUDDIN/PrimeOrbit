@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import image from '../../assets/image';
 
 const Navbar = ({ theme = 'dark' }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,8 +39,14 @@ const Navbar = ({ theme = 'dark' }) => {
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-[16px]">
-          <div className="w-[28px] h-[28.16px] bg-primary rounded-md flex items-center justify-center font-bold text-secondary italic">P</div>
-          <span className={`${isLight ? 'text-black' : 'text-white'} font-semibold text-[24px] leading-[28.8px] font-sans`}>PrimeOrbit</span>
+          <img
+            src={image.navbarLogo}
+            alt="PrimeOrbit"
+            className="h-[36px] w-auto md:h-[37px]"
+          />
+          <span className={`${isLight ? 'text-black' : 'text-white'} font-semibold text-[24px] leading-[28.8px] font-sans`}>
+            PrimeOrbit
+          </span>
         </Link>
 
         {/* Desktop Menu */}
