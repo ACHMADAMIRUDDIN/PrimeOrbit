@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Map, Package, Truck, PieChart, ShoppingCart } from 'lucide-react';
+import image from '../../assets/image';
 
 const AdminSidebar = () => {
   const navItems = [
@@ -15,8 +16,12 @@ const AdminSidebar = () => {
   return (
     <aside className="w-[286px] shrink-0 bg-white border-r border-gray-100 flex flex-col h-full font-work p-[42px_32px_52px_30px] gap-[56px] overflow-y-auto">
       
-      <div className="flex items-center gap-[11px] text-[24px] text-[#297aff] font-semibold">
-        <div className="w-[31.6px] h-[36.1px] bg-[#297aff] text-white flex items-center justify-center rounded-md italic">P</div>
+      <div className="flex items-center gap-[11px] text-[24px] text-black font-semibold">
+                    <img
+              src={image.navbarLogo}
+              alt="PrimeOrbit"
+              className="h-[36px] w-auto md:h-[37px] object-contain"
+            />
         <span>PrimeOrbit</span>
       </div>
 
