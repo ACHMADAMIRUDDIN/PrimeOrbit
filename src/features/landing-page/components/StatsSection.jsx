@@ -67,31 +67,26 @@ const StatsSection = () => {
             </div>
           </div>
 
-          {/* KANAN: Gambar Utama & Card Badge Tumpang Tindih */}
-          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end mt-16 lg:mt-0">
+          {/* KANAN: Gambar Utama & Card Badge Terpisah dan Lebih Kecil */}
+          <div className="lg:col-span-5 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-6 mt-12 lg:mt-0 w-full">
             
-            {/* Wrapper Relatif yang membungkus gambar dan badge agar badge diposisikan relatif terhadap gambar */}
-            <div className="relative w-full max-w-[480px]">
-              
-              {/* Bingkai Gambar Besar */}
-              <div className="w-full h-[500px] rounded-[32px] overflow-hidden relative z-0">
-                <img 
-                  src={image.kontener || image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
-                  alt="Logistics Operations" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            {/* Bingkai Gambar Lebih Kecil */}
+            <div className="w-[240px] h-[330px] rounded-[24px] overflow-hidden shadow-lg shrink-0">
+              <img 
+                src={image.kontener || image.roadTruck || image.cargoShipAerial || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
+                alt="Logistics Operations" 
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-              {/* Card Badge Persentase Biru (Tumpang Tindih / Absolute) */}
-              <div className="absolute -left-8 lg:-left-[150px] bottom-0 z-10 w-[220px] h-[280px] bg-[#2A2A7C] rounded-[32px] p-6 flex flex-col justify-between shadow-2xl hover:scale-[1.02] transition-transform duration-300">
-                <p className="text-sm font-medium text-white/90 leading-snug font-inter">
-                  On-time delivery rate across our global network
-                </p>
-                <h4 className="text-[44px] md:text-[48px] font-medium tracking-tight leading-none font-sans text-white">
-                  99.9%
-                </h4>
-              </div>
-
+            {/* Card Badge Persentase Biru (Terpisah, Static / Tidak Overlap) */}
+            <div className="w-[180px] h-[230px] bg-[#2A2A7C] rounded-[24px] p-6 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform duration-300 shrink-0">
+              <p className="text-xs font-medium text-white/90 leading-snug font-inter">
+                On-time delivery rate across our global network
+              </p>
+              <h4 className="text-[36px] md:text-[40px] font-medium tracking-tight leading-none font-sans text-white">
+                99.9%
+              </h4>
             </div>
 
           </div>
