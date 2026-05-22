@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const ServicesHeroMockup = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f5f5f5] px-4 pt-[156px] pb-0 md:px-6 md:pt-[172px] lg:pt-[186px]">
+    <section data-theme="light" className="relative w-full overflow-hidden bg-[#f5f5f5] px-4 pt-[156px] pb-0 md:px-6 md:pt-[172px] lg:pt-[186px]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[72%] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.92),_rgba(245,245,245,1)_72%)]"></div>
 
       <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center">

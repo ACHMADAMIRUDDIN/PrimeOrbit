@@ -135,12 +135,12 @@ const LocationSelector = () => {
 
 const CalculatorSection = () => {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      <img
-        src={image.portTerminal}
-        alt="Stacked shipping containers"
-        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
-      />
+    <section data-theme="light" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background Image menggunakan image.kontener */}
+      <div
+        className="absolute inset-0 z-0 opacity-100 bg-cover bg-center"
+        style={{ backgroundImage: `url(${image.kontener})` }}
+      ></div>
 
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="bg-white rounded-xl p-8 md:p-16 shadow-xl flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">

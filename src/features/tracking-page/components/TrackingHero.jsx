@@ -1,5 +1,6 @@
 import React from 'react';
 import image from '../../../assets/image';
+import { Truck } from 'lucide-react';
 
 const FloatingBadgeIcon = () => (
   <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#0f5de8]">
@@ -33,45 +34,65 @@ const FloatingBadge = ({ className = '' }) => (
 
 const TrackingHero = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#78828b]">
-      <img
-        src={image.containerStacks}
-        alt="Container stacks"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+    <section data-theme="dark" className="w-full h-[880px] bg-[#191919] relative overflow-hidden flex flex-col items-center pt-[228px] text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img src={image.trackingHeroBg} alt="Tracking Hero Background" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[#0d0f14]/30 bg-gradient-to-t from-[#191919] via-[#191919]/20 to-black/40"></div>
+      </div>
+      
+      {/* Floating Tracklane Badges */}
+      <div className="absolute top-[31%] left-[23%] transform rotate-[8deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
+        <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
+          <Truck size={18} className="text-white fill-white animate-pulse" />
+        </div>
+        <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
+          Tracklane
+        </span>
+      </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(111,120,129,0.52)_0%,rgba(79,89,99,0.26)_36%,rgba(18,22,27,0.18)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.05)_45%,rgba(0,0,0,0.14)_100%)]" />
+      <div className="absolute top-[60%] left-[4%] transform -rotate-[12deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
+        <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
+          <Truck size={18} className="text-white fill-white" />
+        </div>
+        <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
+          Tracklane
+        </span>
+      </div>
 
-      <FloatingBadge className="left-[18%] top-[168px] -translate-x-1/2 md:left-[24%] md:top-[188px]" />
-      <FloatingBadge className="left-[8%] top-[360px] -translate-x-1/2 md:left-[7%] md:top-[424px]" />
-      <FloatingBadge className="right-[7%] top-[236px] rotate-[8deg] md:right-[8%] md:top-[252px]" />
+      <div className="absolute top-[41%] right-[9%] transform rotate-[8deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
+        <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
+          <Truck size={18} className="text-white fill-white" />
+        </div>
+        <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
+          Tracklane
+        </span>
+      </div>
 
-      <div className="relative mx-auto flex min-h-[610px] w-full max-w-[1320px] flex-col items-center px-[22px] pb-[42px] pt-[162px] text-white md:min-h-[700px] md:px-[42px] md:pb-[54px] md:pt-[190px] lg:min-h-[748px] lg:px-[56px] lg:pb-[66px] lg:pt-[204px]">
-        <div className="flex w-full max-w-[941px] flex-col items-center gap-[22px]">
-          <h1 className="text-center font-sans text-[50px] font-medium leading-[108%] tracking-[-0.07em] text-white md:text-[76px] lg:text-[78px]">
-            Track Your
-            <br />
-            Shipment Instantly
-          </h1>
+      {/* Hero Content */}
+      <div className="flex flex-col items-center gap-[40px] z-10 w-full max-w-[941px] px-4">
+        
+        <h1 className="text-[52px] md:text-[84px] tracking-[-0.05em] leading-[110%] font-medium text-center font-sans max-w-[900px] text-white">
+          Track Your <br className="hidden md:block"/>Shipment Instantly
+        </h1>
+        
+        <p className="text-[18px] md:text-[22px] tracking-[-0.02em] leading-[140%] font-sans text-center max-w-[680px] text-white/90 mt-[10px]">
+          From global forwarding to local distribution <br className="hidden md:block"/>
+          we streamline your supply chain with precision and transparency.
+        </p>
 
-          <p className="max-w-[650px] text-center font-geist text-[20px] leading-[120%] tracking-[-0.02em] text-white/92 md:text-[24px]">
-            From global forwarding to local distribution
-            <br className="hidden md:block" />
-            we streamline your supply chain with precision and transparency.
-          </p>
-
-          <div className="mt-[38px] flex w-full max-w-[941px] flex-col items-center rounded-[100px] border border-white/70 bg-white/16 p-[8px_8px_8px_22px] backdrop-blur-[7px] md:h-[84px] md:flex-row md:justify-between md:gap-0">
-            <input
-              type="text"
-              placeholder="12345"
-              className="w-full flex-1 bg-transparent px-4 py-2 text-[20px] font-medium leading-[120%] text-white placeholder-white outline-none md:px-0 md:py-0 md:text-[38px]"
-            />
-
-            <button className="mt-[10px] w-full rounded-[100px] bg-white px-[30px] py-[18px] font-sans text-[18px] font-medium leading-none text-[#111111] transition-colors hover:bg-white/90 md:mt-0 md:w-auto md:px-[34px] md:py-[18px] md:text-[20px]">
-              Track Package
-            </button>
-          </div>
+        {/* Input Container */}
+        <div className="w-full max-w-[941px] h-auto md:h-[88px] mt-[32px] backdrop-blur-[16px] bg-white/10 border border-white/40 rounded-[100px] flex flex-col md:flex-row items-center justify-between p-[8px_8px_8px_32px] gap-[12px] md:gap-0 shadow-[0_16px_40px_rgba(0,0,0,0.2)]">
+          
+          <input 
+            type="text" 
+            placeholder="2315482546"
+            className="bg-transparent outline-none border-none text-white text-[22px] md:text-[26px] font-light leading-[120%] placeholder-white/80 w-full md:w-auto flex-1 px-4 md:px-0"
+          />
+          
+          <button className="w-full md:w-auto h-full rounded-[100px] bg-white text-black flex items-center justify-center px-[42px] py-[18px] md:py-0 text-[18px] md:text-[20px] font-sans font-medium hover:bg-white/90 active:scale-[0.98] transition-all duration-200">
+            Track Package
+          </button>
         </div>
       </div>
     </section>

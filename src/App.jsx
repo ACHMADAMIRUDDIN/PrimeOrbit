@@ -6,11 +6,13 @@ import GlobalNetworkPage from './features/global-network-page/GlobalNetworkPage'
 import WhyChooseUsPage from './features/why-choose-us-page/WhyChooseUsPage';
 import ContactUsPage from './features/contact-us-page/ContactUsPage';
 import AdminDashboard from './features/admin/AdminDashboard';
+import ScrollToTop from './components/layout/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />

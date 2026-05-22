@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyChooseUsAbout = () => {
   return (
-    <section className="w-full bg-black text-white flex flex-col items-center p-[60px_20px] md:p-[80px_120px] gap-[40px] md:gap-[46px] text-center overflow-hidden">
+    <section data-theme="dark" className="w-full bg-black text-white flex flex-col items-center p-[60px_20px] md:p-[80px_120px] gap-[40px] md:gap-[46px] text-center overflow-hidden">
       
       {/* PrimeOrbit Label with Gold Lines */}
       <div className="h-[56px] flex items-center justify-center gap-[12px]">
