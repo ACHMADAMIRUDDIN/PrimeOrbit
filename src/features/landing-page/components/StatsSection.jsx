@@ -10,12 +10,11 @@ const StatsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full mb-16 lg:mb-24">
           <div className="lg:col-span-7 flex items-center">
             {/* Logo */}
-            <div className="text-white">
-              <svg className="w-14 h-14" viewBox="0 0 64 64" fill="currentColor">
-                <path d="M10 14L32 4l22 10v24L32 60 10 38V14zm6 4.5v16.7l16 11.4 16-11.4V18.5L32 11.2 16 18.5z" />
-                <path d="M24 26h16v4H24zm0 8h10v4H24z" />
-              </svg>
-            </div>
+            <img
+              src={image.wordmarkLogo}
+              alt="PrimeOrbit logo"
+              className="h-[58px] w-auto md:h-[70px]"
+            />
           </div>
           <div className="lg:col-span-5 flex items-center justify-start lg:justify-end mt-4 lg:mt-0">
             {/* Label Kanan Atas */}

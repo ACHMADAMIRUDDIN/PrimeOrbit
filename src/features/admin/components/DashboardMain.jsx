@@ -1,8 +1,38 @@
 import React from 'react';
-import image from '../../../assets/image';
 import { Plus, Settings, Search, Package, MapPin, Truck, ChevronDown, MoreVertical } from 'lucide-react';
 
 const DashboardMain = () => {
+  const mapLandforms = [
+    'M128 210C172 168 248 160 292 188C332 212 338 256 310 288C280 320 220 326 170 304C122 282 94 246 128 210Z',
+    'M286 356C316 338 360 344 384 372C406 400 402 446 374 486C350 522 330 566 300 578C272 590 244 556 250 520C254 488 238 448 248 412C256 388 266 370 286 356Z',
+    'M356 118C372 104 398 100 418 110C432 118 436 136 422 148C408 160 382 164 364 156C350 150 346 130 356 118Z',
+    'M588 188C620 172 676 174 712 196C742 214 748 248 724 272C698 296 654 302 620 294C580 284 548 254 556 222C562 204 572 194 588 188Z',
+    'M620 320C658 300 712 308 738 340C762 370 756 420 730 454C704 490 666 524 626 516C592 510 572 470 574 432C576 394 586 338 620 320Z',
+    'M794 176C858 138 964 130 1054 154C1136 176 1208 228 1204 282C1180 330 1118 346 1050 338C1004 332 962 312 934 298C902 312 870 318 830 310C778 300 740 258 748 220C754 198 772 188 794 176Z',
+    'M1150 458C1184 442 1232 446 1264 468C1294 488 1306 526 1286 554C1266 582 1220 592 1182 584C1146 576 1124 548 1124 516C1124 492 1130 468 1150 458Z',
+  ];
+
+  const mapRoutes = [
+    'M190 252C318 210 472 220 616 242',
+    'M626 236C770 204 934 220 1094 266',
+    'M636 344C710 332 810 350 932 392',
+    'M266 436C402 400 548 392 688 420',
+    'M960 506C1022 486 1104 494 1186 532',
+  ];
+
+  const mapPoints = [
+    { cx: 186, cy: 252, r: 5 },
+    { cx: 418, cy: 224, r: 4 },
+    { cx: 624, cy: 238, r: 5 },
+    { cx: 822, cy: 224, r: 4 },
+    { cx: 1088, cy: 266, r: 5 },
+    { cx: 636, cy: 344, r: 4 },
+    { cx: 910, cy: 386, r: 4 },
+    { cx: 268, cy: 438, r: 4 },
+    { cx: 682, cy: 420, r: 4 },
+    { cx: 1184, cy: 530, r: 5 },
+  ];
+
   return (
     <div className="flex flex-col gap-[24px] font-work text-black w-full min-w-0 max-w-full">
       
@@ -244,8 +274,55 @@ const DashboardMain = () => {
       <div className="w-full h-[380px] rounded-[24px] bg-white relative overflow-hidden flex shadow-sm border border-gray-100">
          
          {/* Map Background Placeholder */}
-         <div className="absolute inset-0 z-0">
-           <img src={image.Globalnetworkpng} alt="Map" className="w-full h-full object-cover opacity-50 filter grayscale" />
+         <div className="absolute inset-0 z-0 overflow-hidden bg-[#f8fafc]">
+           <svg
+             viewBox="0 0 1440 760"
+             className="h-full w-full"
+             preserveAspectRatio="xMidYMid slice"
+             aria-hidden="true"
+           >
+             <defs>
+               <linearGradient id="dashboard-map-surface" x1="0" y1="0" x2="1" y2="1">
+                 <stop offset="0%" stopColor="#f9fbff" />
+                 <stop offset="100%" stopColor="#eef3fb" />
+               </linearGradient>
+               <linearGradient id="dashboard-map-route" x1="0" y1="0" x2="1" y2="0">
+                 <stop offset="0%" stopColor="#bcc8e6" stopOpacity="0.25" />
+                 <stop offset="50%" stopColor="#93a5d5" stopOpacity="0.7" />
+                 <stop offset="100%" stopColor="#bcc8e6" stopOpacity="0.2" />
+               </linearGradient>
+             </defs>
+
+             <rect width="1440" height="760" fill="url(#dashboard-map-surface)" />
+
+             <g opacity="0.88">
+               {mapLandforms.map((path, index) => (
+                 <path key={path} d={path} fill={index % 2 === 0 ? '#dbe4f2' : '#e5ebf6'} />
+               ))}
+             </g>
+
+             <g opacity="0.52">
+               <circle cx="232" cy="242" r="132" fill="#eef3fb" />
+               <circle cx="676" cy="278" r="158" fill="#edf2fb" />
+               <circle cx="1078" cy="264" r="176" fill="#edf2fb" />
+             </g>
+
+             <g stroke="url(#dashboard-map-route)" strokeWidth="2.5" strokeDasharray="7 10" strokeLinecap="round" fill="none" opacity="0.9">
+               {mapRoutes.map((path) => (
+                 <path key={path} d={path} />
+               ))}
+             </g>
+
+             <g>
+               {mapPoints.map((point, index) => (
+                 <g key={`${point.cx}-${point.cy}`}>
+                   <circle cx={point.cx} cy={point.cy} r={point.r + 5} fill="#8ea2d5" opacity={index % 3 === 0 ? 0.18 : 0.1} />
+                   <circle cx={point.cx} cy={point.cy} r={point.r} fill="#6b7fbc" opacity="0.65" />
+                 </g>
+               ))}
+             </g>
+           </svg>
+           <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_38%,rgba(42,42,124,0.05),transparent_34%),radial-gradient(circle_at_62%_52%,rgba(42,42,124,0.04),transparent_28%)]" />
            {/* Fade overlay on right side to match Figma */}
            <div className="absolute right-0 top-0 bottom-0 w-[50%] bg-gradient-to-l from-white to-transparent z-10"></div>
          </div>
