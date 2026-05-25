@@ -4,11 +4,11 @@ import { ArrowUpRight } from 'lucide-react';
 const TailoredLogistics = () => {
   return (
     <section data-theme="dark" className="bg-[#191919] w-full py-[80px] px-4 md:px-[80px] flex flex-col gap-[80px] text-white">
-      
+
       {/* Header */}
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-[40px] md:gap-[20px]">
         <div className="flex flex-col gap-[12px] max-w-[691px]">
-          <h2 className="text-[40px] md:text-[56px] font-medium leading-[120%] font-sans">
+          <h2 className="text-[32px] md:text-[48px] font-medium leading-[120%] font-sans">
             Tailored Logistics <br />
             Services to Fit Your Business
           </h2>
@@ -27,7 +27,7 @@ const TailoredLogistics = () => {
 
       {/* Cards Grid */}
       <div className="w-full h-auto md:h-[395px] flex flex-col md:flex-row items-stretch gap-[24px] text-black">
-        
+
         {/* Card 1: Ocean Freight */}
         <div className="flex-1 bg-primary rounded-[20px] p-[24px] flex flex-col justify-between items-start min-h-[300px]">
           <div className="flex flex-col gap-[12px]">

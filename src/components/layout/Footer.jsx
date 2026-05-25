@@ -16,8 +16,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-y-[44px] md:grid-cols-2 md:gap-x-[36px] lg:grid-cols-[minmax(0,1.7fr)_170px_220px] lg:gap-x-[56px]">
           <div className="max-w-[520px] flex flex-col justify-between">
             <div>
-              <h2 className="max-w-[470px] font-sans text-[34px] font-medium leading-[1.15] tracking-[-0.03em] text-white md:text-[46px] lg:text-[52px]">
-                Reliable Logistics <span className="text-primary">Always On <br className="hidden md:block" /> Time Delivery</span>
+              <h2 className="max-w-[440px] font-sans text-[22px] font-medium leading-[1.15] tracking-[-0.03em] text-[#FFCD51] md:text-[28px] lg:text-[32px]">
+                Reliable Logistics Always On <br className="hidden md:block" /> Time Delivery
               </h2>
             </div>
             <p className="mt-16 md:mt-24 lg:mt-[105px] text-[11px] leading-none tracking-[-0.02em] text-white/72">
