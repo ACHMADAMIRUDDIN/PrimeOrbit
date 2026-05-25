@@ -77,6 +77,7 @@ const image = {
   trackingGlobalFootprintMap: gambar_34,
   whyChooseUsSuccessMap: gambar_35,
   trackingHeroBg: gambar_14,
+  statsImage: gambar_29,
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
     '1a1378a26a489846263a4e1779ce749298c8222b.png': gambar_1,

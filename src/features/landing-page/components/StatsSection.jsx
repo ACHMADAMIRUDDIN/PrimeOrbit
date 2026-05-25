@@ -71,11 +71,11 @@ const StatsSection = () => {
           <div className="lg:col-span-7 flex flex-col sm:flex-row items-end justify-center lg:justify-end gap-6 mt-12 lg:mt-0 w-full">
             
             {/* Card Badge Persentase Biru */}
-            <div className="w-full sm:w-[200px] h-[270px] bg-[#20236a] rounded-[24px] p-6 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform duration-300 shrink-0">
+            <div className="w-full sm:w-[180px] h-[230px] bg-[#20236a] rounded-[24px] p-5 flex flex-col justify-between shadow-lg hover:scale-[1.02] transition-transform duration-300 shrink-0">
               <p className="text-xs sm:text-sm font-medium text-white/90 leading-snug font-inter">
                 On-time delivery rate across our global network
               </p>
-              <h4 className="text-[36px] sm:text-[40px] font-semibold tracking-tight leading-none font-sans text-white">
+              <h4 className="text-[32px] sm:text-[36px] font-semibold tracking-tight leading-none font-sans text-white">
                 99.9%
               </h4>
             </div>
@@ -83,7 +83,7 @@ const StatsSection = () => {
             {/* Bingkai Gambar Lebih Kecil */}
             <div className="w-full sm:w-[300px] md:w-[320px] lg:w-[310px] xl:w-[360px] h-[440px] sm:h-[480px] rounded-[24px] overflow-hidden shadow-lg shrink-0">
               <img 
-                src={image.kontener || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
+                src={image.statsImage || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
                 alt="Logistics Operations" 
                 className="w-full h-full object-cover"
               />
