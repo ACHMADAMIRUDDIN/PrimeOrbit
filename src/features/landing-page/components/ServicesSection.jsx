@@ -11,7 +11,7 @@ const ServicesSection = () => {
       <div className="mx-auto w-full max-w-[1540px]">
         {/* HEADER */}
         <div className="mb-[42px] flex flex-col justify-between gap-6 md:flex-row md:items-start">
-          <h2 className="text-[34px] font-semibold leading-[1.18] tracking-[-0.03em] text-[#303030] md:text-[42px] lg:text-[52px]">
+          <h2 className="text-[34px] font-normal leading-[1.18] tracking-[-0.03em] text-[#303030] md:text-[42px] lg:text-[52px]">
             Smarter Routes,
             <br />
             Faster Delivery
