@@ -36,6 +36,9 @@ import gambar_35 from './gambar/3243rew-htru65rut-ytf6556r7657ytur67.png';
 import gambar_37 from './gambar/Container.png';
 import gambar_38 from './gambar/Frame.png';
 import gambar_39 from './gambar/Fast & Reliable Delivery Icon.png';
+import gambar_40 from './gambar/Shipment Details Background.png';
+import gambar_41 from './gambar/Vector.png';
+
 
 
 const image = {
@@ -70,6 +73,8 @@ const image = {
   truk: gambar_15,
   warehouse: gambar_38,
   astruck: gambar_39,
+  shipmentDetailsBg: gambar_40,
+  vector: gambar_41,
 
 
 
@@ -108,6 +113,8 @@ const image = {
     'Container.png': gambar_37,
     'Frame.png': gambar_38,
     'Fast & Reliable Delivery Icon.png': gambar_39,
+    'Shipment Details Background.png': gambar_40,
+    'Vector.png': gambar_41
   }
 };
 

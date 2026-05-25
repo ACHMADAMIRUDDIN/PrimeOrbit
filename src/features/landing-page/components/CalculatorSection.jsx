@@ -6,9 +6,9 @@ const locationOptions = ['Singapore', 'Netherlands', 'Indonesia', 'United States
 
 const ShipmentDetailsIcon = () => (
   <span className="flex h-[18px] w-[18px] items-center justify-center rounded-[5px] bg-[#3B82F6]/15">
-    <svg 
-      aria-hidden="true" 
-      className="h-[10px] w-[10px] fill-[#005BEA]" 
+    <svg
+      aria-hidden="true"
+      className="h-[10px] w-[10px] fill-[#005BEA]"
       viewBox="0 0 24 24"
     >
       <path d="M4 2l16 11.33-6.42 1.4L18 20.53l-2.83 1.47-4.27-5.94-4.9 3.44V2z" />
@@ -41,9 +41,8 @@ const LocationSelectRow = ({ value, onClick, isOpen }) => (
     <TargetMarkerIcon />
     <span className="flex-1 text-[14px] font-medium text-[#1c1c1c]">{value}</span>
     <ChevronDown
-      className={`shrink-0 text-[#2a2a2a] transition-transform duration-200 group-hover:translate-y-[1px] ${
-        isOpen ? 'rotate-180' : ''
-      }`}
+      className={`shrink-0 text-[#2a2a2a] transition-transform duration-200 group-hover:translate-y-[1px] ${isOpen ? 'rotate-180' : ''
+        }`}
       size={18}
       strokeWidth={1.8}
     />
@@ -54,10 +53,10 @@ const LocationSelector = () => {
   // State untuk menyimpan lokasi asal dan tujuan
   const [origin, setOrigin] = useState(locationOptions[0]);
   const [destination, setDestination] = useState(locationOptions[1]);
-  
+
   // State untuk melacak dropdown mana yang sedang terbuka ('origin', 'destination', atau null)
   const [activeDropdown, setActiveDropdown] = useState(null);
-  
+
   const containerRef = useRef(null);
 
   // Menutup dropdown otomatis jika pengguna mengklik di luar area komponen
@@ -91,18 +90,18 @@ const LocationSelector = () => {
 
       <div className="space-y-[10px]">
         {/* Baris Asal */}
-        <LocationSelectRow 
-          value={origin} 
-          onClick={() => handleRowClick('origin')} 
+        <LocationSelectRow
+          value={origin}
+          onClick={() => handleRowClick('origin')}
           isOpen={activeDropdown === 'origin'}
         />
-        
+
         <div className="ml-[38px] h-px bg-[#d8d8d8]" />
-        
+
         {/* Baris Tujuan */}
-        <LocationSelectRow 
-          value={destination} 
-          onClick={() => handleRowClick('destination')} 
+        <LocationSelectRow
+          value={destination}
+          onClick={() => handleRowClick('destination')}
           isOpen={activeDropdown === 'destination'}
         />
       </div>
@@ -118,11 +117,10 @@ const LocationSelector = () => {
                 key={location}
                 type="button"
                 onClick={() => handleSelectLocation(location)}
-                className={`flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-sm font-medium transition-colors text-left ${
-                  isSelected 
-                    ? 'bg-[#2d66d9]/10 text-[#2d66d9]' 
+                className={`flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-sm font-medium transition-colors text-left ${isSelected
+                    ? 'bg-[#2d66d9]/10 text-[#2d66d9]'
                     : 'text-[#1c1c1c] hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 {location}
               </button>
@@ -165,7 +163,14 @@ const CalculatorSection = () => {
           <div className="lg:w-1/2 w-full">
             <div className="bg-[#F8F9FA] rounded-3xl p-6 md:p-8 border border-gray-100 shadow-inner">
               <div className="mb-8 flex items-center gap-3">
-                <ShipmentDetailsIcon />
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[7px] bg-[#dbe3f4]">
+                  <img
+                    src={image.vector}
+                    alt="Shipment Details Icon"
+                    className="h-[11px] w-[11px] object-contain" // Ukuran ikon diperkecil dari 14px ke 11px
+                  />
+                </div>
+
                 <h3 className="text-[15px] font-medium text-[#5a5a5a]">Shipment Details</h3>
               </div>
 
@@ -183,7 +188,7 @@ const CalculatorSection = () => {
                     {/* Arrow custom untuk select option */}
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
                       <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </div>
                   </div>
