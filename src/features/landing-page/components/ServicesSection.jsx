@@ -4,190 +4,175 @@ import { Search, ArrowRight, Check } from 'lucide-react';
 
 const ServicesSection = () => {
   return (
-    <section id="services" data-theme="light" className="py-24 bg-white px-4 md:px-6 lg:px-[55px]">
+    <section
+      id="services"
+      className="bg-white px-4 py-24 font-inter antialiased md:px-6 lg:px-[55px]"
+    >
       <div className="mx-auto w-full max-w-[1540px]">
-        
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-          <h2 className="text-3xl md:text-[38px] lg:text-[42px] font-medium text-[#191919] leading-[1.2] tracking-normal font-sans">
-            Smarter Routes, <br /> Faster Delivery
+        {/* HEADER */}
+        <div className="mb-[42px] flex flex-col justify-between gap-6 md:flex-row md:items-start">
+          <h2 className="text-[34px] font-semibold leading-[1.18] tracking-[-0.03em] text-[#303030] md:text-[42px] lg:text-[52px]">
+            Smarter Routes,
+            <br />
+            Faster Delivery
           </h2>
-          <p className="text-gray-500 max-w-sm text-sm md:text-[15px] font-normal leading-relaxed text-left md:text-left pb-1">
 
+          <p className="max-w-[340px] pt-4 text-[13px] font-normal leading-[1.45] text-[#333333] md:text-[14px] lg:mr-[80px]">
             Accelerate your operations with PrimeOrbit advanced logistics infrastructure designed
           </p>
         </div>
-        {/* Asymmetrical Layout - Two Rows */}
-        <div className="flex flex-col gap-8 w-full">
-          
-          {/* Row 1: Warehouse Card (58%) & Search/Tracking Mockup Card (42%) */}
-          <div className="flex flex-col lg:flex-row gap-8 w-full">
-            
-            {/* 1. Warehouse Card */}
-            <div className="relative rounded-[32px] overflow-hidden h-[460px] w-full lg:w-[58%] shadow-sm group">
-              <img 
-                src={image.warehouseOperations || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"} 
-                alt="Warehouse Management Solutions" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent group-hover:bg-black/30 transition-all duration-500 flex flex-col justify-end p-8 md:p-10">
-                <h3 className="text-white text-2xl font-semibold mb-2.5 font-plusJakarta">Warehouse Management Solutions</h3>
-                <p className="text-white/80 text-[14px] font-normal leading-relaxed max-w-[90%]">
-                  Warehouse Management Solutions enables businesses to manage inventory, storage, and warehouse operations efficiently through a ce...
-                </p>
-              </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-12 gap-[18px]">
+          {/* CARD 1 */}
+          <div className="group relative col-span-12 h-[420px] overflow-hidden rounded-[18px] lg:col-span-7">
+            <img
+              src={image.warehouseOperations}
+              alt="Warehouse Management Solutions"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/25 to-transparent px-[30px] pb-[28px]">
+              <h3 className="mb-3 text-[24px] font-semibold tracking-tight text-white">
+                Warehouse Management Solutions
+              </h3>
+
+              <p className="line-clamp-2 max-w-[92%] text-[15px] leading-[1.55] text-white/75">
+                Warehouse Management Solutions enables businesses to manage inventory, storage, and
+                warehouse operations efficiently through a ce...
+              </p>
             </div>
-
-            {/* 2. Search/Tracking Mockup Card */}
-            <div className="bg-[#F4F5F6] rounded-[32px] p-6 h-[460px] w-full lg:w-[42%] flex flex-col justify-between shadow-sm">
-              {/* Fake Search Bar */}
-              <div className="bg-white rounded-full py-3 px-5 flex items-center gap-3 border border-gray-100/50 shadow-sm">
-                <Search size={16} className="text-gray-400" />
-                <span className="text-gray-400 text-sm font-normal">Search</span>
-              </div>
-
-              {/* White Container Inside Tracking */}
-              <div className="bg-white rounded-[24px] p-6 flex-1 mt-4 flex flex-col justify-between shadow-sm overflow-hidden h-[330px]">
-                
-                {/* Horizontal Progress Steps */}
-                <div className="flex items-center gap-2 w-full mb-6">
-                  <div className="w-5 h-5 rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-[10px] font-bold">✓</div>
-                  <div className="flex-1 border-t-2 border-dotted border-gray-200"></div>
-                  <div className="w-5 h-5 rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-[10px] font-bold">✓</div>
-                  <div className="flex-1 border-t-2 border-dotted border-gray-200"></div>
-                  <div className="text-[10px] font-bold text-gray-400 tracking-wider">STEP 3</div>
-                  <div className="flex-1 border-t-2 border-dotted border-gray-200"></div>
-                  <div className="text-[10px] font-bold text-gray-400 tracking-wider">STEP 4</div>
-                </div>
-
-                {/* Tracking ID Header */}
-                <div className="flex justify-between items-end mb-4">
-                  <div>
-                    <div className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Tracking ID</div>
-                    <div className="text-[17px] font-semibold text-[#191919] font-plusJakarta">#9876QWER</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Estimate</div>
-                    <div className="text-[17px] font-semibold text-[#191919] font-plusJakarta">10 days</div>
-                  </div>
-                </div>
-
-                {/* Timeline with Fade Overlay */}
-                <div className="relative flex-1 mt-2 overflow-hidden h-[180px]">
-                  {/* Vertical Timeline */}
-                  <div className="relative pl-6 border-l-2 border-dotted border-gray-200 space-y-4 h-full overflow-y-auto no-scrollbar pb-6">
-                    
-                    {/* Item 1 */}
-                    <div className="relative flex justify-between items-start">
-                      <div className="absolute w-2.5 h-2.5 bg-[#3B82F6] rounded-full -left-[31px] top-[5px] ring-4 ring-blue-50"></div>
-                      <div>
-                        <p className="text-[10px] font-semibold text-gray-400">Current Location</p>
-                        <p className="text-xs font-bold text-[#191919]">Indonesia</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-xs font-bold text-[#191919]">12.00</p>
-                        <p className="text-[10px] font-semibold text-gray-400">Time</p>
-                      </div>
-                    </div>
-                    
-                    {/* Item 2 */}
-                    <div className="relative flex justify-between items-start">
-                      <div className="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[31px] top-[5px]"></div>
-                      <div>
-                        <p className="text-[10px] font-semibold text-gray-400">Departur Waypoint</p>
-                        <p className="text-xs font-bold text-[#191919]">Singapore</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-xs font-bold text-[#191919]">08.00</p>
-                        <p className="text-[10px] font-semibold text-gray-400">Time</p>
-                      </div>
-                    </div>
-
-                    {/* Item 3 */}
-                    <div className="relative flex justify-between items-start">
-                      <div className="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[31px] top-[5px]"></div>
-                      <div>
-                        <p className="text-[10px] font-semibold text-gray-400">Arrival Waypoint</p>
-                        <p className="text-xs font-bold text-[#191919]">Singapore</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-xs font-bold text-[#191919]">03.00</p>
-                        <p className="text-[10px] font-semibold text-gray-400">Time</p>
-                      </div>
-                    </div>
-
-                    {/* Item 4 */}
-                    <div className="relative flex justify-between items-start opacity-70">
-                      <div className="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[31px] top-[5px]"></div>
-                      <div>
-                        <p className="text-[10px] font-semibold text-gray-400">Current Location</p>
-                        <p className="text-xs font-bold text-[#191919]">Indonesia</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-xs font-bold text-[#191919]">12.00</p>
-                        <p className="text-[10px] font-semibold text-gray-400">Time</p>
-                      </div>
-                    </div>
-
-                  </div>
-                  {/* Premium Bottom Fade Mask */}
-                  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-10"></div>
-                </div>
-
-              </div>
-            </div>
-            
           </div>
 
-          {/* Row 2: Yellow Card (42%) & Shipment Management Card (58%) */}
-          <div className="flex flex-col lg:flex-row gap-8 w-full">
-            
-            {/* 3. Yellow Card */}
-            <div className="bg-[#FFCD51] rounded-[32px] p-8 md:p-10 h-[460px] w-full lg:w-[42%] flex flex-col justify-between shadow-sm">
-              <div>
-                <h3 className="text-3xl md:text-[38px] font-semibold text-[#191919] mb-5 leading-[1.1] tracking-tight font-plusJakarta">
-                  Next-Gen Smart Shipping<br/>Logistics Solutions
-                </h3>
-                <p className="text-[#191919] text-[15px] font-semibold leading-relaxed max-w-[95%]">
-                  Provides innovative logistics solutions for modern, efficient, and scalable supply chains — streamlining operations, improving shipment visibility, and enabling smarter logistics management.
-                </p>
-              </div>
-              
-              {/* Footer Arrows & Active Bar */}
-              <div className="flex items-center gap-4 w-full">
-                {/* Arrow Left */}
-                <div className="w-11 h-11 rounded-full border border-[#191919] flex items-center justify-center cursor-pointer hover:bg-[#191919] hover:text-[#FFCD51] transition-colors duration-300 shrink-0">
-                  <ArrowRight size={18} className="rotate-180" />
-                </div>
-                
-                {/* Custom Horizontal Slider Bar */}
-                <div className="flex-1 flex items-center relative mx-2">
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[35%] h-[3px] bg-[#191919] rounded-full"></div>
-                  <div className="w-full h-[1px] bg-[#191919] opacity-20"></div>
-                </div>
-                
-                {/* Arrow Right */}
-                <div className="w-11 h-11 rounded-full border border-[#191919] flex items-center justify-center cursor-pointer hover:bg-[#191919] hover:text-[#FFCD51] transition-colors duration-300 shrink-0">
-                  <ArrowRight size={18} />
-                </div>
-              </div>
+          {/* CARD 2 */}
+          <div className="relative col-span-12 h-[420px] overflow-hidden rounded-[18px] bg-[#F4F4F4] p-[20px] lg:col-span-5">
+            <div className="flex h-[44px] items-center gap-3 rounded-[10px] bg-white px-4 shadow-sm">
+              <Search size={16} strokeWidth={2.4} className="text-[#8f8f8f]" />
+              <span className="text-[12px] text-[#aaa]">Search</span>
             </div>
 
-            {/* 4. Shipment Management Card */}
-            <div className="relative rounded-[32px] overflow-hidden h-[460px] w-full lg:w-[58%] shadow-sm group">
-              <img 
-                src={image.containerSupervisor || "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800"} 
-                alt="Logistics Shipment Management" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent group-hover:bg-black/30 transition-all duration-500 flex flex-col justify-end p-8 md:p-10">
-                <h3 className="text-white text-2xl font-semibold mb-2.5 font-plusJakarta">Logistics Shipment Management</h3>
-                <p className="text-white/80 text-[14px] font-normal leading-relaxed max-w-[90%]">
-                  Logistics Shipment Management enables businesses to monitor, organize, and control shipments efficiently, providing real-time visibil...
-                </p>
+            <div className="absolute bottom-0 left-[20px] right-[20px] h-[315px] overflow-hidden rounded-t-[22px] bg-white px-[26px] pt-[22px] shadow-sm">
+              {/* STEPS */}
+              <div className="mb-[26px] flex items-center gap-[9px]">
+                <div className="flex h-[15px] w-[15px] items-center justify-center rounded-full bg-[#4B8DEB] text-white">
+                  <Check size={10} strokeWidth={3} />
+                </div>
+                <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
+
+                <div className="flex h-[15px] w-[15px] items-center justify-center rounded-full bg-[#4B8DEB] text-white">
+                  <Check size={10} strokeWidth={3} />
+                </div>
+                <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
+
+                <span className="whitespace-nowrap text-[9px] font-semibold tracking-wider text-[#555]">
+                  STEP 3
+                </span>
+                <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
+
+                <span className="whitespace-nowrap text-[9px] font-semibold tracking-wider text-[#555]">
+                  STEP 4
+                </span>
+              </div>
+
+              {/* TRACKING HEADER */}
+              <div className="mb-[22px] flex items-end justify-between">
+                <div>
+                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">Tracking ID</p>
+                  <p className="text-[15px] font-bold text-[#222]">#9876QWER</p>
+                </div>
+
+                <div className="text-right">
+                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">Estimate</p>
+                  <p className="text-[15px] font-bold text-[#222]">10 days</p>
+                </div>
+              </div>
+
+              {/* TIMELINE */}
+              <div className="relative ml-1 border-l border-dashed border-[#d9d9d9] pl-7">
+                {[
+                  ['Current Location', 'Indonesia', '12.00'],
+                  ['Departure Waypoint', 'Singapore', '08.00'],
+                  ['Arrival Waypoint', 'Singapore', '03.00'],
+                  ['Current Location', 'Indonesia', '12.00'],
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`relative mb-[17px] flex justify-between ${
+                      index === 3 ? 'opacity-40' : ''
+                    }`}
+                  >
+                    <span
+                      className={`absolute -left-[32px] top-[5px] h-[7px] w-[7px] rounded-full ${
+                        index === 0
+                          ? 'bg-[#4B8DEB] ring-[4px] ring-blue-100'
+                          : 'bg-[#d6d6d6]'
+                      }`}
+                    />
+
+                    <div>
+                      <p className="text-[9px] font-medium text-[#b8b8b8]">{item[0]}</p>
+                      <p className="text-[11px] font-semibold text-[#505050]">{item[1]}</p>
+                    </div>
+
+                    <div className="text-right">
+                      <p className="text-[11px] font-semibold text-[#222]">{item[2]}</p>
+                      <p className="text-[9px] text-[#b8b8b8]">Time</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
 
+          {/* CARD 3 */}
+          <div className="col-span-12 flex h-[350px] flex-col justify-between rounded-[18px] bg-[#FFD76B] p-[30px] lg:col-span-5">
+            <div>
+              <h3 className="mb-[18px] text-[32px] font-semibold leading-[1.12] tracking-[-0.03em] text-black lg:text-[36px]">
+                Next-Gen Smart Shipping
+                <br />
+                Logistics Solutions
+              </h3>
+
+              <p className="max-w-[92%] text-[13px] font-bold leading-[1.35] text-black">
+                Provides innovative logistics solutions for modern, efficient, and scalable supply
+                chains — streamlining operations, improving shipment visibility, and enabling
+                smarter logistics management.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <button className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-black transition hover:bg-black hover:text-[#FFD76B]">
+                <ArrowRight size={15} strokeWidth={2.4} className="rotate-180" />
+              </button>
+
+              <div className="relative h-px flex-1 bg-black/20">
+                <div className="absolute left-0 top-1/2 h-[2px] w-[32%] -translate-y-1/2 rounded-full bg-black" />
+              </div>
+
+              <button className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-black transition hover:bg-black hover:text-[#FFD76B]">
+                <ArrowRight size={15} strokeWidth={2.4} />
+              </button>
+            </div>
+          </div>
+
+          {/* CARD 4 */}
+          <div className="group relative col-span-12 h-[350px] overflow-hidden rounded-[18px] lg:col-span-7">
+            <img
+              src={image.deliveryDocs}
+              alt="Logistics Shipment Management"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/25 to-transparent px-[30px] pb-[28px]">
+              <h3 className="mb-3 text-[24px] font-semibold tracking-tight text-white">
+                Logistics Shipment Management
+              </h3>
+
+              <p className="line-clamp-2 max-w-[92%] text-[15px] leading-[1.55] text-white/75">
+                Logistics Shipment Management enables businesses to monitor, organize, and control
+                shipments efficiently, providing real-time visibil...
+              </p>
+            </div>
           </div>
         </div>
       </div>
