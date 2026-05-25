@@ -4,8 +4,8 @@ import { Search, ArrowRight, Check } from 'lucide-react';
 
 const ServicesSection = () => {
   return (
-    <section id="services" data-theme="light" className="py-24 bg-white">
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+    <section id="services" data-theme="light" className="py-24 bg-white px-4 md:px-6 lg:px-[55px]">
+      <div className="mx-auto w-full max-w-[1540px]">
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
