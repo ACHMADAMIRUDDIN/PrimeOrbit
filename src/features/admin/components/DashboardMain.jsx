@@ -127,18 +127,18 @@ const DashboardMain = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-[20px]">
          
          {/* Shipment Analytics Chart */}
-         <div className="rounded-[24px] bg-white border border-[#eceef1] p-[20px_20px_41px_20px] flex flex-col gap-[40px] relative">
+         <div className="rounded-[24px] bg-white border border-[#eceef1] p-[24px_24px_41px_24px] flex flex-col gap-[30px] relative">
             <div className="flex items-center justify-between text-[18px]">
-               <h3 className="font-medium tracking-[-0.01em] leading-[120%]">Shipment Analytics</h3>
+               <h3 className="font-work font-medium tracking-[-0.01em] leading-[120%]">Shipment Analytics</h3>
                <button className="flex items-center gap-[8px] px-[15px] py-[9px] rounded-full border border-[#e6e7ea] text-[12px] text-gray-600 hover:bg-gray-50">
                  <span>January 2024 - June 2024</span>
                  <ChevronDown size={12} />
                </button>
             </div>
 
-            <div className="flex items-end gap-[15px] h-[220px] relative text-[#989dab] text-[12px] font-sans pr-[10px]">
+            <div className="flex items-end gap-[15px] h-[300px] relative text-[#989dab] text-[12px] font-sans pr-[10px]">
                {/* Left Axis */}
-               <div className="flex flex-col justify-between h-full w-[40px] text-right pb-[25px]">
+               <div className="flex flex-col justify-between h-full w-[40px] text-right pb-[35px]">
                  <span>$100K</span>
                  <span>$75K</span>
                  <span>$50K</span>
@@ -147,46 +147,46 @@ const DashboardMain = () => {
                </div>
                
                {/* Horizontal Grid Lines */}
-               <div className="absolute left-[55px] right-0 h-full flex flex-col justify-between pb-[32px] pointer-events-none">
-                 {[1,2,3,4,5].map((i) => <div key={i} className="w-full border-b border-[#f0f0f0]"></div>)}
+               <div className="absolute left-[55px] right-0 h-full flex flex-col justify-between pb-[42px] pointer-events-none">
+                 {[1,2,3,4,5].map((i) => <div key={i} className="w-full border-b border-[#f4f4f6]"></div>)}
                </div>
 
                {/* Bars Container */}
                <div className="flex-1 flex items-end justify-between px-[10px] h-full relative z-10">
-                  {/* Tooltip Popup (Feb) */}
-                  <div className="absolute top-[-30px] left-[15%] transform -translate-x-1/2 bg-[#2a2a7c] text-white px-[19px] py-[8px] rounded-[24px] text-[14px] font-semibold whitespace-nowrap shadow-lg">
-                    82.500
-                  </div>
-
                   {/* Jan */}
-                  <div className="flex flex-col items-center gap-[11px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[120px] bg-[#e1e1f0] rounded-[24px]"></div>
-                    <span>Jan</span>
+                  <div className="flex-1 flex flex-col items-center gap-[11px] min-w-0">
+                    <div className="w-[90%] max-w-[72px] h-[210px] bg-[#e1e1f0] rounded-[22px] transition-all hover:bg-[#d0d0e8]"></div>
+                    <span className="font-work text-[13px] text-[#797979]">Jan</span>
                   </div>
                   {/* Feb (Active) */}
-                  <div className="flex flex-col items-center gap-[10px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[190px] bg-[#2a2a7c] rounded-[24px]"></div>
-                    <span className="font-semibold text-black">Feb</span>
+                  <div className="flex-1 flex flex-col items-center gap-[10px] min-w-0">
+                    <div className="w-[90%] max-w-[72px] h-[260px] bg-[#20236a] rounded-[22px] transition-all hover:bg-[#20236a]/95"></div>
+                    <span className="font-work text-[13px] font-semibold text-black">Feb</span>
                   </div>
                   {/* Mar */}
-                  <div className="flex flex-col items-center gap-[11px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[80px] bg-[#e1e1f0] rounded-[24px]"></div>
-                    <span>Mar</span>
+                  <div className="flex-1 flex flex-col items-center gap-[11px] min-w-0">
+                    <div className="w-[90%] max-w-[72px] h-[145px] bg-[#e1e1f0] rounded-[22px] transition-all hover:bg-[#d0d0e8]"></div>
+                    <span className="font-work text-[13px] text-[#797979]">Mar</span>
                   </div>
-                  {/* Apr */}
-                  <div className="flex flex-col items-center gap-[11px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[160px] bg-[#e1e1f0] rounded-[24px]"></div>
-                    <span>Apr</span>
+                  {/* Apr (Active tooltip) */}
+                  <div className="flex-1 flex flex-col items-center gap-[11px] min-w-0 relative">
+                     {/* Black Tooltip Popup with Beak (Apr) */}
+                     <div className="absolute top-[-38px] left-1/2 transform -translate-x-1/2 bg-black text-white px-[16px] py-[6px] rounded-full text-[12px] font-semibold whitespace-nowrap shadow-lg z-20">
+                        82.500
+                        <div className="absolute bottom-[-5px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black"></div>
+                     </div>
+                    <div className="w-[90%] max-w-[72px] h-[230px] bg-[#e1e1f0] rounded-[22px] transition-all hover:bg-[#d0d0e8]"></div>
+                    <span className="font-work text-[13px] text-[#797979]">Apr</span>
                   </div>
                   {/* May */}
-                  <div className="flex flex-col items-center gap-[11px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[140px] bg-[#e1e1f0] rounded-[24px]"></div>
-                    <span>May</span>
+                  <div className="flex-1 flex flex-col items-center gap-[11px] min-w-0">
+                    <div className="w-[90%] max-w-[72px] h-[185px] bg-[#e1e1f0] rounded-[22px] transition-all hover:bg-[#d0d0e8]"></div>
+                    <span className="font-work text-[13px] text-[#797979]">May</span>
                   </div>
                   {/* June */}
-                  <div className="flex flex-col items-center gap-[11px] w-[50px]">
-                    <div className="w-[45px] lg:w-[60px] h-[110px] bg-[#e1e1f0] rounded-[24px]"></div>
-                    <span>June</span>
+                  <div className="flex-1 flex flex-col items-center gap-[11px] min-w-0">
+                    <div className="w-[90%] max-w-[72px] h-[145px] bg-[#e1e1f0] rounded-[22px] transition-all hover:bg-[#d0d0e8]"></div>
+                    <span className="font-work text-[13px] text-[#797979]">June</span>
                   </div>
                </div>
             </div>
@@ -220,17 +220,17 @@ const DashboardMain = () => {
                  <div className="flex items-center gap-[12px]">
                    <span className="w-[20px] text-[13px] font-medium text-[#989dab]">Q4</span>
                    <div className="flex-1 h-[16px] bg-gray-100 rounded-full overflow-hidden">
-                     <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-600 w-[58.34%] rounded-full"></div>
+                     <div className="h-full bg-[#C0C0E0] w-[58.34%] rounded-full"></div>
                    </div>
                  </div>
                </div>
-               {/* Q3 */}
+               {/* Q3 (Highest - Blue) */}
                <div className="flex flex-col gap-[4px]">
                  <span className="text-[12px] opacity-60 ml-auto">85.12%</span>
                  <div className="flex items-center gap-[12px]">
                    <span className="w-[20px] text-[13px] font-medium text-[#989dab]">Q3</span>
                    <div className="flex-1 h-[16px] bg-gray-100 rounded-full overflow-hidden">
-                     <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-600 w-[85.12%] rounded-full"></div>
+                     <div className="h-full bg-[#2a2a7c] w-[85.12%] rounded-full"></div>
                    </div>
                  </div>
                </div>
@@ -240,7 +240,7 @@ const DashboardMain = () => {
                  <div className="flex items-center gap-[12px]">
                    <span className="w-[20px] text-[13px] font-medium text-[#989dab]">Q2</span>
                    <div className="flex-1 h-[16px] bg-gray-100 rounded-full overflow-hidden">
-                     <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-600 w-[63.78%] rounded-full"></div>
+                     <div className="h-full bg-[#C0C0E0] w-[63.78%] rounded-full"></div>
                    </div>
                  </div>
                </div>
@@ -250,7 +250,7 @@ const DashboardMain = () => {
                  <div className="flex items-center gap-[12px]">
                    <span className="w-[20px] text-[13px] font-medium text-[#989dab]">Q1</span>
                    <div className="flex-1 h-[16px] bg-gray-100 rounded-full overflow-hidden">
-                     <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-600 w-[68.56%] rounded-full"></div>
+                     <div className="h-full bg-[#C0C0E0] w-[68.56%] rounded-full"></div>
                    </div>
                  </div>
                </div>

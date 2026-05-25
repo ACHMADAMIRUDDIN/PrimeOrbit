@@ -129,7 +129,7 @@ const InventoryView = () => {
           <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex flex-col transition-all hover:shadow-md">
             <h3 className="text-lg font-bold text-secondary mb-2">Highlight Logistics</h3>
             <div className="flex items-center gap-[16px] mb-6">
-              <span className="text-[42px] font-bold text-[#1b1c5c] leading-none">88%</span>
+              <span className="text-[42px] font-bold text-[#20236a] leading-none">88%</span>
               <span className="text-[#989dab] text-[13px] font-medium leading-none mt-1">Total Product Spending</span>
             </div>
             
@@ -137,7 +137,7 @@ const InventoryView = () => {
               <svg 
                 viewBox="0 0 240 120" 
                 className="w-full max-w-[220px] h-auto pointer-events-none" 
-                strokeWidth="14" 
+                strokeWidth="21" 
                 fill="none" 
                 strokeLinecap="butt"
               >
@@ -147,25 +147,25 @@ const InventoryView = () => {
                   d="M 220,120 A 100,100 0 0,0 20,120" 
                   stroke="#20236a" 
                   strokeDasharray="314.16" 
-                  strokeDashoffset="84.82" 
+                  strokeDashoffset="188.50" 
                 />
 
                 {/* Middle Ring */}
-                <path d="M 202,120 A 82,82 0 0,0 38,120" stroke="#f3ebe9" />
+                <path d="M 197,120 A 77,77 0 0,0 43,120" stroke="#f3ebe9" />
                 <path 
-                  d="M 202,120 A 82,82 0 0,0 38,120" 
-                  stroke="#2c33ac" 
-                  strokeDasharray="257.61" 
-                  strokeDashoffset="133.96" 
+                  d="M 197,120 A 77,77 0 0,0 43,120" 
+                  stroke="#20236a" 
+                  strokeDasharray="241.90" 
+                  strokeDashoffset="108.85" 
                 />
 
                 {/* Inner Ring */}
-                <path d="M 184,120 A 64,64 0 0,0 56,120" stroke="#f3ebe9" />
+                <path d="M 174,120 A 54,54 0 0,0 66,120" stroke="#f3ebe9" />
                 <path 
-                  d="M 184,120 A 64,64 0 0,0 56,120" 
-                  stroke="#1f2aa4" 
-                  strokeDasharray="201.06" 
-                  strokeDashoffset="40.21" 
+                  d="M 174,120 A 54,54 0 0,0 66,120" 
+                  stroke="#20236a" 
+                  strokeDasharray="169.65" 
+                  strokeDashoffset="50.90" 
                 />
               </svg>
             </div>

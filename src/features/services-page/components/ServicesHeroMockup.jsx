@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../../assets/image';
+import herroImage from '../../UI/herro.png';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const ServicesHeroMockup = () => {
@@ -35,11 +35,13 @@ const ServicesHeroMockup = () => {
           </div>
         </div>
 
-        <div className="relative mt-[48px] w-full max-w-[1134px] overflow-hidden rounded-t-[24px] border-x border-t border-white/80 bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.08)]">
+        <div className="relative mt-[64px] w-full max-w-[1134px] overflow-hidden rounded-t-[24px] border-x border-t border-white/80 bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.08)]">
           <div
             className="aspect-[1425/676] w-full bg-[length:100%_100%] bg-top bg-no-repeat"
-            style={{ backgroundImage: `url(${image.servicesDashboardMockup})` }}
+            style={{ backgroundImage: `url(${herroImage})` }}
           />
+          {/* Soft White Gradient Fade at the bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
         </div>
       </div>
     </section>

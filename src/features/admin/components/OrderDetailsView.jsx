@@ -24,22 +24,18 @@ const OrderDetailsView = () => {
   };
 
   const locationStatsCol1 = [
-    { name: 'DKI Jakarta', percentage: 96, color: 'bg-[#2a2a7c]' },
-    { name: 'West Java', percentage: 83, color: 'bg-[#2a2a7c]' },
-    { name: 'Bali', percentage: 76, color: 'bg-[#2a2a7c]' },
+    { name: 'DKI Jakarta', percentage: 96, color: 'bg-[#20236a]' },
+    { name: 'West Java', percentage: 83, color: 'bg-[#20236a]' },
+    { name: 'Bali', percentage: 76, color: 'bg-[#20236a]' },
   ];
 
   const locationStatsCol2 = [
     { name: 'East Java', percentage: 56, color: 'bg-[#ffcd51]' },
     { name: 'DIY Yogyakarta', percentage: 43, color: 'bg-[#ffcd51]' },
-    { name: 'Central Java', percentage: 33, color: 'bg-[#c4c4c4]' },
+    { name: 'Central Java', percentage: 33, color: 'bg-[#c5c5c7]' },
   ];
 
-  // Donut Chart SVG Variables
-  const radius = 90;
-  const circumference = 2 * Math.PI * radius;
-  const targetPercentage = 81;
-  const strokeDashoffset = circumference - (targetPercentage / 100) * circumference;
+
 
   return (
     <div className="flex flex-col gap-[24px] font-work text-black w-full min-w-0 max-w-full">
@@ -48,62 +44,118 @@ const OrderDetailsView = () => {
       <div className="flex flex-col xl:flex-row gap-[20px] w-full">
         
         {/* Shipping Location */}
-        <div className="flex-1 rounded-[12px] bg-white p-[16px] flex flex-col gap-[16px] min-h-[400px]">
+        <div className="flex-1 rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px] flex flex-col gap-[20px] min-h-[450px]">
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-[16px]">
-             <div className="flex flex-col gap-[4px]">
-               <h3 className="font-medium text-[18px] tracking-[-0.01em] leading-[120%]">Shipping Location</h3>
-               <div className="flex items-center gap-[15px] text-[10px] text-[#8a8a8a] font-nunito">
-                 <div className="flex items-center gap-[4px]">
-                   <div className="w-[6px] h-[6px] rounded-[2px] bg-[#f04a4a]"></div>
-                   <span>Most</span>
-                 </div>
-                 <div className="flex items-center gap-[4px]">
-                   <div className="w-[6px] h-[6px] rounded-[2px] bg-[#333]"></div>
-                   <span>Medium</span>
-                 </div>
-                 <div className="flex items-center gap-[4px]">
-                   <div className="w-[6px] h-[6px] rounded-[2px] bg-[#e1e1e1]"></div>
-                   <span>Low</span>
-                 </div>
-               </div>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-[16px]">
+             <div className="flex flex-col gap-[8px]">
+                <h3 className="font-work font-medium text-[18px] tracking-[-0.01em] text-[#191919] leading-[120%]">Shipping Location</h3>
+                {/* Legend */}
+                <div className="flex items-center gap-[15px] text-[12px] text-[#797979] font-work font-medium">
+                  <div className="flex items-center gap-[6px]">
+                    <div className="w-[8px] h-[8px] rounded-full bg-[#ef4444]"></div>
+                    <span>Most</span>
+                  </div>
+                  <div className="flex items-center gap-[6px]">
+                    <div className="w-[8px] h-[8px] rounded-full bg-[#20236a]"></div>
+                    <span>Medium</span>
+                  </div>
+                  <div className="flex items-center gap-[6px]">
+                    <div className="w-[8px] h-[8px] rounded-full bg-[#d1d5db]"></div>
+                    <span>Low</span>
+                  </div>
+                </div>
              </div>
              
              {/* Dropdown */}
-             <button className="bg-[#f0f0f0] rounded-[8px] flex items-center justify-between px-[10px] py-[6px] text-[12px] font-nunito font-semibold w-[120px]">
+             <button className="bg-gray-50 border border-gray-100 rounded-[8px] flex items-center justify-between px-[12px] py-[6px] text-[12px] font-work font-medium text-gray-600 hover:bg-gray-100 transition-colors w-[130px]">
                <span>Last 8 Months</span>
-               <ChevronDown size={14} />
+               <ChevronDown size={14} className="text-gray-400" />
              </button>
           </div>
 
-          {/* Map Image Placeholder (SVG Dot Map) */}
-          <div className="w-full h-[190px] rounded-[8px] bg-[#f9fafb] relative overflow-hidden flex items-center justify-center border border-gray-100">
-             {/* Abstract Map Dots */}
-             <svg className="absolute inset-0 w-full h-full text-gray-200" width="100%" height="100%">
-                <pattern id="pattern-circles" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                   <circle fill="currentColor" cx="3" cy="3" r="1.5"></circle>
-                </pattern>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+          {/* Map Area (Custom SVG Java & Bali Map) */}
+          <div className="w-full h-[190px] rounded-[16px] bg-[#f9fafb] relative overflow-hidden flex items-center justify-center border border-[#efeff1] p-4">
+             <svg viewBox="0 0 580 180" className="w-full h-full max-h-[160px]" xmlns="http://www.w3.org/2000/svg">
+                {/* Banten (Gray) */}
+                <path 
+                   d="M 45,80 C 55,75 70,80 80,80 L 80,110 C 70,110 50,112 40,110 C 30,105 35,85 45,80 Z" 
+                   fill="#e5e7eb" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+                
+                {/* West Java (Navy Blue) */}
+                <path 
+                   d="M 80,80 C 110,65 150,70 180,75 C 200,75 210,90 220,95 L 220,125 C 200,125 150,135 130,130 C 105,125 90,115 80,110 Z" 
+                   fill="#20236a" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* Central Java (Gray) */}
+                <path 
+                   d="M 220,95 C 240,95 270,105 290,105 C 310,105 320,95 330,95 L 330,130 C 320,132 305,133 295,133 C 285,145 275,145 265,130 C 250,129 235,127 220,125 Z" 
+                   fill="#e5e7eb" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* DIY Yogyakarta (Gold/Yellow) */}
+                <path 
+                   d="M 265,130 C 275,145 285,145 295,133 C 295,133 285,133 265,130 Z" 
+                   fill="#ffcd51" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* East Java (Gold/Yellow) */}
+                <path 
+                   d="M 330,95 C 350,95 380,100 400,100 C 420,100 440,110 470,115 C 475,115 480,125 480,138 C 470,142 440,148 420,148 C 390,148 360,140 330,130 Z" 
+                   fill="#ffcd51" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* Madura Island (Gold/Yellow) */}
+                <path 
+                   d="M 405,88 C 420,80 440,80 460,88 C 440,94 420,94 405,88 Z" 
+                   fill="#ffcd51" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* Bali (Navy Blue) */}
+                <path 
+                   d="M 495,135 C 505,130 515,132 525,138 C 515,148 505,148 495,135 Z" 
+                   fill="#20236a" 
+                   stroke="#ffffff" 
+                   strokeWidth="1.5" 
+                   strokeLinejoin="round"
+                />
+
+                {/* Specific Port Indicator (Tiny Red Circle at east of Bali) */}
+                <circle cx="520" cy="138" r="3.5" fill="#ef4444" stroke="#ffffff" strokeWidth="0.8" />
              </svg>
-             {/* Highlighted map locations */}
-             <div className="absolute w-[8px] h-[8px] bg-[#f04a4a] rounded-full shadow-[0_0_10px_rgba(240,74,74,0.8)]" style={{ top: '40%', left: '30%' }}></div>
-             <div className="absolute w-[6px] h-[6px] bg-[#333] rounded-full" style={{ top: '60%', left: '45%' }}></div>
-             <div className="absolute w-[6px] h-[6px] bg-[#333] rounded-full" style={{ top: '50%', left: '60%' }}></div>
-             <div className="absolute w-[4px] h-[4px] bg-[#e1e1e1] rounded-full" style={{ top: '70%', left: '75%' }}></div>
           </div>
 
           {/* Stats Progress Bars */}
-          <div className="flex flex-col sm:flex-row gap-[20px] font-nunito text-[12px] text-[#8a8a8a] mt-2">
+          <div className="flex flex-col sm:flex-row gap-[24px] font-work text-[14px] text-[#797979] mt-2">
             {/* Column 1 */}
             <div className="flex-1 flex flex-col gap-[16px]">
               {locationStatsCol1.map((stat, i) => (
-                <div key={i} className="flex flex-col gap-[4px] w-full">
-                  <div className="flex items-baseline justify-between">
-                    <span className="font-semibold text-black">{stat.name}</span>
-                    <span className="text-[10px]">{stat.percentage}%</span>
+                <div key={i} className="flex flex-col gap-[6px] w-full">
+                  <div className="flex items-baseline justify-between font-medium">
+                    <span className="text-[#191919]">{stat.name}</span>
+                    <span className="text-[13px] text-[#797979]">{stat.percentage}%</span>
                   </div>
-                  <div className="w-full h-[8px] rounded-[4px] bg-[#e1e1e1] overflow-hidden">
-                    <div className={`h-full ${stat.color} transition-all duration-500`} style={{ width: `${stat.percentage}%` }}></div>
+                  <div className="w-full h-[8px] rounded-full bg-[#efeff1] overflow-hidden">
+                    <div className={`h-full ${stat.color} rounded-full transition-all duration-500`} style={{ width: `${stat.percentage}%` }}></div>
                   </div>
                 </div>
               ))}
@@ -112,13 +164,13 @@ const OrderDetailsView = () => {
             {/* Column 2 */}
             <div className="flex-1 flex flex-col gap-[16px]">
               {locationStatsCol2.map((stat, i) => (
-                <div key={i} className="flex flex-col gap-[4px] w-full">
-                  <div className="flex items-baseline justify-between">
-                    <span className="font-semibold text-black">{stat.name}</span>
-                    <span className="text-[10px]">{stat.percentage}%</span>
+                <div key={i} className="flex flex-col gap-[6px] w-full">
+                  <div className="flex items-baseline justify-between font-medium">
+                    <span className="text-[#191919]">{stat.name}</span>
+                    <span className="text-[13px] text-[#797979]">{stat.percentage}%</span>
                   </div>
-                  <div className="w-full h-[8px] rounded-[4px] bg-[#e1e1e1] overflow-hidden">
-                    <div className={`h-full ${stat.color} transition-all duration-500`} style={{ width: `${stat.percentage}%` }}></div>
+                  <div className="w-full h-[8px] rounded-full bg-[#efeff1] overflow-hidden">
+                    <div className={`h-full ${stat.color} rounded-full transition-all duration-500`} style={{ width: `${stat.percentage}%` }}></div>
                   </div>
                 </div>
               ))}
@@ -127,47 +179,99 @@ const OrderDetailsView = () => {
         </div>
 
         {/* Shipping Revenue */}
-        <div className="w-full xl:w-[350px] rounded-[12px] bg-white p-[16px_16px_8px] flex flex-col gap-[16px] shrink-0 min-h-[400px]">
+        <div className="w-full xl:w-[420px] rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px] flex flex-col gap-[20px] shrink-0 min-h-[450px]">
            {/* Header */}
            <div className="flex items-center justify-between gap-[20px]">
-             <h3 className="font-medium text-[18px] tracking-[-0.01em] leading-[120%]">Shipping Revenue</h3>
+             <h3 className="font-work font-medium text-[18px] tracking-[-0.01em] text-[#191919]">Shipping Revenue</h3>
              {/* Dropdown */}
-             <button className="bg-[#f0f0f0] rounded-[8px] flex items-center justify-between px-[10px] py-[6px] text-[12px] font-nunito font-semibold w-[90px]">
+             <button className="bg-gray-50 border border-gray-100 rounded-[8px] flex items-center justify-between px-[12px] py-[6px] text-[12px] font-work font-medium text-gray-600 hover:bg-gray-100 transition-colors w-[105px]">
                <span>This Year</span>
-               <ChevronDown size={14} />
+               <ChevronDown size={14} className="text-gray-400" />
              </button>
            </div>
 
-           {/* Donut Chart */}
-           <div className="flex-1 relative flex items-center justify-center font-nunito mt-4">
-              <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center pointer-events-none">
-                 <span className="text-[10px] text-[#8a8a8a]">Total Revenue</span>
-                 <span className="text-[20px] leading-[120%] text-[#333] font-bold mt-1 mb-1">$473,265</span>
-                 <span className="text-[10px] text-[#8a8a8a]">81% from Target Revenue</span>
+           {/* Semi-Circle Gauge */}
+           <div className="relative flex items-center justify-center font-work mt-2 h-[130px]">
+              <div className="absolute inset-x-0 bottom-[8px] flex flex-col items-center justify-center text-center pointer-events-none">
+                 <span className="text-[12px] text-[#797979] font-medium tracking-[-0.01em]">Total Revenue</span>
+                 <span className="text-[26px] leading-[120%] text-[#20236a] font-bold mt-0.5 mb-0.5">$473,265</span>
+                 <span className="text-[12px] text-[#797979] font-medium tracking-[-0.01em]">81% from Target Revenue</span>
               </div>
               
-              {/* SVG Donut */}
-              <svg width="220" height="220" viewBox="0 0 200 200" className="transform -rotate-90">
-                <circle
-                  cx="100" cy="100" r={radius}
-                  fill="none" stroke="#e1e1e1" strokeWidth="15"
+              {/* SVG Gauge */}
+              <svg width="240" height="130" viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg">
+                {/* Background Arc */}
+                <path 
+                  d="M 30,120 A 90,90 0 0,1 210,120" 
+                  fill="none" 
+                  stroke="#efeff1" 
+                  strokeWidth="20" 
+                  strokeLinecap="round" 
                 />
-                <circle
-                  cx="100" cy="100" r={radius}
-                  fill="none" stroke="#2a2a7c" strokeWidth="15"
-                  strokeDasharray={circumference}
-                  strokeDashoffset={strokeDashoffset}
-                  strokeLinecap="round"
+                {/* Active Arc (81% of 283 length is 229, dashoffset is 54) */}
+                <path 
+                  d="M 30,120 A 90,90 0 0,1 210,120" 
+                  fill="none" 
+                  stroke="#20236a" 
+                  strokeWidth="20" 
+                  strokeLinecap="round" 
+                  strokeDasharray="283"
+                  strokeDashoffset="54"
                   className="transition-all duration-1000 ease-out"
                 />
               </svg>
            </div>
 
-           {/* Sparkline Decorative */}
-           <div className="w-full h-[40px] border-t-2 border-[#f0f0f0] mt-4 flex items-end justify-between px-2 pt-4">
-              {[30, 45, 20, 60, 80, 50, 90, 40, 70].map((val, i) => (
-                <div key={i} className="w-[12px] bg-gradient-to-t from-gray-200 to-gray-100 rounded-t-[4px]" style={{ height: `${val}%` }}></div>
-              ))}
+           {/* Divider Line */}
+           <div className="w-full border-t border-[#efeff1]"></div>
+
+           {/* Horizontal Bar Chart representation */}
+           <div className="w-full">
+              <svg viewBox="0 0 440 200" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                 {/* Vertical Dashed Grid lines */}
+                 <line x1="40" y1="10" x2="40" y2="160" stroke="#f4f4f6" strokeWidth="1" strokeDasharray="3 3" />
+                 <line x1="135" y1="10" x2="135" y2="160" stroke="#f4f4f6" strokeWidth="1" strokeDasharray="3 3" />
+                 <line x1="230" y1="10" x2="230" y2="160" stroke="#f4f4f6" strokeWidth="1" strokeDasharray="3 3" />
+                 <line x1="325" y1="10" x2="325" y2="160" stroke="#f4f4f6" strokeWidth="1" strokeDasharray="3 3" />
+                 <line x1="420" y1="10" x2="420" y2="160" stroke="#f4f4f6" strokeWidth="1" strokeDasharray="3 3" />
+
+                 {/* Bar Q1 */}
+                 <rect x="40" y="20" width="380" height="18" fill="#f4f4f6" rx="4" />
+                 <rect x="40" y="20" width="256" height="18" fill="#c5c5c7" rx="4" />
+                 <text x="48" y="29" fill="#ffffff" fontSize="10.5" fontFamily="Work Sans, sans-serif" fontWeight="600" dominantBaseline="middle">$67,396</text>
+
+                 {/* Bar Q2 (Highlighted Dark) */}
+                 <rect x="40" y="60" width="380" height="18" fill="#f4f4f6" rx="4" />
+                 <rect x="40" y="60" width="323" height="18" fill="#2d2d30" rx="4" />
+                 <text x="48" y="69" fill="#ffffff" fontSize="10.5" fontFamily="Work Sans, sans-serif" fontWeight="600" dominantBaseline="middle">$84,899</text>
+
+                 {/* Bar Q3 */}
+                 <rect x="40" y="100" width="380" height="18" fill="#f4f4f6" rx="4" />
+                 <rect x="40" y="100" width="216" height="18" fill="#c5c5c7" rx="4" />
+                 <text x="48" y="109" fill="#ffffff" fontSize="10.5" fontFamily="Work Sans, sans-serif" fontWeight="600" dominantBaseline="middle">$56,822</text>
+
+                 {/* Bar Q4 */}
+                 <rect x="40" y="140" width="380" height="18" fill="#f4f4f6" rx="4" />
+                 <rect x="40" y="140" width="221" height="18" fill="#c5c5c7" rx="4" />
+                 <text x="48" y="149" fill="#ffffff" fontSize="10.5" fontFamily="Work Sans, sans-serif" fontWeight="600" dominantBaseline="middle">$58,113</text>
+
+                 {/* Y-Axis Labels */}
+                 <g fill="#797979" fontSize="13" fontFamily="Work Sans, sans-serif" fontWeight="500" textAnchor="end">
+                    <text x="25" y="29" dominantBaseline="middle">Q1</text>
+                    <text x="25" y="69" dominantBaseline="middle">Q2</text>
+                    <text x="25" y="109" dominantBaseline="middle">Q3</text>
+                    <text x="25" y="149" dominantBaseline="middle">Q4</text>
+                 </g>
+
+                 {/* X-Axis Labels */}
+                 <g fill="#797979" fontSize="11" fontFamily="Work Sans, sans-serif" fontWeight="500" textAnchor="middle">
+                    <text x="40" y="185">$0</text>
+                    <text x="135" y="185">$25K</text>
+                    <text x="230" y="185">$50K</text>
+                    <text x="325" y="185">$75K</text>
+                    <text x="420" y="185">$100K</text>
+                 </g>
+              </svg>
            </div>
         </div>
 

@@ -239,111 +239,107 @@ const TrackingView = () => {
           </button>
         </div>
 
-        <div className="w-full rounded-[8px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.07)] overflow-x-auto">
-          <div className="min-w-[900px] flex flex-col">
+        <div className="w-full rounded-[12px] border border-gray-200/80 overflow-x-auto">
+          <div className="min-w-[900px] flex flex-col bg-white">
             {/* Header Row */}
-            <div className="w-full h-[36px] bg-[#fafafa] flex items-center px-[8px] gap-[20px] text-[14px] font-semibold text-[#6a7282]">
-              <div className="w-[130px] px-[16px]">ORDER ID</div>
-              <div className="w-[160px] px-[16px]">ORIGIN</div>
-              <div className="w-[154px] px-[16px]">DESTINATION</div>
-              <div className="w-[120px] px-[16px]">STATUS</div>
-              <div className="w-[102px] px-[16px]">ETA</div>
-              <div className="flex-1 px-[16px]">PROGRES</div>
+            <div className="w-full h-[48px] bg-[#fafafa] border-b border-gray-200/80 flex items-center px-[24px] gap-[20px] text-[12px] font-semibold text-[#6b7282] uppercase tracking-wider">
+              <div className="w-[15%]">ORDER ID</div>
+              <div className="w-[20%]">ORIGIN</div>
+              <div className="w-[20%]">DESTINATION</div>
+              <div className="w-[15%]">STATUS</div>
+              <div className="w-[12%]">ETA</div>
+              <div className="w-[18%]">PROGRES</div>
             </div>
 
             {/* Table Body */}
-            <div className="w-full flex flex-col p-[8px] gap-[8px] bg-white text-[14px] text-[#1e2939]">
+            <div className="w-full flex flex-col text-[14px] text-[#1e2939]">
 
               {/* Row 1 */}
-              <div className="flex items-center gap-[20px] px-[8px] py-[4px]">
-                <div className="w-[130px] px-[16px]">#ORD-2301</div>
-                <div className="w-[160px] px-[16px]">New York, NY</div>
-                <div className="w-[154px] px-[16px] truncate">Los Angeles, CA</div>
-                <div className="w-[120px] px-[16px]">
-                  <div className="inline-flex items-center h-[24px] rounded-full bg-[#00b8db]/20 px-[12px] text-[#2a2a7c] text-[12px]">
+              <div className="flex items-center gap-[20px] px-[24px] py-[16px] border-b border-gray-100">
+                <div className="w-[15%] font-medium text-[#191919]">#ORD-2301</div>
+                <div className="w-[20%] text-[#6b7280]">New York, NY</div>
+                <div className="w-[20%] text-[#6b7280] truncate">Los Angeles, CA</div>
+                <div className="w-[15%]">
+                  <div className="inline-flex items-center justify-center h-[28px] rounded-full bg-[#e0f2fe] px-[14px] text-[#0369a1] text-[13px] font-medium">
                     In Transit
                   </div>
                 </div>
-                <div className="w-[102px] px-[16px]">2 hours</div>
-                <div className="flex-1 px-[16px]">
-                  <div className="w-full h-[8px] rounded-full bg-[#dbdbdb] overflow-hidden">
-                    <div className="h-full bg-[#ffcd51] w-[70%]"></div>
+                <div className="w-[12%] text-[#191919]">2 hours</div>
+                <div className="w-[18%]">
+                  <div className="w-full max-w-[140px] h-[8px] rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full bg-[#ffcd51] w-[70%] rounded-full"></div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-[1px] bg-gray-100"></div>
 
               {/* Row 2 */}
-              <div className="flex items-center gap-[20px] px-[8px] py-[4px]">
-                <div className="w-[130px] px-[16px]">#ORD-2302</div>
-                <div className="w-[160px] px-[16px]">Chicago, IL</div>
-                <div className="w-[154px] px-[16px] truncate">Miami, FL</div>
-                <div className="w-[120px] px-[16px]">
-                  <div className="inline-flex items-center h-[24px] rounded-full bg-[#00bc7d]/20 px-[12px] text-[#00a370] text-[12px]">
+              <div className="flex items-center gap-[20px] px-[24px] py-[16px] border-b border-gray-100">
+                <div className="w-[15%] font-medium text-[#191919]">#ORD-2302</div>
+                <div className="w-[20%] text-[#6b7280]">Chicago, IL</div>
+                <div className="w-[20%] text-[#6b7280] truncate">Miami, FL</div>
+                <div className="w-[15%]">
+                  <div className="inline-flex items-center justify-center h-[28px] rounded-full bg-[#dcfce7] px-[14px] text-[#15803d] text-[13px] font-medium">
                     Delivered
                   </div>
                 </div>
-                <div className="w-[102px] px-[16px]">Completed</div>
-                <div className="flex-1 px-[16px]">
-                  <div className="w-full h-[8px] rounded-full bg-[#1e2939] overflow-hidden">
-                    <div className="h-full bg-[#ffcd51] w-[100%]"></div>
+                <div className="w-[12%] text-[#191919]">Completed</div>
+                <div className="w-[18%]">
+                  <div className="w-full max-w-[140px] h-[8px] rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full bg-[#ffcd51] w-[100%] rounded-full"></div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-[1px] bg-gray-100"></div>
 
               {/* Row 3 */}
-              <div className="flex items-center gap-[20px] px-[8px] py-[4px]">
-                <div className="w-[130px] px-[16px]">#ORD-2303</div>
-                <div className="w-[160px] px-[16px]">Houston, TX</div>
-                <div className="w-[154px] px-[16px] truncate">Seattle, WA</div>
-                <div className="w-[120px] px-[16px]">
-                  <div className="inline-flex items-center h-[24px] rounded-full bg-[#00b8db]/20 px-[12px] text-[#2a2a7c] text-[12px]">
+              <div className="flex items-center gap-[20px] px-[24px] py-[16px] border-b border-gray-100">
+                <div className="w-[15%] font-medium text-[#191919]">#ORD-2303</div>
+                <div className="w-[20%] text-[#6b7280]">Houston, TX</div>
+                <div className="w-[20%] text-[#6b7280] truncate">Seattle, WA</div>
+                <div className="w-[15%]">
+                  <div className="inline-flex items-center justify-center h-[28px] rounded-full bg-[#e0f2fe] px-[14px] text-[#0369a1] text-[13px] font-medium">
                     In Transit
                   </div>
                 </div>
-                <div className="w-[102px] px-[16px]">6 hours</div>
-                <div className="flex-1 px-[16px]">
-                  <div className="w-full h-[8px] rounded-full bg-[#dbdbdb] overflow-hidden">
-                    <div className="h-full bg-[#ffcd51] w-[40%]"></div>
+                <div className="w-[12%] text-[#191919]">6 hours</div>
+                <div className="w-[18%]">
+                  <div className="w-full max-w-[140px] h-[8px] rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full bg-[#ffcd51] w-[40%] rounded-full"></div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-[1px] bg-gray-100"></div>
 
               {/* Row 4 */}
-              <div className="flex items-center gap-[20px] px-[8px] py-[4px]">
-                <div className="w-[130px] px-[16px]">#ORD-2304</div>
-                <div className="w-[160px] px-[16px]">Boston, MA</div>
-                <div className="w-[154px] px-[16px] truncate">San Francisco, CA</div>
-                <div className="w-[120px] px-[16px]">
-                  <div className="inline-flex items-center h-[24px] rounded-full bg-[#fb2c36]/20 px-[12px] text-[#ff6467] text-[12px]">
+              <div className="flex items-center gap-[20px] px-[24px] py-[16px] border-b border-gray-100">
+                <div className="w-[15%] font-medium text-[#191919]">#ORD-2304</div>
+                <div className="w-[20%] text-[#6b7280]">Boston, MA</div>
+                <div className="w-[20%] text-[#6b7280] truncate">San Francisco, CA</div>
+                <div className="w-[15%]">
+                  <div className="inline-flex items-center justify-center h-[28px] rounded-full bg-[#fee2e2] px-[14px] text-[#b91c1c] text-[13px] font-medium">
                     Delayed
                   </div>
                 </div>
-                <div className="w-[102px] px-[16px]">12 hours</div>
-                <div className="flex-1 px-[16px] flex items-center gap-[8px]">
-                  <div className="w-[80px] h-[8px] rounded-full bg-[#dbdbdb] overflow-hidden">
-                    <div className="h-full bg-[#ffcd51] w-[30%]"></div>
+                <div className="w-[12%] text-[#191919]">12 hours</div>
+                <div className="w-[18%]">
+                  <div className="w-full max-w-[140px] h-[8px] rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full bg-[#ffcd51] w-[30%] rounded-full"></div>
                   </div>
-                  <span className="text-[12px] text-[#6a7282]">30%</span>
                 </div>
               </div>
-              <div className="w-full h-[1px] bg-gray-100"></div>
 
               {/* Row 5 */}
-              <div className="flex items-center gap-[20px] px-[8px] py-[4px]">
-                <div className="w-[130px] px-[16px]">#ORD-2305</div>
-                <div className="w-[160px] px-[16px]">Phoenix, AZ</div>
-                <div className="w-[154px] px-[16px] truncate">Denver, CO</div>
-                <div className="w-[120px] px-[16px]">
-                  <div className="inline-flex items-center h-[24px] rounded-full bg-[#fe9a00]/20 px-[12px] text-[#ffb900] text-[12px]">
+              <div className="flex items-center gap-[20px] px-[24px] py-[16px]">
+                <div className="w-[15%] font-medium text-[#191919]">#ORD-2305</div>
+                <div className="w-[20%] text-[#6b7280]">Phoenix, AZ</div>
+                <div className="w-[20%] text-[#6b7280] truncate">Denver, CO</div>
+                <div className="w-[15%]">
+                  <div className="inline-flex items-center justify-center h-[28px] rounded-full bg-[#fef3c7] px-[14px] text-[#d97706] text-[13px] font-medium">
                     Pending
                   </div>
                 </div>
-                <div className="w-[102px] px-[16px]">Not Started</div>
-                <div className="flex-1 px-[16px]">
-                  <div className="w-full h-[8px] rounded-full bg-[#dbdbdb] overflow-hidden">
+                <div className="w-[12%] text-[#191919]">Not Started</div>
+                <div className="w-[18%]">
+                  <div className="w-full max-w-[140px] h-[8px] rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full bg-[#ffcd51] w-[0%] rounded-full"></div>
                   </div>
                 </div>
               </div>

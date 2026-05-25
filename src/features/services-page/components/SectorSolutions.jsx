@@ -22,8 +22,8 @@ const SectorSolutions = () => {
         {/* Image 1 (Kiri) - Mengikuti tinggi induk (480px) */}
         <div className="flex-1 h-[300px] lg:h-full rounded-[24px] overflow-hidden">
           <img
-            src={image.airCargoPlane}
-            alt="Air Cargo"
+            src={image.seaAirCargo}
+            alt="Sea Air Cargo"
             className="w-full h-full object-cover"
           />
         </div>

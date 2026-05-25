@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, Truck, CheckCircle, Search, ChevronLeft, ChevronRight, ArrowUpRight, ArrowDownRight, MoreVertical } from 'lucide-react';
+import { Package, Truck, CheckCircle, Search, ChevronLeft, ChevronRight, ArrowUpRight, ArrowDownRight, MoreVertical, MoreHorizontal, Plane } from 'lucide-react';
 
 const AnalyticsView = () => {
   // KPI Data
@@ -51,16 +51,6 @@ const AnalyticsView = () => {
     }
   };
 
-  // Mock data for Bar Chart
-  const chartData = [
-    { month: 'Jan', val: 30 },
-    { month: 'Feb', val: 50 },
-    { month: 'Mar', val: 40 },
-    { month: 'Apr', val: 70 },
-    { month: 'May', val: 90 },
-    { month: 'Jun', val: 65 },
-    { month: 'Jul', val: 80 },
-  ];
 
   return (
     <div className="flex flex-col gap-[24px] font-work text-black w-full min-w-0 max-w-full">
@@ -91,127 +81,196 @@ const AnalyticsView = () => {
 
       {/* Middle Section: Logistics Performance & Routes in Transit */}
       <div className="flex flex-col xl:flex-row gap-[20px] w-full font-jakarta">
-        
         {/* Logistics Performance Chart */}
-        <div className="flex-1 rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px_28px] flex flex-col gap-[20px] min-h-[423px] relative overflow-hidden">
+        <div className="flex-1 rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px_28px] flex flex-col gap-[20px] min-h-[560px] relative overflow-hidden">
           <div className="flex items-center justify-between">
              <div className="flex flex-col gap-[4px]">
-               <h3 className="font-work font-medium text-[18px] tracking-[-0.01em]">Logistics Performance</h3>
-               <p className="text-[13px] text-[#797979] tracking-[-0.02em]">You can see monthly logistic volume from here</p>
+                <h3 className="font-work font-medium text-[18px] tracking-[-0.01em]">Logistics Performance</h3>
+                <p className="text-[13px] text-[#797979] tracking-[-0.02em]">You can see monthly logistic volume from here</p>
              </div>
              <button className="w-[24px] h-[24px] rounded-full border border-[#e6e7ea] flex items-center justify-center shadow-sm text-gray-400">
-               <MoreVertical size={14} />
+                <MoreVertical size={14} />
              </button>
           </div>
-          
-          {/* Simple Bar Chart Representation */}
-          <div className="flex-1 flex w-full mt-4">
-             {/* Y-Axis */}
-             <div className="flex flex-col justify-between text-[13px] font-medium text-[#797979] tracking-[-0.02em] pb-[20px]">
-               <span>$100K</span>
-               <span>$75K</span>
-               <span>$50K</span>
-               <span>$25K</span>
-               <span>$0K</span>
-             </div>
-             {/* Bars area */}
-             <div className="flex-1 flex items-end justify-between ml-[20px] relative pb-[20px] h-[300px]">
+          {/* SVG Ribbon Area Chart Representation */}
+          <div className="flex-1 flex items-center justify-center w-full mt-4 min-h-[420px]">
+             <svg viewBox="0 0 600 360" className="w-full h-auto max-h-[450px]" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                   {/* Gradient for area below curve */}
+                   <linearGradient id="lowerGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#fdebc2" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="#fdebc2" stopOpacity="0.0" />
+                   </linearGradient>
+                </defs>
+
                 {/* Horizontal Grid lines */}
-                <div className="absolute inset-0 flex flex-col justify-between z-0 pb-[20px]">
-                  {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-full border-t border-gray-100"></div>
-                  ))}
-                </div>
-                {/* Bars */}
-                {chartData.map((data, i) => (
-                  <div key={i} className="relative z-10 flex flex-col items-center gap-[10px] group w-[40px] sm:w-[60px]">
-                    <div 
-                      className="w-full bg-[#2a2a7c] rounded-t-[8px] transition-all duration-300 group-hover:bg-[#3b3b9b] opacity-90"
-                      style={{ height: `${data.val}%` }}
-                    ></div>
-                    <span className="absolute bottom-[-24px] text-[13px] font-medium text-[#797979]">{data.month}</span>
-                  </div>
-                ))}
-             </div>
+                <line x1="80" y1="30" x2="560" y2="30" stroke="#efeff1" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="80" y1="100" x2="560" y2="100" stroke="#efeff1" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="80" y1="170" x2="560" y2="170" stroke="#efeff1" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="80" y1="240" x2="560" y2="240" stroke="#efeff1" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="80" y1="310" x2="560" y2="310" stroke="#efeff1" strokeWidth="1" strokeDasharray="3 3" />
+
+                {/* Fading area below lower curve */}
+                <path 
+                   d="M 80,310 L 80,243 L 110,243 C 130,243 140,173 160,173 L 250,173 C 280,173 295,208 320,208 C 340,208 360,157 380,157 L 430,157 C 450,157 465,103 480,103 L 560,103 L 560,310 Z" 
+                   fill="url(#lowerGrad)" 
+                />
+
+                {/* Ribbon fill between upper and lower curves */}
+                <path 
+                   d="M 80,205 L 110,205 C 130,205 140,135 160,135 L 250,135 C 280,135 295,170 320,170 C 340,170 360,119 380,119 L 430,119 C 450,119 465,65 480,65 L 560,65 L 560,103 L 480,103 C 465,103 450,157 430,157 L 380,157 C 360,157 340,208 320,208 C 295,208 280,173 250,173 L 160,173 C 140,173 130,243 110,243 L 80,243 Z" 
+                   fill="#fdebc2" 
+                   fillOpacity="0.95"
+                />
+
+                {/* Vertical Dashed Line near May */}
+                <line x1="380" y1="30" x2="380" y2="310" stroke="#191919" strokeWidth="1.2" strokeDasharray="4 4" strokeOpacity="0.7" />
+
+                {/* Upper Curve Line */}
+                <path 
+                   d="M 80,205 L 110,205 C 130,205 140,135 160,135 L 250,135 C 280,135 295,170 320,170 C 340,170 360,119 380,119 L 430,119 C 450,119 465,65 480,65 L 560,65" 
+                   fill="none" 
+                   stroke="#20236a" 
+                   strokeWidth="2" 
+                   strokeLinecap="round" 
+                   strokeLinejoin="round" 
+                />
+
+                {/* Lower Curve Line */}
+                <path 
+                   d="M 80,243 L 110,243 C 130,243 140,173 160,173 L 250,173 C 280,173 295,208 320,208 C 340,208 360,157 380,157 L 430,157 C 450,157 465,103 480,103 L 560,103" 
+                   fill="none" 
+                   stroke="#20236a" 
+                   strokeWidth="2" 
+                   strokeLinecap="round" 
+                   strokeLinejoin="round" 
+                />
+
+                {/* Y-Axis Labels */}
+                <g fill="#797979" fontSize="13" fontFamily="Work Sans, sans-serif" fontWeight="500" textAnchor="end">
+                   <text x="65" y="30" dominantBaseline="middle">$100K</text>
+                   <text x="65" y="100" dominantBaseline="middle">$75K</text>
+                   <text x="65" y="170" dominantBaseline="middle">$50K</text>
+                   <text x="65" y="240" dominantBaseline="middle">$25K</text>
+                   <text x="65" y="310" dominantBaseline="middle">$0K</text>
+                </g>
+
+                {/* X-Axis Labels */}
+                <g fill="#797979" fontSize="13" fontFamily="Work Sans, sans-serif" fontWeight="500" textAnchor="middle">
+                   <text x="80" y="340">Jan</text>
+                   <text x="160" y="340">Feb</text>
+                   <text x="240" y="340">Mar</text>
+                   <text x="320" y="340">Apr</text>
+                   <text x="400" y="340">May</text>
+                   <text x="480" y="340">Jun</text>
+                   <text x="560" y="340">Jul</text>
+                </g>
+             </svg>
           </div>
         </div>
 
         {/* Routes in Transit */}
-        <div className="w-full xl:w-[380px] rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px] flex flex-col shrink-0 min-h-[423px] font-work text-[10px]">
+        <div className="w-full xl:w-[380px] rounded-[24px] bg-white border border-[#efeff1] shadow-[0_4px_18px_rgba(230,229,234,0.27)] p-[24px] flex flex-col shrink-0 min-h-[560px] font-work text-[10px]">
            <div className="flex items-center justify-between mb-[20px]">
-             <h3 className="font-medium text-[18px] tracking-[-0.01em]">Routes in Transit</h3>
-             <button className="w-[24px] h-[24px] rounded-full border border-[#e6e7ea] flex items-center justify-center shadow-sm text-gray-400">
-               <MoreVertical size={14} />
+             <h3 className="font-work font-medium text-[20px] md:text-[22px] tracking-[-0.01em] text-[#191919]">Routes in Transit</h3>
+             <button className="w-[32px] h-[32px] rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors">
+               <MoreHorizontal size={16} />
              </button>
            </div>
 
-           <div className="flex flex-col gap-[16px]">
-              {/* Package 1 */}
-              <div className="w-full rounded-[20px] bg-[#2a2a7c] p-[20px] flex flex-col gap-[16px] text-white relative">
-                 <button className="absolute top-[20px] right-[20px] text-white/50 hover:text-white"><MoreVertical size={16} /></button>
-                 <div className="flex flex-col gap-[2px]">
-                   <span className="font-semibold text-[15px] tracking-[-0.02em]">Wardrobe Package</span>
-                   <span className="text-[10px] tracking-[-0.02em] text-white/80"><span className="font-semibold">Invoice Number:</span> 3823KRU8429</span>
+           <div className="flex flex-col gap-[20px]">
+              {/* Package 1 (Wardrobe) */}
+              <div className="w-full rounded-[24px] bg-[#20236a] p-[24px] flex flex-col gap-[20px] text-white relative shadow-md">
+                 <button className="absolute top-[24px] right-[24px] text-white/70 hover:text-white transition-colors">
+                   <MoreHorizontal size={20} />
+                 </button>
+                 
+                 <div className="flex flex-col gap-[4px]">
+                   <span className="font-semibold text-[20px] tracking-tight leading-tight">Wardrobe Package</span>
+                   <span className="text-[12px] opacity-80">Invoice Number: <span className="font-medium">3823KRU8429</span></span>
                  </div>
                  
-                 {/* Timeline Line */}
-                 <div className="relative w-full h-[30px] flex items-center mt-2">
-                    <div className="absolute left-0 w-full h-[5px] flex rounded-[20px] overflow-hidden">
-                      <div className="w-1/2 bg-white/30 h-full"></div>
-                      <div className="w-1/2 bg-[#ffcd51] h-full"></div>
+                 {/* Progress Route Bar */}
+                 <div className="relative w-full h-[32px] flex items-center justify-between mt-2 z-10">
+                    {/* Yellow line connecting Truck (Circle 3) to right end */}
+                    <div className="absolute left-[50%] right-[8px] h-[4px] bg-[#FFCD51] z-0"></div>
+                    
+                    {/* Circle 1 */}
+                    <div className="w-[16px] h-[16px] rounded-full border-[2.2px] border-white bg-transparent shrink-0 z-10"></div>
+                    {/* Circle 2 */}
+                    <div className="w-[16px] h-[16px] rounded-full border-[2.2px] border-white bg-transparent shrink-0 z-10"></div>
+                    
+                    {/* Circle 3 (Truck) */}
+                    <div className="w-[32px] h-[32px] rounded-full border-[2.2px] border-white bg-[#20236a] flex items-center justify-center text-white shrink-0 z-10 shadow-sm">
+                       <Truck size={14} className="fill-white text-white" />
                     </div>
-                    {/* Dots */}
-                    <div className="absolute left-0 w-[16px] h-[16px] rounded-full bg-[#2a2a7c] border-[2px] border-white z-10"></div>
-                    <div className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full bg-white flex items-center justify-center z-10 shadow-sm text-[#2a2a7c]">
-                       <Truck size={12} strokeWidth={3} />
+                    
+                    {/* Circle 4 (Plane) */}
+                    <div className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center text-[#20236a] shrink-0 z-10 shadow-sm">
+                       <Plane size={14} className="fill-[#20236a] text-[#20236a] rotate-45" />
                     </div>
-                    <div className="absolute right-0 w-[16px] h-[16px] rounded-full bg-[#2a2a7c] border-[2px] border-white z-10"></div>
+                    
+                    {/* Circle 5 */}
+                    <div className="w-[16px] h-[16px] rounded-full border-[2.2px] border-white bg-transparent shrink-0 z-10"></div>
                  </div>
 
                  {/* Locations */}
-                 <div className="flex justify-between mt-2">
-                    <div className="flex flex-col text-left">
-                       <span className="text-white/80">10:11 AM, May 1</span>
-                       <span className="font-bold text-[12px]">San Fransisco, USA</span>
+                 <div className="flex justify-between mt-1 text-[12px] leading-tight">
+                    <div className="flex flex-col text-left gap-[4px]">
+                       <span className="opacity-80">10:11 AM, May 1</span>
+                       <span className="font-semibold text-[15px]">San Fransisco, USA</span>
                     </div>
-                    <div className="flex flex-col text-right">
-                       <span className="text-white/80">10:11 AM, May 28</span>
-                       <span className="font-bold text-[12px]">San Jose, Mexico</span>
+                    <div className="flex flex-col text-right gap-[4px]">
+                       <span className="opacity-80">10:11 AM, May 28</span>
+                       <span className="font-semibold text-[15px]">San Jose, Mexico</span>
                     </div>
                  </div>
               </div>
 
-              {/* Package 2 */}
-              <div className="w-full rounded-[20px] bg-white border border-[#efeff1] shadow-sm p-[20px] flex flex-col gap-[16px] text-black relative">
-                 <button className="absolute top-[20px] right-[20px] text-gray-400 hover:text-gray-600"><MoreVertical size={16} /></button>
-                 <div className="flex flex-col gap-[2px]">
-                   <span className="font-semibold text-[15px] tracking-[-0.02em]">Gadget Package</span>
-                   <span className="text-[10px] tracking-[-0.02em] text-gray-500"><span className="font-semibold text-black">Invoice Number:</span> 3823KRU8429</span>
+              {/* Package 2 (Gadget) */}
+              <div className="w-full rounded-[24px] bg-white border border-gray-100 p-[24px] flex flex-col gap-[20px] text-[#191919] relative shadow-sm">
+                 <button className="absolute top-[24px] right-[24px] text-gray-400 hover:text-gray-600 transition-colors">
+                   <MoreHorizontal size={20} />
+                 </button>
+                 
+                 <div className="flex flex-col gap-[4px]">
+                   <span className="font-semibold text-[20px] tracking-tight leading-tight">Gadget Package</span>
+                   <span className="text-[12px] text-gray-500">Invoice Number: <span className="font-medium text-gray-700">3823KRU8429</span></span>
                  </div>
                  
-                 {/* Timeline Line */}
-                 <div className="relative w-full h-[30px] flex items-center mt-2">
-                    <div className="absolute left-0 w-full h-[5px] flex rounded-[20px] overflow-hidden">
-                      <div className="w-1/2 bg-[#2a2a7c]/20 h-full"></div>
-                      <div className="w-1/2 bg-[#2a2a7c] h-full"></div>
+                 {/* Progress Route Bar */}
+                 <div className="relative w-full h-[32px] flex items-center justify-between mt-2 z-10">
+                    {/* Blue line connecting all circles */}
+                    <div className="absolute left-[8px] right-[8px] h-[4px] bg-[#20236a] z-0"></div>
+                    
+                    {/* Circle 1 */}
+                    <div className="w-[16px] h-[16px] rounded-full bg-[#20236a] shrink-0 z-10"></div>
+                    {/* Circle 2 */}
+                    <div className="w-[16px] h-[16px] rounded-full bg-[#20236a] shrink-0 z-10 border-[2.2px] border-white"></div>
+                    
+                    {/* Circle 3 (Truck) */}
+                    <div className="w-[32px] h-[32px] rounded-full bg-[#20236a] flex items-center justify-center text-white shrink-0 z-10 shadow-sm border-[2.2px] border-white">
+                       <Truck size={14} className="fill-white text-white" />
                     </div>
-                    {/* Dots */}
-                    <div className="absolute left-0 w-[16px] h-[16px] rounded-full bg-white border-[2px] border-[#2a2a7c] z-10"></div>
-                    <div className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full bg-[#2a2a7c] flex items-center justify-center z-10 shadow-sm text-white border-[2px] border-[#f5f5f5]">
-                       <Truck size={12} strokeWidth={3} />
+                    
+                    {/* Circle 4 (Plane) */}
+                    <div className="w-[32px] h-[32px] rounded-full bg-[#20236a] flex items-center justify-center text-white shrink-0 z-10 shadow-sm border-[2.2px] border-white">
+                       <Plane size={14} className="fill-white text-white rotate-45" />
                     </div>
-                    <div className="absolute right-0 w-[16px] h-[16px] rounded-full bg-white border-[2px] border-[#2a2a7c] z-10"></div>
+                    
+                    {/* Circle 5 */}
+                    <div className="w-[16px] h-[16px] rounded-full bg-[#20236a] shrink-0 z-10"></div>
                  </div>
 
                  {/* Locations */}
-                 <div className="flex justify-between mt-2">
-                    <div className="flex flex-col text-left">
+                 <div className="flex justify-between mt-1 text-[12px] leading-tight">
+                    <div className="flex flex-col text-left gap-[4px]">
                        <span className="text-gray-500">10:11 AM, May 1</span>
-                       <span className="font-bold text-[12px]">Orange City, USA</span>
+                       <span className="font-semibold text-[15px]">Orange City, USA</span>
                     </div>
-                    <div className="flex flex-col text-right">
+                    <div className="flex flex-col text-right gap-[4px]">
                        <span className="text-gray-500">10:11 AM, May 28</span>
-                       <span className="font-bold text-[12px]">Atlanta, USA</span>
+                       <span className="font-semibold text-[15px]">Atlanta, USA</span>
                     </div>
                  </div>
               </div>

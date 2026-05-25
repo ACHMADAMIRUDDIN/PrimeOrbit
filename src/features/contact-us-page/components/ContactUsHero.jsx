@@ -8,7 +8,7 @@ const ContactUsHero = () => {
       
       {/* Background Image & Gradient */}
       <div className="absolute inset-0 z-0">
-        <img src={image.logisticsTeam} alt="Contact Us Background" className="w-full h-full object-cover object-top filter brightness-50" />
+        <img src={image.containerStacks} alt="Contact Us Background" className="w-full h-full object-cover object-top filter brightness-50" />
         <div className="absolute bottom-0 left-0 w-full h-[355px] bg-gradient-to-t from-black/80 to-transparent"></div>
       </div>
 

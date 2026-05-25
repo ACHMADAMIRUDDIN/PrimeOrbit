@@ -3,6 +3,16 @@ import image from '../../../assets/image';
 import { PackageSearch, Activity } from 'lucide-react';
 
 const WhyChooseUsHero = () => {
+  const heroImages = [
+    image.yardInspector,
+    image.logisticsTeam,
+    image.containerSupervisor,
+    image.warehouseManager,
+  ];
+
+  // Triplicate the array for seamless infinite looping
+  const duplicatedImages = [...heroImages, ...heroImages, ...heroImages];
+
   return (
     <section data-theme="light" className="w-full relative min-h-[900px] md:min-h-[1024px] bg-[#f5f5f5] overflow-hidden flex flex-col items-center pt-[180px] md:pt-[270px] pb-[40px] px-4 font-sans text-black">
       
@@ -52,12 +62,24 @@ const WhyChooseUsHero = () => {
         </span>
       </div>
 
-      {/* Image Grid Carousel */}
-      <div className="absolute bottom-[-50px] md:bottom-[-20px] left-1/2 transform -translate-x-1/2 flex items-center gap-[15px] md:gap-[25px] w-full px-4 overflow-hidden justify-center min-w-max pb-[60px]">
-        <img src={image.yardInspector} alt="Logistics 1" className="w-[200px] md:w-[362px] h-[180px] md:h-[289px] object-cover rounded-[10px] shadow-md hover:-translate-y-2 transition-transform duration-300" />
-        <img src={image.logisticsTeam} alt="Logistics 2" className="w-[240px] md:w-[426px] h-[180px] md:h-[289px] object-cover rounded-[10px] shadow-md hover:-translate-y-2 transition-transform duration-300" />
-        <img src={image.containerSupervisor} alt="Logistics 3" className="w-[200px] md:w-[362px] h-[180px] md:h-[289px] object-cover rounded-[10px] shadow-md hover:-translate-y-2 transition-transform duration-300" />
-        <img src={image.warehouseManager} alt="Logistics 4" className="w-[200px] md:w-[362px] h-[180px] md:h-[289px] object-cover rounded-[10px] shadow-md hidden lg:block hover:-translate-y-2 transition-transform duration-300" />
+      {/* Image Grid Carousel Ticker */}
+      <div className="absolute bottom-[-50px] md:bottom-[-20px] left-0 right-0 w-full overflow-hidden pb-[60px] z-10">
+        {/* Soft edge fade overlays */}
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#f5f5f5] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#f5f5f5] to-transparent z-10 pointer-events-none"></div>
+
+        {/* Sliding marquee track */}
+        <div className="flex w-max items-center gap-[15px] md:gap-[25px] animate-infinite-scroll">
+          {duplicatedImages.map((imgSrc, index) => (
+            <div key={index} className="shrink-0">
+              <img 
+                src={imgSrc} 
+                alt={`Logistics ${index + 1}`} 
+                className="w-[200px] md:w-[362px] h-[180px] md:h-[289px] object-cover rounded-[10px] shadow-md hover:-translate-y-2 transition-transform duration-300" 
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
     </section>
