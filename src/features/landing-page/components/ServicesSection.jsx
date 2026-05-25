@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../../../assets/image';
-import { Search, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight, Check } from 'lucide-react';
 
 const ServicesSection = () => {
   return (
@@ -13,10 +13,10 @@ const ServicesSection = () => {
             Smarter Routes, <br /> Faster Delivery
           </h2>
           <p className="text-gray-500 max-w-sm text-sm md:text-[15px] font-normal leading-relaxed text-left md:text-left pb-1">
+
             Accelerate your operations with PrimeOrbit advanced logistics infrastructure designed
           </p>
         </div>
-
         {/* Asymmetrical Layout - Two Rows */}
         <div className="flex flex-col gap-8 w-full">
           
@@ -189,7 +189,6 @@ const ServicesSection = () => {
             </div>
 
           </div>
-
         </div>
       </div>
     </section>

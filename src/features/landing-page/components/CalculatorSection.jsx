@@ -5,12 +5,13 @@ import image from '../../../assets/image';
 const locationOptions = ['Singapore', 'Netherlands', 'Indonesia', 'United States', 'Australia', 'Germany', 'France', 'Japan'];
 
 const ShipmentDetailsIcon = () => (
-  <span className="flex h-[18px] w-[18px] items-center justify-center rounded-[5px] bg-[#2d66d9]">
-    <svg aria-hidden="true" className="h-[10px] w-[10px]" viewBox="0 0 12 12">
-      <path
-        d="M2.15 2.45L9.75 5.65L2.15 8.95L3.45 5.85L2.15 2.45Z"
-        fill="#ffffff"
-      />
+  <span className="flex h-[18px] w-[18px] items-center justify-center rounded-[5px] bg-[#3B82F6]/15">
+    <svg 
+      aria-hidden="true" 
+      className="h-[10px] w-[10px] fill-[#005BEA]" 
+      viewBox="0 0 24 24"
+    >
+      <path d="M4 2l16 11.33-6.42 1.4L18 20.53l-2.83 1.47-4.27-5.94-4.9 3.44V2z" />
     </svg>
   </span>
 );

@@ -68,6 +68,7 @@ const Footer = () => {
           </div>
         </div>
 
+
         {/* Brand massive watermark at bottom */}
         <div className="mt-[58px] h-[72px] overflow-hidden border-white/10 pt-[2px] md:mt-[80px] md:h-[118px] md:pt-[4px] lg:h-[156px] lg:pt-[6px]">
           <p className="whitespace-nowrap font-interTight font-bold uppercase leading-none tracking-[-0.04em] text-white/[0.08] text-[76px] md:text-[148px] lg:text-[218px]">

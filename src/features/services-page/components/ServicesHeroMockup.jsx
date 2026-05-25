@@ -24,11 +24,11 @@ const ServicesHeroMockup = () => {
             <div className="flex flex-col items-center gap-[8px] md:flex-row">
               <span className="leading-[120%] tracking-[-0.02em]">From global forwarding</span>
               <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2a2a7c] p-[8px] text-white">
-                <ArrowRight size={16} />
+                <img
+                  src={image.warehouse}  alt="Warehouse icon" className="h-[16px] w-[16px] object-contain"/>
               </div>
               <span className="leading-[120%] tracking-[-0.02em]">to local distribution</span>
             </div>
-
             <span className="max-w-[760px] leading-[120%] tracking-[-0.02em]">
               we streamline your supply chain with precision and transparency.
             </span>

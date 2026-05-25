@@ -19,8 +19,7 @@ const StatsSection = () => {
               </svg>
             </div>
           </div>
-          <div className="lg:col-span-5 flex items-center justify-start lg:justify-end mt-4 lg:mt-0">
-            {/* Label Kanan Atas */}
+          <div className="lg:col-span-5 flex items-center justify-start lg:justify-end mt-4 lg:mt-20">
             <span className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-400 font-inter">
               WHAT MAKES US DIFFERENT
             </span>
@@ -62,7 +61,7 @@ const StatsSection = () => {
               <h3 className="text-[36px] md:text-[44px] font-semibold leading-[1.2] tracking-tight font-sans text-white">
                 Optimizing complex supply chains with digital precision
               </h3>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-normal">
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed font-inter font-bold">
                 We provide end-to-end logistics solutions designed for the modern era. From intelligent warehousing to real-time fleet management, we streamline your operations for scalability.
               </p>
             </div>

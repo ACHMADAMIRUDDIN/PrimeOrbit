@@ -8,7 +8,7 @@ const SectorSolutions = () => {
 
       {/* Header */}
       <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-[20px]">
-        <h2 className="text-[40px] md:text-[56px] font-medium leading-[120%] font-sans">
+        <h2 className="text-[20px] md:text-[24px] font-medium leading-[120%] font-sans font-black">
           Solutions for Every Sector
         </h2>
         <p className="max-w-[450px] text-[16px] leading-[140%] font-figtree">

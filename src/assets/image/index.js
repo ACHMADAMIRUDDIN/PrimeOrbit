@@ -34,6 +34,7 @@ import gambar_33 from './gambar/5788fed9-c888-4d49-aa35-538d71d3204a.png';
 import gambar_34 from './gambar/23432453253453tret3t-76856.png';
 import gambar_35 from './gambar/3243rew-htru65rut-ytf6556r7657ytur67.png';
 import gambar_37 from './gambar/Container.png';
+import gambar_38 from './gambar/Frame.png';
 
 const image = {
   kontener: kontenerpng,
@@ -65,6 +66,7 @@ const image = {
   whyChooseUsSuccessMap: gambar_35,
   container: gambar_37,
   truk: gambar_15,
+  warehouse: gambar_38,
 
 
   gambar: {
@@ -100,6 +102,7 @@ const image = {
     '23432453253453tret3t-76856.png': gambar_34,
     '3243rew-htru65rut-ytf6556r7657ytur67.png': gambar_35,
     'Container.png': gambar_37,
+    'Frame.png': gambar_38,
   }
 };
 
