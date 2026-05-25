@@ -1,5 +1,6 @@
 import React from 'react';
 import herroImage from '../../UI/herro.png';
+import image from '../../../assets/image';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const ServicesHeroMockup = () => {
