@@ -6,13 +6,13 @@ const PlatformSection = () => {
     <section data-theme="light" className="py-24 bg-white px-4 md:px-6 lg:px-[55px]">
       <div className="mx-auto w-full max-w-[1540px]">
         <div className="bg-black rounded-[32px] p-8 md:p-12 lg:px-[60px] lg:py-[60px] flex flex-col lg:flex-row gap-12 lg:gap-10 items-stretch justify-between relative overflow-hidden min-h-[620px]">
-          
+
           {/* Left Content */}
           <div className="lg:w-[58%] flex flex-col justify-between relative z-10 py-1">
 
             {/* Top Title Group */}
-            <div className="mb-20 md:mb-28 lg:mb-32">
-              <h2 className="text-[30px] md:text-[42px] lg:text-[54px] font-medium text-white leading-[1.2] tracking-[-0.03em] font-plusJakarta">
+            <div className="mb-10 md:mb-12 lg:mb-14">
+              <h2 className="text-[19px] md:text-[26px] lg:text-[34px] font-medium text-white leading-[1.25] tracking-[-0.02em] font-plusJakarta">
                 Movein is a smart logistics <br className="hidden md:block" />
                 platform built for seamless, <br className="hidden md:block" />
                 <span className="text-primary">
@@ -21,7 +21,6 @@ const PlatformSection = () => {
                 </span>
               </h2>
             </div>
-
             {/* Bottom Group */}
             <div className="w-full max-w-[560px] mt-auto">
 

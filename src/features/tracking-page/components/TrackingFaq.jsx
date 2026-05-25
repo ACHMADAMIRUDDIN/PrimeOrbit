@@ -33,7 +33,7 @@ const TrackingFaq = () => {
           Frequently <br className="hidden md:block" />
           Asked Questions
         </h2>
-        <p className="text-[16px] md:text-[18px] leading-[150%] text-[#5a6472] max-w-[360px] md:text-right pt-[12px] font-sans">
+        <p className="text-[16px] md:text-[18px] leading-[150%] text-[#5a6472] whitespace-nowrap md:text-right pt-[12px] font-sans">
           Answers to your questions, every step of the way.
         </p>
       </div>

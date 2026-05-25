@@ -137,18 +137,19 @@ const GlobalNetworkHero = () => {
                 Logistics Solutions Tailored
               </h1>
 
-              <div className="flex flex-col items-center gap-[8px] text-[18px] text-[#0a0a0a] md:text-[24px]">
-                <div className="flex flex-col items-center gap-[8px] md:flex-row">
-                  <span className="leading-[120%] tracking-[-0.02em]">From global forwarding</span>
-                  <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2a2a7c] p-[8px] text-white">
-                    <ArrowRight size={16} />
-                  </div>
-                  <span className="leading-[120%] tracking-[-0.02em]">to local distribution</span>
-                </div>
-                <span className="leading-[120%] tracking-[-0.02em]">
-                  we streamline your supply chain with precision and transparency.
-                </span>
+              <div className="flex flex-col items-center gap-[6px] text-[18px] text-[#050505] md:text-[24px]">
+            <div className="flex flex-col items-center gap-[8px] md:flex-row">
+              <span className="leading-[120%] tracking-[-0.02em]">From global forwarding</span>
+              <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2a2a7c] p-[8px] text-white">
+                <img
+                  src={image.warehouse}  alt="Warehouse icon" className="h-[16px] w-[16px] object-contain"/>
               </div>
+              <span className="leading-[120%] tracking-[-0.02em]">to local distribution</span>
+            </div>
+            <span className="max-w-[760px] leading-[120%] tracking-[-0.02em]">
+              we streamline your supply chain with precision and transparency.
+            </span>
+          </div>
 
               <div className="flex flex-col items-center gap-[14px] pt-[8px] font-sans text-[18px] md:flex-row md:gap-[8px] md:text-[20px]">
                 <button className="rounded-[100px] bg-[#2a2a7c] px-[34px] py-[18px] text-white transition-colors hover:bg-[#2a2a7c]/90">
