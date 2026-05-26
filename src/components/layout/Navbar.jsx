@@ -65,6 +65,8 @@ const Navbar = ({ theme = 'dark' }) => {
   }, [theme, location.pathname]);
 
   const isLight = currentTheme === 'light';
+  const isLoginRoute = location.pathname === '/login';
+  const isRegisterRoute = location.pathname === '/register';
   const activeNavClass = isLight ? 'font-bold text-[#191919]' : 'font-bold text-white';
   const inactiveDesktopNavClass = isLight
     ? 'text-[#191919] hover:text-black/70'
@@ -72,6 +74,74 @@ const Navbar = ({ theme = 'dark' }) => {
   const inactiveMobileNavClass = isLight
     ? 'text-[#191919] hover:text-black/70'
     : 'text-white/80 hover:text-white';
+  const desktopAuthButtonBaseClass =
+    'inline-flex items-center justify-center rounded-[100px] px-[22px] py-[12px] text-[15px] leading-none font-medium transition-all duration-300';
+  const mobileAuthButtonBaseClass =
+    'inline-flex w-full items-center justify-center rounded-[100px] px-6 py-[16px] text-[18px] font-medium transition-all duration-300';
+
+  const getDesktopAuthButtonClass = (variant) => {
+    if (variant === 'login') {
+      if (isLight) {
+        return `${desktopAuthButtonBaseClass} ${
+          isLoginRoute
+            ? 'bg-[#191919] text-white shadow-[0px_10px_25px_rgba(15,23,42,0.18)]'
+            : 'border border-[#d8dce6] bg-white text-[#191919] hover:bg-[#f5f7fb]'
+        }`;
+      }
+
+      return `${desktopAuthButtonBaseClass} ${
+        isLoginRoute
+          ? 'bg-white text-[#191919] shadow-[0px_10px_25px_rgba(0,0,0,0.18)]'
+          : 'border border-white/16 bg-white/10 text-white hover:bg-white/16'
+      }`;
+    }
+
+    if (isLight) {
+      return `${desktopAuthButtonBaseClass} ${
+        isRegisterRoute
+          ? 'bg-[#1d1f63] text-white shadow-[0px_10px_25px_rgba(42,42,124,0.24)]'
+          : 'bg-secondary text-white hover:bg-secondary/90 shadow-sm'
+      }`;
+    }
+
+    return `${desktopAuthButtonBaseClass} ${
+      isRegisterRoute
+        ? 'bg-primary text-[#191919] shadow-[0px_10px_25px_rgba(255,205,81,0.22)]'
+        : 'bg-primary text-[#191919] hover:bg-primary/90 shadow-sm'
+    }`;
+  };
+
+  const getMobileAuthButtonClass = (variant) => {
+    if (variant === 'login') {
+      if (isLight) {
+        return `${mobileAuthButtonBaseClass} ${
+          isLoginRoute
+            ? 'bg-[#191919] text-white shadow-[0px_10px_25px_rgba(15,23,42,0.18)]'
+            : 'border border-[#d8dce6] bg-white text-[#191919] hover:bg-[#f5f7fb]'
+        }`;
+      }
+
+      return `${mobileAuthButtonBaseClass} ${
+        isLoginRoute
+          ? 'bg-white text-[#191919] shadow-[0px_10px_25px_rgba(0,0,0,0.18)]'
+          : 'border border-white/16 bg-white/10 text-white hover:bg-white/16'
+      }`;
+    }
+
+    if (isLight) {
+      return `${mobileAuthButtonBaseClass} ${
+        isRegisterRoute
+          ? 'bg-[#1d1f63] text-white shadow-[0px_10px_25px_rgba(42,42,124,0.24)]'
+          : 'bg-secondary text-white hover:bg-secondary/90 shadow-sm'
+      }`;
+    }
+
+    return `${mobileAuthButtonBaseClass} ${
+      isRegisterRoute
+        ? 'bg-primary text-[#191919] shadow-[0px_10px_25px_rgba(255,205,81,0.22)]'
+        : 'bg-primary text-[#191919] hover:bg-primary/90 shadow-sm'
+    }`;
+  };
 
   const navPositionClass = isScrolled
     ? 'top-0 px-0'
@@ -116,12 +186,13 @@ const Navbar = ({ theme = 'dark' }) => {
             <Link to="/why-choose-us" className={`${location.pathname === '/why-choose-us' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Why Choose Us</Link>
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden md:block relative z-[60]">
-            <Link to="/contact">
-              <button className="bg-secondary text-white hover:bg-secondary/90 px-[28px] py-[12px] rounded-[100px] text-[16px] leading-[19.2px] font-medium transition-all shadow-sm">
-                login
-              </button>
+          {/* Auth Buttons */}
+          <div className="hidden md:flex items-center gap-3 relative z-[60]">
+            <Link to="/login" className={getDesktopAuthButtonClass('login')}>
+              Login
+            </Link>
+            <Link to="/register" className={getDesktopAuthButtonClass('register')}>
+              Register
             </Link>
           </div>
 
@@ -167,11 +238,14 @@ const Navbar = ({ theme = 'dark' }) => {
         </div>
 
         <div className="w-full flex justify-center">
-          <Link to="/contact" className="w-[85%] max-w-[340px]">
-            <button className="w-full bg-secondary text-white hover:bg-secondary/90 py-[16px] rounded-[100px] text-[18px] font-medium transition-all shadow-md">
-              Contact Us
-            </button>
-          </Link>
+          <div className="flex w-[85%] max-w-[340px] flex-col gap-3">
+            <Link to="/login" className={getMobileAuthButtonClass('login')}>
+              Login
+            </Link>
+            <Link to="/register" className={getMobileAuthButtonClass('register')}>
+              Register
+            </Link>
+          </div>
         </div>
       </div>
     </>

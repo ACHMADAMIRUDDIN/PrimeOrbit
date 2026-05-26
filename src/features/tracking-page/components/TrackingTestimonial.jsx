@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image from '../../../assets/image';
 
 const TrackingTestimonial = () => {
@@ -37,9 +38,12 @@ const TrackingTestimonial = () => {
              <span className="text-[28px] font-medium leading-[110%] md:text-[34px] xl:text-[48px]">11.23T+</span>
              <span className="max-w-[220px] text-[14px] leading-[132%] md:text-[16px] xl:text-[20px]">Global Logistics Market Value</span>
           </div>
-          <button className="self-start rounded-[100px] bg-[#2a2a7c] text-white px-[16px] py-[11px] text-[12px] font-sans font-medium transition-colors hover:bg-[#2a2a7c]/90 md:px-[18px] md:py-[13px] md:text-[13px] xl:px-[20px] xl:py-[18px] xl:text-[16px]">
-             Learn More
-          </button>
+          <Link
+            to="/contact"
+            className="self-start rounded-[100px] bg-[#2a2a7c] text-white px-[16px] py-[11px] text-[12px] font-sans font-medium transition-colors hover:bg-[#2a2a7c]/90 md:px-[18px] md:py-[13px] md:text-[13px] xl:px-[20px] xl:py-[18px] xl:text-[16px]"
+          >
+             Contact Us
+          </Link>
         </div>
 
         {/* Testimonial Card 2 */}
