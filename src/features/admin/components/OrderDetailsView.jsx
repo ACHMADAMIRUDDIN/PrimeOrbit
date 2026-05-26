@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import mapImg from '../../UI/adminicon/Map.png';
 
 const OrderDetailsView = () => {
   // Table Data (same as Analytics for consistency)
@@ -74,74 +75,8 @@ const OrderDetailsView = () => {
           </div>
 
           {/* Map Area (Custom SVG Java & Bali Map) */}
-          <div className="w-full h-[190px] rounded-[16px] bg-[#f9fafb] relative overflow-hidden flex items-center justify-center border border-[#efeff1] p-4">
-             <svg viewBox="0 0 580 180" className="w-full h-full max-h-[160px]" xmlns="http://www.w3.org/2000/svg">
-                {/* Banten (Gray) */}
-                <path 
-                   d="M 45,80 C 55,75 70,80 80,80 L 80,110 C 70,110 50,112 40,110 C 30,105 35,85 45,80 Z" 
-                   fill="#e5e7eb" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-                
-                {/* West Java (Navy Blue) */}
-                <path 
-                   d="M 80,80 C 110,65 150,70 180,75 C 200,75 210,90 220,95 L 220,125 C 200,125 150,135 130,130 C 105,125 90,115 80,110 Z" 
-                   fill="#20236a" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* Central Java (Gray) */}
-                <path 
-                   d="M 220,95 C 240,95 270,105 290,105 C 310,105 320,95 330,95 L 330,130 C 320,132 305,133 295,133 C 285,145 275,145 265,130 C 250,129 235,127 220,125 Z" 
-                   fill="#e5e7eb" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* DIY Yogyakarta (Gold/Yellow) */}
-                <path 
-                   d="M 265,130 C 275,145 285,145 295,133 C 295,133 285,133 265,130 Z" 
-                   fill="#ffcd51" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* East Java (Gold/Yellow) */}
-                <path 
-                   d="M 330,95 C 350,95 380,100 400,100 C 420,100 440,110 470,115 C 475,115 480,125 480,138 C 470,142 440,148 420,148 C 390,148 360,140 330,130 Z" 
-                   fill="#ffcd51" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* Madura Island (Gold/Yellow) */}
-                <path 
-                   d="M 405,88 C 420,80 440,80 460,88 C 440,94 420,94 405,88 Z" 
-                   fill="#ffcd51" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* Bali (Navy Blue) */}
-                <path 
-                   d="M 495,135 C 505,130 515,132 525,138 C 515,148 505,148 495,135 Z" 
-                   fill="#20236a" 
-                   stroke="#ffffff" 
-                   strokeWidth="1.5" 
-                   strokeLinejoin="round"
-                />
-
-                {/* Specific Port Indicator (Tiny Red Circle at east of Bali) */}
-                <circle cx="520" cy="138" r="3.5" fill="#ef4444" stroke="#ffffff" strokeWidth="0.8" />
-             </svg>
+          <div className="w-full h-[295px] rounded-[16px] bg-[#f9fafb] relative overflow-hidden flex items-center justify-center border border-[#efeff1] p-2">
+             <img src={mapImg} alt="Shipping Location Map" className="w-full h-full object-contain scale-[1.3]" />
           </div>
 
           {/* Stats Progress Bars */}
