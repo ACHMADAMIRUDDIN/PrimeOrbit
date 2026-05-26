@@ -1,6 +1,8 @@
 import React from 'react';
 import { Settings, Car } from 'lucide-react';
 import image from '../../../assets/image';
+import serviceIcon from '../../UI/adminicon/Frame 515030.png';
+import fuelIcon from '../../UI/adminicon/Frame 515030 (1).png';
 
 const FleetDriverView = () => {
   const fleetData = [
@@ -44,12 +46,12 @@ const FleetDriverView = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
+    <div className="flex flex-col lg:flex-row gap-6 w-full">
 
       {/* Truck Images Grid */}
-      <div className="lg:w-[52%] max-w-[600px] grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="lg:w-[60%] w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
         {fleetData.map((item) => (
-          <div key={item.id} className="relative rounded-2xl overflow-hidden h-[310px] shadow-sm group cursor-pointer border border-gray-100 transition-all duration-300 hover:shadow-md">
+          <div key={item.id} className="relative rounded-2xl overflow-hidden h-[415px] shadow-sm group cursor-pointer border border-gray-100 transition-all duration-300 hover:shadow-md">
             <img
               src={item.image}
               alt={item.name}
@@ -74,7 +76,7 @@ const FleetDriverView = () => {
       </div>
 
       {/* Sidebar Details */}
-      <div className="lg:w-[45%] max-w-[420px] flex-1 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div className="flex-1 w-full bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
         <h2 className="text-xl font-bold text-secondary mb-6 px-1">Details Information</h2>
 
         <div className="space-y-6">
@@ -87,10 +89,10 @@ const FleetDriverView = () => {
 
             <div className="flex items-center gap-4 mb-6">
               <div className="w-24 h-14 rounded-xl overflow-hidden relative border border-gray-200 bg-white">
-                <img 
+                <img
                   src={image.sideBoxTruck}
-                  alt="Van" 
-                  className="w-full h-full object-cover" 
+                  alt="Van"
+                  className="w-full h-full object-cover"
                 />
                 {/* Lightning overlay */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/5">
@@ -107,17 +109,13 @@ const FleetDriverView = () => {
 
             <div className="flex gap-4">
               <div className="flex-1 bg-[#242A5C] rounded-xl p-4 text-white hover:opacity-95 transition-opacity">
-                <div className="w-9 h-9 border border-white/20 rounded-full flex items-center justify-center mb-3">
-                  <Car size={15} />
-                </div>
+                <img src={serviceIcon} alt="Service Date" className="w-8 h-8 object-contain mb-3" />
                 <p className="text-[10px] text-indigo-200 mb-0.5">Service Date</p>
                 <p className="font-bold text-xs">May 12, 2026</p>
               </div>
 
               <div className="flex-1 bg-[#242A5C] rounded-xl p-4 text-white hover:opacity-95 transition-opacity">
-                <div className="w-9 h-9 border border-white/20 rounded-full flex items-center justify-center mb-3">
-                  <Settings size={15} />
-                </div>
+                <img src={fuelIcon} alt="Fuel Consumption" className="w-8 h-8 object-contain mb-3" />
                 <p className="text-[10px] text-indigo-200 mb-0.5">Fuel Consumption</p>
                 <p className="font-bold text-xs">10 L/100km</p>
               </div>

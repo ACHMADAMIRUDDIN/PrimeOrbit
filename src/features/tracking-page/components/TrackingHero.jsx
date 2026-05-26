@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../../../assets/image';
-import { Truck } from 'lucide-react';
+import trukIcon from '../../UI/uiicon/truk.png';
 
 const FloatingBadgeIcon = () => (
   <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#0f5de8]">
@@ -44,7 +44,7 @@ const TrackingHero = () => {
       {/* Floating Tracklane Badges */}
       <div className="absolute top-[31%] left-[23%] transform rotate-[8deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
         <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
-          <Truck size={18} className="text-white fill-white animate-pulse" />
+          <img src={trukIcon} alt="Truck Icon" className="w-[18px] h-[18px] object-contain animate-pulse" />
         </div>
         <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
           Tracklane
@@ -53,7 +53,7 @@ const TrackingHero = () => {
 
       <div className="absolute top-[60%] left-[4%] transform -rotate-[12deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
         <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
-          <Truck size={18} className="text-white fill-white" />
+          <img src={trukIcon} alt="Truck Icon" className="w-[18px] h-[18px] object-contain" />
         </div>
         <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
           Tracklane
@@ -62,7 +62,7 @@ const TrackingHero = () => {
 
       <div className="absolute top-[41%] right-[9%] transform rotate-[8deg] bg-white rounded-[100px] flex items-center p-[6px_18px_6px_6px] gap-[10px] shadow-[0_12px_32px_rgba(0,0,0,0.15)] border border-white/20 select-none z-10">
         <div className="w-[36px] h-[36px] rounded-full bg-[#1e58ff] flex items-center justify-center shadow-sm">
-          <Truck size={18} className="text-white fill-white" />
+          <img src={trukIcon} alt="Truck Icon" className="w-[18px] h-[18px] object-contain" />
         </div>
         <span className="font-sans font-medium text-[16px] tracking-tight text-[#1c1c1c]">
           Tracklane
