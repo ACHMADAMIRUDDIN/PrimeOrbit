@@ -1,5 +1,10 @@
 import React from 'react';
-import { Plus, Settings, Search, Package, MapPin, Truck, ChevronDown, MoreVertical } from 'lucide-react';
+import { Plus, MapPin, Truck, ChevronDown, MoreVertical, Package } from 'lucide-react';
+
+// Custom PNG icons from adminicon
+import frameIcon from '../../UI/adminicon/Frame.png';
+import totalShipmentsIcon from '../../UI/adminicon/Icon Container2 (2).png';
+import deliveredIcon from '../../UI/adminicon/Icon Container2 (1).png';
 
 const DashboardMain = () => {
   const mapLandforms = [
@@ -49,7 +54,7 @@ const DashboardMain = () => {
         
         <div className="flex items-center gap-[11px] text-[16px] text-white">
           <button className="w-[53px] h-[53px] rounded-full bg-white border border-[#eceef1] flex items-center justify-center text-gray-500 hover:bg-gray-50 transition-colors shrink-0">
-            <Settings size={20} />
+            <img src={frameIcon} alt="Settings" className="w-[20px] h-[20px] object-contain" />
           </button>
           <button className="h-[53px] rounded-full bg-[#2a2a7c] flex items-center justify-center px-[18px] py-[16px] gap-[10px] hover:bg-[#2a2a7c]/90 transition-colors font-medium shrink-0">
             <Plus size={20} />
@@ -65,9 +70,7 @@ const DashboardMain = () => {
         <div className="rounded-[24px] bg-white p-[20px] flex flex-col gap-[8px] shadow-sm">
            <div className="flex items-center justify-between">
               <h3 className="font-medium leading-[120%] tracking-[-0.01em]">Total Shipments</h3>
-              <div className="w-[35px] h-[35px] rounded-[10px] bg-[#f3f4f6] flex items-center justify-center text-gray-600">
-                <Search size={16} />
-              </div>
+              <img src={totalShipmentsIcon} alt="Total Shipments Icon" className="w-[35px] h-[35px] object-contain" />
            </div>
            <div className="flex flex-col gap-[8px] mt-[4px]">
              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">1,256</span>
@@ -105,9 +108,7 @@ const DashboardMain = () => {
         <div className="rounded-[24px] bg-white p-[20px] flex flex-col gap-[8px] shadow-sm">
            <div className="flex items-center justify-between">
               <h3 className="font-medium leading-[120%] tracking-[-0.01em]">Delivered</h3>
-              <div className="w-[35px] h-[35px] rounded-[10px] bg-[#fbfbfb] flex items-center justify-center text-gray-700">
-                <Package size={16} />
-              </div>
+              <img src={deliveredIcon} alt="Delivered Icon" className="w-[35px] h-[35px] object-contain" />
            </div>
            <div className="flex flex-col gap-[8px] mt-[4px]">
              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">763</span>
