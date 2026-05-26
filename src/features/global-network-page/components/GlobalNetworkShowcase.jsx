@@ -1,5 +1,9 @@
 import React from 'react';
-import { ArrowRight, QrCode, FileText, BarChart2, Share2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import hierarchySquare from '../../UI/uiicon/hierarchy-square-2.png';
+import scanIcon from '../../UI/uiicon/scan.png';
+import videoIcon from '../../UI/uiicon/video.png';
+import chartIcon from '../../UI/uiicon/chart.png';
 
 const GlobalNetworkShowcase = () => {
   return (
@@ -60,7 +64,7 @@ const GlobalNetworkShowcase = () => {
           
           {/* Card 1: Smart Logistics */}
           <div className="rounded-[24px] bg-white p-[24px_20px] flex flex-col gap-[18px] hover:shadow-lg transition-shadow">
-            <Share2 size={40} className="text-[#2a2a7c]" />
+            <img src={hierarchySquare} alt="Smart Logistics" className="w-[40px] h-[40px] object-contain" />
             <h4 className="text-[24px] md:text-[28px] leading-[120%] font-medium">Smart Logistics</h4>
             <p className="leading-[140%] text-[#a5a5a5] text-[16px] md:text-[18px] line-clamp-2">
               Manage shipments, routes, and operational data efficiently through an integrate
@@ -73,7 +77,7 @@ const GlobalNetworkShowcase = () => {
 
           {/* Card 2: QR Scan System */}
           <div className="rounded-[24px] bg-white p-[24px_20px] flex flex-col gap-[18px] hover:shadow-lg transition-shadow">
-            <QrCode size={40} className="text-[#2a2a7c]" />
+            <img src={scanIcon} alt="QR Scan System" className="w-[40px] h-[40px] object-contain" />
             <h4 className="text-[24px] md:text-[28px] leading-[120%] font-medium">QR Scan System</h4>
             <p className="leading-[140%] text-[#a5a5a5] text-[16px] md:text-[18px] line-clamp-2">
               Simplify shipment verification and access through QR code technology, allowing overall
@@ -86,7 +90,7 @@ const GlobalNetworkShowcase = () => {
 
           {/* Card 3: AI Documentation */}
           <div className="rounded-[24px] bg-white p-[24px_20px] flex flex-col gap-[18px] hover:shadow-lg transition-shadow">
-            <FileText size={40} className="text-[#2a2a7c]" />
+            <img src={videoIcon} alt="AI Documentation" className="w-[40px] h-[40px] object-contain" />
             <h4 className="text-[24px] md:text-[28px] leading-[120%] font-medium">AI Documentation</h4>
             <p className="leading-[140%] text-[#a5a5a5] text-[16px] md:text-[18px] line-clamp-2">
               Simplify logistics documentation with automated digital records, reducing, and documentation
@@ -99,7 +103,7 @@ const GlobalNetworkShowcase = () => {
 
           {/* Card 4: Smart Analytics */}
           <div className="rounded-[24px] bg-white p-[24px_20px] flex flex-col gap-[18px] hover:shadow-lg transition-shadow">
-            <BarChart2 size={40} className="text-[#2a2a7c]" />
+            <img src={chartIcon} alt="Smart Analytics" className="w-[40px] h-[40px] object-contain" />
             <h4 className="text-[24px] md:text-[28px] leading-[120%] font-medium">Smart Analytics</h4>
             <p className="leading-[140%] text-[#a5a5a5] text-[16px] md:text-[18px] line-clamp-2">
               Gain valuable insights through logistics analytics that help businesses monitoring

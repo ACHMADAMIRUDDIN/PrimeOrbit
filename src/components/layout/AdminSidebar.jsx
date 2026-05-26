@@ -1,16 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Map, Package, Truck, PieChart, ShoppingCart } from 'lucide-react';
 import image from '../../assets/image';
+
+// Custom PNG icons
+import grid5 from '../../features/UI/adminicon/grid-5.png';
+import mapPinArea from '../../features/UI/adminicon/MapPinArea.png';
+import treasureChest from '../../features/UI/adminicon/TreasureChest.png';
+import truckIcon from '../../features/UI/adminicon/Truck.png';
+import chartDonut from '../../features/UI/adminicon/ChartDonut.png';
+import scrollIcon from '../../features/UI/adminicon/Scroll.png';
 
 const AdminSidebar = () => {
   const navItems = [
-    { path: '/admin/dashboard', icon: <LayoutDashboard size={24} />, label: 'Dashboard' },
-    { path: '/admin/tracking', icon: <Map size={24} />, label: 'Tracking' },
-    { path: '/admin/inventory', icon: <Package size={24} />, label: 'Inventory' },
-    { path: '/admin/fleet', icon: <Truck size={24} />, label: 'Fleet & Driver' },
-    { path: '/admin/analytics', icon: <PieChart size={24} />, label: 'Analytics' },
-    { path: '/admin/order', icon: <ShoppingCart size={24} />, label: 'Order' },
+    { path: '/admin/dashboard', icon: grid5, label: 'Dashboard' },
+    { path: '/admin/tracking', icon: mapPinArea, label: 'Tracking' },
+    { path: '/admin/inventory', icon: treasureChest, label: 'Inventory' },
+    { path: '/admin/fleet', icon: truckIcon, label: 'Fleet & Driver' },
+    { path: '/admin/analytics', icon: chartDonut, label: 'Analytics' },
+    { path: '/admin/order', icon: scrollIcon, label: 'Order' },
   ];
 
   return (
@@ -40,8 +47,8 @@ const AdminSidebar = () => {
           >
             {({ isActive }) => (
               <>
-                <div className={`${!isActive ? 'opacity-40' : 'opacity-100'}`}>
-                  {item.icon}
+                <div className={`w-[24px] h-[24px] shrink-0 flex items-center justify-center ${isActive ? 'brightness-0 invert' : 'opacity-40'}`}>
+                  <img src={item.icon} alt={item.label} className="w-full h-full object-contain" />
                 </div>
                 <span className="leading-[140%]">{item.label}</span>
               </>
