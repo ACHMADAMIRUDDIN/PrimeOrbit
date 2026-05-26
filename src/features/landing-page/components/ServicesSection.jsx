@@ -6,7 +6,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="bg-white px-4 py-[90px] font-inter antialiased md:px-6 lg:px-[65px]"
+      className="bg-white px-4 py-24 font-inter antialiased md:px-6 lg:px-[55px]"
     >
       <div className="mx-auto w-full max-w-[1540px]">
         {/* HEADER */}

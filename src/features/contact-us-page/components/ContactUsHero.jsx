@@ -34,7 +34,7 @@ const ContactUsHero = () => {
             </div>
             <div className="flex items-center gap-[12px] font-sans">
                <Mail className="opacity-70 hidden md:block" />
-               <span className="text-[24px] md:text-[32px] leading-[120%] font-medium text-primary">Primebit@gmail.com</span>
+               <span className="text-[24px] md:text-[32px] leading-[120%] font-medium text-white">Primebit@gmail.com</span>
             </div>
           </div>
 

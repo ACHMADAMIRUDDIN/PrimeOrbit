@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../../../assets/image';
-import { PackageSearch, Activity } from 'lucide-react';
+import trukIcon from '../../UI/uiicon/truk.png';
 
 const WhyChooseUsHero = () => {
   const heroImages = [
@@ -45,7 +45,7 @@ const WhyChooseUsHero = () => {
       {/* Cargo Status Floating Chip */}
       <div className="absolute top-[350px] md:top-[447px] right-[-20px] md:right-[5%] lg:right-[15%] xl:right-[20%] shadow-lg rounded-[100px] bg-white hidden md:flex items-center p-[4px_24px_4px_8px] gap-[12px] transform rotate-[-5deg]">
         <div className="w-[32px] h-[32px] rounded-full bg-[#2a2a7c] shadow-[0_4px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-          <PackageSearch size={16} color="white" />
+          <img src={trukIcon} alt="Truck Icon" className="w-[18px] h-[18px] object-contain" />
         </div>
         <span className="font-medium text-[16px] leading-[120%] tracking-[-0.02em] text-[#050505]">
           Cargo Status
@@ -55,7 +55,7 @@ const WhyChooseUsHero = () => {
       {/* Live Tracking Floating Chip */}
       <div className="absolute top-[280px] md:top-[259px] left-[-20px] md:left-[5%] lg:left-[10%] xl:left-[15%] shadow-lg rounded-[100px] bg-white hidden md:flex items-center p-[4px_24px_4px_8px] gap-[12px] transform rotate-[5deg]">
         <div className="w-[32px] h-[32px] rounded-full bg-[#2a2a7c] shadow-[0_4px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-          <Activity size={16} color="white" />
+          <img src={trukIcon} alt="Truck Icon" className="w-[18px] h-[18px] object-contain" />
         </div>
         <span className="font-medium text-[16px] leading-[120%] tracking-[-0.02em] text-[#050505]">
           Live Tracking
