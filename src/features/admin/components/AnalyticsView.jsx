@@ -12,7 +12,7 @@ const AnalyticsView = () => {
       isPositive: true,
       icon: <Package size={20} className="text-[#64748B]" />,
       iconBg: 'bg-[#f3f4f6]',
-      arrowImage: 'sdfsfsfsfsf'
+      arrowImage: 'sdfsfsfsfsf' 
     },
     {
       title: 'In Transit',

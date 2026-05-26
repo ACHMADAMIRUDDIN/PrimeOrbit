@@ -65,6 +65,13 @@ const Navbar = ({ theme = 'dark' }) => {
   }, [theme, location.pathname]);
 
   const isLight = currentTheme === 'light';
+  const activeNavClass = isLight ? 'font-bold text-[#191919]' : 'font-bold text-white';
+  const inactiveDesktopNavClass = isLight
+    ? 'text-[#191919] hover:text-black/70'
+    : 'text-white/80 hover:text-white';
+  const inactiveMobileNavClass = isLight
+    ? 'text-[#191919] hover:text-black/70'
+    : 'text-white/80 hover:text-white';
 
   const navPositionClass = isScrolled
     ? 'top-0 px-0'
@@ -102,11 +109,11 @@ const Navbar = ({ theme = 'dark' }) => {
 
           {/* Desktop Menu */}
           <div className={`hidden lg:flex items-center gap-[46px] ${isLight ? 'text-[#191919]' : 'text-white'} transition-colors duration-300`}>
-            <Link to="/" className={`${location.pathname === '/' ? 'font-semibold text-primary' : ''} hover:text-primary transition-colors text-[16px] leading-[19.2px] font-inter`}>Home</Link>
-            <Link to="/services" className={`${location.pathname === '/services' ? 'font-semibold text-primary' : ''} hover:text-primary transition-colors text-[16px] leading-[19.2px] font-inter`}>Services</Link>
-            <Link to="/tracking" className={`${location.pathname === '/tracking' ? 'font-semibold text-primary' : ''} hover:text-primary transition-colors text-[16px] leading-[19.2px] font-inter`}>Tracking</Link>
-            <Link to="/global-network" className={`${location.pathname === '/global-network' ? 'font-semibold text-primary' : ''} hover:text-primary transition-colors text-[16px] leading-[19.2px] font-inter`}>Global Network</Link>
-            <Link to="/why-choose-us" className={`${location.pathname === '/why-choose-us' ? 'font-semibold text-primary' : ''} hover:text-primary transition-colors text-[16px] leading-[19.2px] font-inter`}>Why Choose Us</Link>
+            <Link to="/" className={`${location.pathname === '/' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Home</Link>
+            <Link to="/services" className={`${location.pathname === '/services' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Services</Link>
+            <Link to="/tracking" className={`${location.pathname === '/tracking' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Tracking</Link>
+            <Link to="/global-network" className={`${location.pathname === '/global-network' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Global Network</Link>
+            <Link to="/why-choose-us" className={`${location.pathname === '/why-choose-us' ? activeNavClass : inactiveDesktopNavClass} transition-colors text-[16px] leading-[19.2px] font-inter`}>Why Choose Us</Link>
           </div>
 
           {/* Contact Button */}
@@ -152,11 +159,11 @@ const Navbar = ({ theme = 'dark' }) => {
         }`}
       >
         <div className="flex flex-col gap-[36px] items-center">
-          <Link to="/" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/' ? 'font-bold text-primary' : 'hover:text-primary'}`}>Home</Link>
-          <Link to="/services" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/services' ? 'font-bold text-primary' : 'hover:text-primary'}`}>Services</Link>
-          <Link to="/tracking" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/tracking' ? 'font-bold text-primary' : 'hover:text-primary'}`}>Tracking</Link>
-          <Link to="/global-network" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/global-network' ? 'font-bold text-primary' : 'hover:text-primary'}`}>Global Network</Link>
-          <Link to="/why-choose-us" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/why-choose-us' ? 'font-bold text-primary' : 'hover:text-primary'}`}>Why Choose Us</Link>
+          <Link to="/" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/' ? activeNavClass : inactiveMobileNavClass}`}>Home</Link>
+          <Link to="/services" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/services' ? activeNavClass : inactiveMobileNavClass}`}>Services</Link>
+          <Link to="/tracking" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/tracking' ? activeNavClass : inactiveMobileNavClass}`}>Tracking</Link>
+          <Link to="/global-network" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/global-network' ? activeNavClass : inactiveMobileNavClass}`}>Global Network</Link>
+          <Link to="/why-choose-us" className={`text-[22px] font-medium transition-colors duration-300 ${location.pathname === '/why-choose-us' ? activeNavClass : inactiveMobileNavClass}`}>Why Choose Us</Link>
         </div>
 
         <div className="w-full flex justify-center">
