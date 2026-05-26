@@ -42,8 +42,8 @@ import gambar_42 from './gambar/Icon.png';
 import gambar_43 from './gambar/Frame 15.png';
 import gambar_44 from './gambar/Truck.png';
 import gambar_45 from './gambar/Files.png';
-import gmabra_46 from './gambar/Alarm.png';
-
+import gambar_46 from './gambar/Alarm.png';
+import gambar_47 from './gambar/dsfscvsxcx.png';
 
 
 const image = {
@@ -84,7 +84,8 @@ const image = {
   frame152: gambar_43,
   truck121: gambar_44,
   files21321: gambar_45,
-  alarm1232432432: gmabra_46,
+  alarm1232432432: gambar_46,
+  dsfscvsxcx: gambar_47,
 
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
@@ -127,7 +128,8 @@ const image = {
     'Frame 15.png': gambar_43,
     'Truck.png': gambar_44,
     'Files.png': gambar_45,
-    'Alarm.png': gmabra_46,
+    'Alarm.png': gambar_46,
+    'dsfscvsxcx.png': gambar_47,
   }
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../../../assets/image';
-import { Ship, Plane, Truck } from 'lucide-react';
+import { Plane, Truck } from 'lucide-react';
 
 const GlobalNetworkStats = () => {
   return (
@@ -41,8 +41,8 @@ const GlobalNetworkStats = () => {
             <img src={image.cargoShipAerial} alt="Sea Transport" className="absolute w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" />
             
             <div className="absolute top-[16px] left-[24px] right-[24px] flex items-center justify-between z-10 text-[12px] text-white">
-              <div className="w-[24px] h-[24px] rounded-full backdrop-blur-[8px] bg-white/10 border border-white flex items-center justify-center">
-                <Ship size={14} />
+              <div className="w-[28px] h-[28px] flex items-center justify-center">
+                <img src={image.dsfscvsxcx} alt="Ship" width={24} height={24} className="w-[16px] h-[16px]" />
               </div>
               <div className="h-[28px] rounded-[100px] bg-white text-black font-semibold flex items-center justify-center px-[12px]">
                 Transport
@@ -63,8 +63,8 @@ const GlobalNetworkStats = () => {
             <img src={image.airCargoPlane} alt="Air Transport" className="absolute w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" />
             
             <div className="absolute top-[16px] left-[24px] right-[24px] flex items-center justify-between z-10 text-[12px] text-black">
-              <div className="w-[24px] h-[24px] rounded-full backdrop-blur-[8px] bg-white/50 border border-white flex items-center justify-center">
-                <Plane size={14} />
+              <div className="w-[28px] h-[28px] flex items-center justify-center">
+                <img src={image.dsfscvsxcx} alt="Ship" width={24} height={24} className="w-[16px] h-[16px]" />
               </div>
               <div className="h-[28px] rounded-[100px] backdrop-blur-[8px] bg-white/80 text-black font-semibold flex items-center justify-center px-[12px]">
                 Transport
@@ -85,8 +85,8 @@ const GlobalNetworkStats = () => {
             <img src={image.roadTruck} alt="Land Transport" className="absolute w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" />
             
             <div className="absolute top-[16px] left-[24px] right-[24px] flex items-center justify-between z-10 text-[12px] text-black">
-              <div className="w-[24px] h-[24px] rounded-full backdrop-blur-[8px] bg-white/50 border border-white flex items-center justify-center">
-                <Truck size={14} />
+              <div className="w-[28px] h-[28px] flex items-center justify-center">
+                <img src={image.dsfscvsxcx} alt="Ship" width={24} height={24} className="w-[16px] h-[16px]" />
               </div>
               <div className="h-[28px] rounded-[100px] backdrop-blur-[8px] bg-white/80 text-black font-semibold flex items-center justify-center px-[12px]">
                 Transport
