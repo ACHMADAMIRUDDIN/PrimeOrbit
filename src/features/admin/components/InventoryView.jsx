@@ -1,5 +1,6 @@
 import React from 'react';
-import { Package, Truck, CheckCircle2, Filter, AlertCircle, BellRing } from 'lucide-react';
+import { Package, Truck, CheckCircle2, Filter, AlertCircle } from 'lucide-react';
+import image from '../../../assets/image';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const donutData = [
@@ -174,11 +175,11 @@ const InventoryView = () => {
           <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 transition-all hover:shadow-md">
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-[12px] text-secondary font-bold text-[16px]">
-                <div className="w-[32px] h-[32px] rounded-[10px] bg-[#20236a] text-white flex items-center justify-center shrink-0">
-                  <BellRing size={16} className="text-white animate-pulse" />
+                  <div className="w-[32px] h-[32px] flex items-center justify-center shrink-0">
+                    <img src={image.dsfdsvcxzes} alt="Geofencing Alert" width={20} height={20} className="w-5 h-5 animate-pulse" />
+                  </div>
+                  <span>Geofencing Alert</span>
                 </div>
-                <span>Geofencing Alert</span>
-              </div>
               <span className="text-[#989dab] text-xs font-semibold">13:48</span>
             </div>
             <p className="text-[#989dab] text-[13px] leading-relaxed font-normal mt-3">
@@ -202,8 +203,8 @@ const InventoryView = () => {
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-2xl p-5">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-secondary text-white p-2 rounded-lg">
-                  <Package size={16} />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <img src={image.sczxcsdcxsc} alt="Main Distribution Center" width={28} height={28} className="w-7 h-7" />
                 </div>
                 <h4 className="font-bold text-secondary">Main Distribution Center</h4>
               </div>
@@ -213,8 +214,8 @@ const InventoryView = () => {
 
             <div className="border border-gray-200 rounded-2xl p-5">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-secondary text-white p-2 rounded-lg">
-                  <AlertCircle size={16} />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <img src={image.dasxzczxc} alt="Main Distribution Center" width={28} height={28} className="w-7 h-7" />
                 </div>
                 <h4 className="font-bold text-secondary">Retail Storage</h4>
               </div>
@@ -236,8 +237,8 @@ const InventoryView = () => {
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-5 flex gap-4 items-start">
-                <div className="bg-indigo-100 text-indigo-600 p-2 rounded-lg shrink-0 mt-1">
-                  <BellRing size={16} />
+                <div className="shrink-0 mt-1">
+                  <img src={image.dsfdsvcxzes} alt="Alert" width={20} height={20} className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-secondary mb-1">{i === 1 ? 'Supply Chain' : 'Warehouse Efficiency'}</h4>

@@ -47,7 +47,9 @@ import gambar_47 from './gambar/dsfscvsxcx.png';
 import gambar_48 from './gambar/sdfsfsfsfsf.png';
 import gambar_49 from './gambar/dzcxzvcxvfd.png';
 import gambar_50 from './gambar/sfsdvcxvcxvd.png';
-
+import gambar_51 from './gambar/dsfdsvcxzes.png';
+import gambar_52 from './gambar/sczxcsdcxsc.png';
+import gambar_54 from './gambar/dasxzczxc.png';
 
 const image = {
   kontener: kontenerpng,
@@ -92,6 +94,9 @@ const image = {
   sdfsfsfsfsf: gambar_48,
   dzcxzvcxvfd: gambar_49,
   sfsdvcxvcxvd: gambar_50,
+  dsfdsvcxzes: gambar_51,
+  sczxcsdcxsc: gambar_52,
+  dasxzczxc: gambar_54,
 
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
@@ -138,7 +143,10 @@ const image = {
     'dsfscvsxcx.png': gambar_47,
     'sdfsfsfsfsf.png': gambar_48,
     'dzcxzvcxvfd.png': gambar_49,
-    'sfsdvcxvcxvd.png': gambar_50
+    'sfsdvcxvcxvd.png': gambar_50,
+    'dsfdsvcxzes.png': gambar_51,
+    'sczxcsdcxsc.png': gambar_52,
+    'dasxzczxc.png': gambar_54
   }
 };
 

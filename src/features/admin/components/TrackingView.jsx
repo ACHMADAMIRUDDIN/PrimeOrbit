@@ -14,30 +14,30 @@ const TrackingView = () => {
 
           {/* Map Container */}
           {/* Map Container */}
-<div className="w-full h-[400px] xl:h-[576px] rounded-[24px] relative overflow-hidden shadow-sm border border-gray-100">
+          <div className="w-full h-[400px] xl:h-[576px] rounded-[24px] relative overflow-hidden shadow-sm border border-gray-100">
 
-  {/* Gambar Peta - Langsung nempel full tanpa sisa background di belakangnya */}
-  <img
-    src={image.container}
-    alt="Map"
-    className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-[1.01] z-0"
-  />
+            {/* Gambar Peta - Langsung nempel full tanpa sisa background di belakangnya */}
+            <img
+              src={image.container}
+              alt="Map"
+              className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-[1.01] z-0"
+            />
 
-  {/* Map Pins & Overlays */}
-  <div className="absolute left-[20%] top-[40%] z-10">
-    <div className="w-[17px] h-[17px] rounded-full bg-[#ffcd51] border-[2.6px] border-white shadow-md"></div>
-  </div>
+            {/* Map Pins & Overlays */}
+            <div className="absolute left-[20%] top-[40%] z-10">
+              <div className="w-[17px] h-[17px] rounded-full bg-[#ffcd51] border-[2.6px] border-white shadow-md"></div>
+            </div>
 
-  <div className="absolute left-[60%] top-[30%] z-10">
-    <div className="w-[17px] h-[17px] rounded-full bg-[#ffcd51] border-[2.6px] border-white shadow-md"></div>
-  </div>
+            <div className="absolute left-[60%] top-[30%] z-10">
+              <div className="w-[17px] h-[17px] rounded-full bg-[#ffcd51] border-[2.6px] border-white shadow-md"></div>
+            </div>
 
-  {/* SVG Route Line */}
-  <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-10">
-    <path d="M 200,230 Q 400,100 650,180" fill="none" stroke="#2a2a7c" strokeWidth="2.6" strokeDasharray="6,6" />
-  </svg>
+            {/* SVG Route Line */}
+            <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-10">
+              <path d="M 200,230 Q 400,100 650,180" fill="none" stroke="#2a2a7c" strokeWidth="2.6" strokeDasharray="6,6" />
+            </svg>
 
-</div>
+          </div>
 
           {/* 3 KPI Cards under Map */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
@@ -70,9 +70,9 @@ const TrackingView = () => {
             {/* KPI 3 */}
             <div className="rounded-[24px] bg-white p-[20px] flex flex-col gap-[26px] shadow-sm border border-gray-100">
               <div className="flex flex-col gap-[8px]">
-                <div className="w-[46px] h-[46px] rounded-[12px] bg-[#2a2a7c] text-white flex items-center justify-center">
-                  <Navigation size={24} />
-                </div>
+                 <div className="w-[46px] h-[46px] rounded-[12px] bg-[#2a2a7c] text-white flex items-center justify-center">
+                   <Truck size={24} style={{ transform: 'scaleX(-1)' }} />
+                 </div>
                 <span className="text-[14px] leading-[120%] text-[#2a2a7c] font-medium">Active Deliveries</span>
               </div>
               <div className="flex flex-col gap-[8px]">
