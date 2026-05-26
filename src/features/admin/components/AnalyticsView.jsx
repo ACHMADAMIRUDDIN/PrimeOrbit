@@ -1,5 +1,6 @@
 import React from 'react';
-import { Package, Truck, CheckCircle, Search, ChevronLeft, ChevronRight, ArrowUpRight, ArrowDownRight, MoreVertical, MoreHorizontal, Plane } from 'lucide-react';
+import { Package, Truck, CheckCircle, Search, ChevronLeft, ChevronRight, MoreVertical, MoreHorizontal, Plane } from 'lucide-react';
+import image from '../../../assets/image';
 
 const AnalyticsView = () => {
   // KPI Data
@@ -10,7 +11,8 @@ const AnalyticsView = () => {
       percentage: '12%',
       isPositive: true,
       icon: <Package size={20} className="text-[#64748B]" />,
-      iconBg: 'bg-[#f3f4f6]'
+      iconBg: 'bg-[#f3f4f6]',
+      arrowImage: 'sdfsfsfsfsf'
     },
     {
       title: 'In Transit',
@@ -18,7 +20,8 @@ const AnalyticsView = () => {
       percentage: '5%',
       isPositive: false,
       icon: <Truck size={20} className="text-[#ea580c]" />,
-      iconBg: 'bg-[#fff7ed]'
+      iconBg: 'bg-[#fff7ed]',
+      arrowImage: 'dzcxzvcxvfd'
     },
     {
       title: 'Delivered',
@@ -26,7 +29,8 @@ const AnalyticsView = () => {
       percentage: '8%',
       isPositive: true,
       icon: <CheckCircle size={20} className="text-[#64748B]" />,
-      iconBg: 'bg-[#fbfbfb]'
+      iconBg: 'bg-[#fbfbfb]',
+      arrowImage: 'sdfsfsfsfsf'
     }
   ];
 
@@ -65,12 +69,12 @@ const AnalyticsView = () => {
                 {kpi.icon}
               </div>
             </div>
-            <div className="flex flex-col gap-[8px]">
-              <span className="text-[32px] font-medium text-[#1e2939] leading-[120%]">{kpi.count}</span>
-              <div className="flex items-center gap-[20px] text-[14px]">
-                <div className={`flex items-center gap-[4px] px-[12px] py-[4px] rounded-full font-semibold ${kpi.isPositive ? 'bg-[#eff6ff] text-[#00bc7d]' : 'bg-[#ffdfe3] text-[#fb2c36]'}`}>
-                  {kpi.isPositive ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />}
-                  {kpi.percentage}
+            <div className="flex flex-col gap-[8px] mt-[4px]">
+              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">{kpi.count}</span>
+              <div className="flex items-center justify-between text-[14px]">
+                <div className={`flex items-center gap-[8px] rounded-full ${kpi.isPositive ? 'bg-[#eff6ff] text-[#00bc7d]' : 'bg-[#ffdfe3] text-[#fb2c36]'} px-[12px] py-[6px]`}>
+                  <img src={image[kpi.arrowImage]} alt="arrow" className="w-[12px] h-[8px] object-contain" />
+                  <span className="font-semibold">{kpi.percentage}</span>
                 </div>
                 <span className="text-[#4a5565]">from last month</span>
               </div>
