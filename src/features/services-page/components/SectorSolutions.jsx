@@ -8,7 +8,7 @@ const SectorSolutions = () => {
 
       {/* Header */}
       <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-[20px]">
-        <h2 className="text-[20px] md:text-[24px] font-medium leading-[120%] font-sans font-black">
+        <h2 className="text-[20px] md:text-[24px] font-nomral leading-[120%] font-sans font-black">
           Solutions for Every Sector
         </h2>
         <p className="max-w-[450px] text-[16px] leading-[140%] font-figtree">
@@ -41,9 +41,16 @@ const SectorSolutions = () => {
 
           {/* Card 15+ */}
           <div className="flex-1 h-[230px] rounded-[24px] bg-white p-[20px_30px_20px_19px] flex flex-col justify-between">
-            <div className="w-[27px] h-[25px] rounded-[5px] bg-[#2460d6]/10 flex items-center justify-center">
-              <ShieldCheck size={16} className="text-[#2460d6]" />
+            {/* Container Ikon */}
+            <div className="w-[27px] h-[25px] rounded-[5px] bg-[#2460d6]/10 flex items-center justify-center overflow-hidden">
+              <img
+                src={image.iconnya}
+                alt="Icon"
+                className="w-[16px] h-[16px] object-contain"
+              />
             </div>
+
+            {/* Konten Teks */}
             <div>
               <h3 className="text-[50px] leading-[130%] font-medium text-[#1e1e1e] mt-2">15+</h3>
               <p className="text-[16px] leading-[130%] font-light text-[#1e1e1e] max-w-[337px] mt-1">

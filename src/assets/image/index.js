@@ -38,6 +38,11 @@ import gambar_38 from './gambar/Frame.png';
 import gambar_39 from './gambar/Fast & Reliable Delivery Icon.png';
 import gambar_40 from './gambar/Shipment Details Background.png';
 import gambar_41 from './gambar/Vector.png';
+import gambar_42 from './gambar/Icon.png';
+import gambar_43 from './gambar/Frame 15.png';
+import gambar_44 from './gambar/Truck.png';
+import gambar_45 from './gambar/Files.png';
+import gmabra_46 from './gambar/Alarm.png';
 
 
 
@@ -75,8 +80,11 @@ const image = {
   astruck: gambar_39,
   shipmentDetailsBg: gambar_40,
   vector: gambar_41,
-
-
+  iconnya: gambar_42,
+  frame152: gambar_43,
+  truck121: gambar_44,
+  files21321: gambar_45,
+  alarm1232432432: gmabra_46,
 
   gambar: {
     '018e16abe81cb6aa47945513e7d1c45dc127f75f.png': gambar_0,
@@ -114,7 +122,12 @@ const image = {
     'Frame.png': gambar_38,
     'Fast & Reliable Delivery Icon.png': gambar_39,
     'Shipment Details Background.png': gambar_40,
-    'Vector.png': gambar_41
+    'Vector.png': gambar_41,
+    'Icon.png': gambar_42,
+    'Frame 15.png': gambar_43,
+    'Truck.png': gambar_44,
+    'Files.png': gambar_45,
+    'Alarm.png': gmabra_46,
   }
 };
 

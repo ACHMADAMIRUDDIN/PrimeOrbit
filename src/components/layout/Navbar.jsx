@@ -113,7 +113,7 @@ const Navbar = ({ theme = 'dark' }) => {
           <div className="hidden md:block relative z-[60]">
             <Link to="/contact">
               <button className="bg-secondary text-white hover:bg-secondary/90 px-[28px] py-[12px] rounded-[100px] text-[16px] leading-[19.2px] font-medium transition-all shadow-sm">
-                Contact Us
+                login
               </button>
             </Link>
           </div>

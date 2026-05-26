@@ -26,50 +26,60 @@ const ServicesSection = () => {
         <div className="grid grid-cols-12 gap-[18px]">
           {/* CARD 1 */}
           <div className="group relative col-span-12 h-[420px] overflow-hidden rounded-[18px] lg:col-span-7">
+            {/* GAMBAR BACKGROUND */}
             <img
               src={image.warehouseOperations}
               alt="Warehouse Management Solutions"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/25 to-transparent px-[30px] pb-[28px]">
-              <h3 className="mb-3 text-[24px] font-semibold tracking-tight text-white">
+            {/* bg-black/40 dikombinasikan dengan backdrop-blur memberikan efek frosted glass yang solid dari ujung ke ujung */}
+            <div className="absolute bottom-0 left-0 right-0 h-[40%] backdrop-blur-[12px] bg-black/40 flex flex-col justify-center px-[30px] pt-4 pb-[28px] border-t border-white/10">
+
+              {/* JUDUL */}
+              <h3 className="mb-2 text-[24px] font-semibold tracking-tight text-white leading-tight">
                 Warehouse Management Solutions
               </h3>
 
-              <p className="line-clamp-2 max-w-[92%] text-[15px] leading-[1.55] text-white/75">
+              {/* DESKRIPSI */}
+              <p className="line-clamp-2 max-w-[96%] text-[14px] leading-[1.5] text-white/80 font-light">
                 Warehouse Management Solutions enables businesses to manage inventory, storage, and
                 warehouse operations efficiently through a ce...
               </p>
+
             </div>
           </div>
 
           {/* CARD 2 */}
           <div className="relative col-span-12 h-[420px] overflow-hidden rounded-[18px] bg-[#F4F4F4] p-[20px] lg:col-span-5">
+            {/* SEARCH BAR */}
             <div className="flex h-[44px] items-center gap-3 rounded-[10px] bg-white px-4 shadow-sm">
               <Search size={16} strokeWidth={2.4} className="text-[#8f8f8f]" />
               <span className="text-[12px] text-[#aaa]">Search</span>
             </div>
 
-            <div className="absolute bottom-0 left-[20px] right-[20px] h-[315px] overflow-hidden rounded-t-[22px] bg-white px-[26px] pt-[22px] shadow-sm">
-              {/* STEPS */}
-              <div className="mb-[26px] flex items-center gap-[9px]">
-                <div className="flex h-[15px] w-[15px] items-center justify-center rounded-full bg-[#4B8DEB] text-white">
+            {/* WHITE CARD CONTAINER */}
+            {/* Kita hilangkan overflow-hidden di sini agar STEPS yang ditarik ke atas bisa terlihat sempurna */}
+            <div className="absolute bottom-0 left-[20px] right-[20px] h-[315px] rounded-t-[22px] bg-white px-[26px] pt-[22px] shadow-sm">
+
+              {/* STEPS (Sekarang dipindah ke sini dan ditarik naik menggunakan -mt-[38px]) */}
+              <div className="-mt-[46px] mb-[32px] flex items-center gap-[9px] relative z-20">
+                <div className="flex h-[15px] w-[15px] flex-shrink-0 items-center justify-center rounded-full bg-[#4B8DEB] text-white shadow-sm">
                   <Check size={10} strokeWidth={3} />
                 </div>
                 <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
 
-                <div className="flex h-[15px] w-[15px] items-center justify-center rounded-full bg-[#4B8DEB] text-white">
+                <div className="flex h-[15px] w-[15px] flex-shrink-0 items-center justify-center rounded-full bg-[#4B8DEB] text-white shadow-sm">
                   <Check size={10} strokeWidth={3} />
                 </div>
                 <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
 
-                <span className="whitespace-nowrap text-[9px] font-semibold tracking-wider text-[#555]">
+                <span className="whitespace-nowrap text-[9px] font-bold tracking-wider text-[#555] leading-none">
                   STEP 3
                 </span>
                 <div className="h-px flex-1 border-t border-dashed border-[#bfbfbf]" />
 
-                <span className="whitespace-nowrap text-[9px] font-semibold tracking-wider text-[#555]">
+                <span className="whitespace-nowrap text-[9px] font-bold tracking-wider text-[#555] leading-none">
                   STEP 4
                 </span>
               </div>
@@ -97,16 +107,14 @@ const ServicesSection = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`relative mb-[17px] flex justify-between ${
-                      index === 3 ? 'opacity-40' : ''
-                    }`}
+                    className={`relative mb-[17px] flex justify-between ${index === 3 ? 'opacity-40' : ''
+                      }`}
                   >
                     <span
-                      className={`absolute -left-[32px] top-[5px] h-[7px] w-[7px] rounded-full ${
-                        index === 0
-                          ? 'bg-[#4B8DEB] ring-[4px] ring-blue-100'
-                          : 'bg-[#d6d6d6]'
-                      }`}
+                      className={`absolute -left-[32px] top-[5px] h-[7px] w-[7px] rounded-full ${index === 0
+                        ? 'bg-[#4B8DEB] ring-[4px] ring-blue-100'
+                        : 'bg-[#d6d6d6]'
+                        }`}
                     />
 
                     <div>
@@ -157,21 +165,28 @@ const ServicesSection = () => {
 
           {/* CARD 4 */}
           <div className="group relative col-span-12 h-[350px] overflow-hidden rounded-[18px] lg:col-span-7">
+            {/* GAMBAR BACKGROUND */}
             <img
               src={image.deliveryDocs}
               alt="Logistics Shipment Management"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/25 to-transparent px-[30px] pb-[28px]">
-              <h3 className="mb-3 text-[24px] font-semibold tracking-tight text-white">
+            {/* OVERLAY TEKS DENGAN BLUR PENUH DI AREA BAWAH */}
+            {/* Menggunakan h-[45%] agar pas dengan tinggi card yang 350px */}
+            <div className="absolute bottom-0 left-0 right-0 h-[45%] backdrop-blur-[12px] bg-black/40 flex flex-col justify-center px-[30px] pt-4 pb-[28px] border-t border-white/10">
+
+              {/* JUDUL */}
+              <h3 className="mb-2 text-[24px] font-semibold tracking-tight text-white leading-tight">
                 Logistics Shipment Management
               </h3>
 
-              <p className="line-clamp-2 max-w-[92%] text-[15px] leading-[1.55] text-white/75">
+              {/* DESKRIPSI */}
+              <p className="line-clamp-2 max-w-[96%] text-[14px] leading-[1.5] text-white/80 font-light">
                 Logistics Shipment Management enables businesses to monitor, organize, and control
                 shipments efficiently, providing real-time visibil...
               </p>
+
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const ServicesGlobalFootprintSection = () => {
       </div>
 
       <div className="mx-auto flex w-full max-w-[1323px] flex-col items-start justify-between gap-[20px] md:flex-row md:items-center">
-        <h2 className="max-w-[608px] text-[28px] font-medium leading-[120%] md:text-[32px]">
+        <h2 className="max-w-[608px] text-[28px] font-normal leading-[120%] md:text-[32px]">
           Successfully managing supply chains across 50+ countries and counting
         </h2>
         <p className="max-w-[419px] text-[16px] leading-[140%] opacity-60 md:text-[20px]">

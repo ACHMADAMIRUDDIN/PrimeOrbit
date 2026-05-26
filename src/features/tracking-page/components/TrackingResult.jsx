@@ -62,7 +62,7 @@ const TrackingResult = () => {
 
           <div className="flex flex-col gap-[11px] w-full md:w-[181px]">
             <span className="text-[16px] md:text-[18px] leading-[120%] font-bold">Status</span>
-            <span className="text-[24px] md:text-[28px] leading-[120%] font-medium text-[#fb2c36]">Transit</span>
+            <span className="text-[24px] md:text-[28px] leading-[120%] font-medium">Transit</span>
           </div>
 
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, FileText, Clock } from 'lucide-react';
+import image from '../../../assets/image';
 
 const PlatformSection = () => {
   return (
@@ -64,7 +64,7 @@ const PlatformSection = () => {
 
             {/* Card 1 */}
             <div className="bg-white rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full transition-all duration-300 hover:scale-[1.01]">
-              <Truck size={24} className="text-dark mb-4" strokeWidth={1.5} />
+              <img src={image.truck121} alt="Truck" width={24} height={24} className="mb-4 w-6 h-6" />
               <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">Smart Fleet Management</h3>
               <p className="text-dark/50 text-[14px] font-normal leading-relaxed">
                 Optimize routes in real-time and monitor fuel consumption to reduce operational.
@@ -73,7 +73,7 @@ const PlatformSection = () => {
 
             {/* Card 2 - FIXED (Struktur Tag Div & P Sudah Diperbaiki Rapi) */}
             <div className="bg-primary rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full relative z-20 hover:scale-[1.01] transition-all duration-300 shadow-md">
-              <FileText size={24} className="text-dark mb-4" strokeWidth={1.5} />
+              <img src={image.files21321} alt="Files" width={24} height={24} className="mb-4 w-6 h-6" />
               <h3 className="text-[18px] font-bold text-dark mb-2 tracking-tight font-plusJakarta">
                 Automated Compliance
               </h3>
@@ -84,7 +84,7 @@ const PlatformSection = () => {
 
             {/* Card 3 */}
             <div className="bg-white rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full transition-all duration-300 hover:scale-[1.01]">
-              <Clock size={24} className="text-dark mb-4" strokeWidth={1.5} />
+              <img src={image.alarm1232432432} alt="Alarm" width={24} height={24} className="mb-4 w-6 h-6" />
               <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">Real-Time Visibility</h3>
               <p className="text-dark/50 text-[14px] font-normal leading-relaxed">
                 Gain 24/7 end-to-end tracking of your shipments with high-precision IoT sensor...
