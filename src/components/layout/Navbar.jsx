@@ -191,9 +191,6 @@ const Navbar = ({ theme = 'dark' }) => {
             <Link to="/login" className={getDesktopAuthButtonClass('login')}>
               Login
             </Link>
-            <Link to="/register" className={getDesktopAuthButtonClass('register')}>
-              Register
-            </Link>
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -241,9 +238,6 @@ const Navbar = ({ theme = 'dark' }) => {
           <div className="flex w-[85%] max-w-[340px] flex-col gap-3">
             <Link to="/login" className={getMobileAuthButtonClass('login')}>
               Login
-            </Link>
-            <Link to="/register" className={getMobileAuthButtonClass('register')}>
-              Register
             </Link>
           </div>
         </div>
