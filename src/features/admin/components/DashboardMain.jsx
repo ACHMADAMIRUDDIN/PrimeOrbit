@@ -378,8 +378,8 @@ const DashboardMain = () => {
             {/* Header section */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-[12px]">
-                <div className="w-[36px] h-[36px] rounded-full bg-[#ebebf5] flex items-center justify-center text-[#121336]">
-                  <Package size={18} />
+                <div className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[10px] bg-[#eef0ff] text-[#23254a]">
+                  <Package size={17} strokeWidth={1.9} />
                 </div>
                 <h3 className="font-semibold text-[17px] text-[#121336] tracking-tight">Shipment Tracker</h3>
               </div>
