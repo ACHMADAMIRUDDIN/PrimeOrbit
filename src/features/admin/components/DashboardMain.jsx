@@ -5,6 +5,7 @@ import { Plus, MapPin, Truck, ChevronDown, MoreVertical, Package } from 'lucide-
 import frameIcon from '../../UI/adminicon/Frame.png';
 import totalShipmentsIcon from '../../UI/adminicon/Icon Container2 (2).png';
 import deliveredIcon from '../../UI/adminicon/Icon Container2 (1).png';
+import image from '../../../assets/image';
 
 const DashboardMain = () => {
   const mapLandforms = [
@@ -76,7 +77,7 @@ const DashboardMain = () => {
              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">1,256</span>
              <div className="flex items-center justify-between text-[14px]">
                 <div className="flex items-center gap-[8px] rounded-full bg-[#eff6ff] px-[12px] py-[6px] text-[#00bc7d]">
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L6 2L11 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <img src={image.sdfsfsfsfsf} alt="up" className="w-[12px] h-[8px] object-contain" />
                   <span className="font-semibold">12%</span>
                 </div>
                 <span className="text-[#4a5565]">from last month</span>
@@ -96,7 +97,7 @@ const DashboardMain = () => {
              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">432</span>
              <div className="flex items-center justify-between text-[14px]">
                 <div className="flex items-center gap-[8px] rounded-full bg-[#ffdfe3] px-[12px] py-[6px] text-[#fb2c36]">
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor" className="transform rotate-180" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L6 2L11 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <img src={image.dzcxzvcxvfd} alt="up" className="w-[12px] h-[8px] object-contain" />
                   <span className="font-semibold">5%</span>
                 </div>
                 <span className="text-[#4a5565]">from last month</span>
@@ -114,7 +115,7 @@ const DashboardMain = () => {
              <span className="text-[32px] leading-[120%] font-medium text-[#1e2939]">763</span>
              <div className="flex items-center justify-between text-[14px]">
                 <div className="flex items-center gap-[8px] rounded-full bg-[#eff6ff] px-[12px] py-[6px] text-[#00bc7d]">
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L6 2L11 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <img src={image.sdfsfsfsfsf} alt="up" className="w-[12px] h-[8px] object-contain" />
                   <span className="font-semibold">8%</span>
                 </div>
                 <span className="text-[#4a5565]">from last month</span>
@@ -208,7 +209,7 @@ const DashboardMain = () => {
                <div className="flex items-center gap-[12px]">
                  <span className="text-[28px] md:text-[36px] leading-[120%] font-medium text-black">$15.245.53</span>
                  <div className="flex items-center gap-[8px] rounded-full bg-[#ecfaee] px-[8px] py-[4px] text-[#219234] text-[12px]">
-                   <svg width="10" height="10" viewBox="0 0 12 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L6 2L11 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                   <img src={image.sfsdvcxvcxvd} alt="up" className="w-[18px] h-[12px] object-contain" />
                    <span>7.52%</span>
                  </div>
                </div>
