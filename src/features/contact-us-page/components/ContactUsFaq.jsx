@@ -96,7 +96,7 @@ const ContactUsFaq = () => {
           </div>
 
           <button className="w-fit rounded-[100px] bg-[#2a2a7c] text-white p-[16px_36px] md:p-[18px_46px] text-[18px] md:text-[20px] font-sans hover:bg-[#2a2a7c]/90 transition-colors mt-[10px]">
-             Contact Us
+             Contact us to email
           </button>
           
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import image from '../../../assets/image';
 import { Plus, Minus } from 'lucide-react';
 
@@ -80,9 +81,12 @@ const TrackingFaq = () => {
             <img src={image.airCargoPlane} alt="Air Cargo Plane" className="absolute w-full h-full object-cover" />
           </div>
 
-          <button className="w-fit rounded-[100px] bg-[#21287c] text-white flex items-center justify-center px-[40px] py-[16px] text-[18px] font-sans font-medium hover:bg-[#1a2063] transition-colors shadow-sm">
+          <Link
+            to="/contact"
+            className="w-fit rounded-[100px] bg-[#21287c] text-white flex items-center justify-center px-[40px] py-[16px] text-[18px] font-sans font-medium hover:bg-[#1a2063] transition-colors shadow-sm"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
 
       </div>
