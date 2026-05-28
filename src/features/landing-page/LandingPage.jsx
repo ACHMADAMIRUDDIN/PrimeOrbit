@@ -6,7 +6,6 @@ import LogoTicker from "./components/LogoTicker";
 import StatsSection from "./components/StatsSection";
 import ServicesSection from "./components/ServicesSection";
 import PlatformSection from "./components/PlatformSection";
-
 import CalculatorSection from "./components/CalculatorSection";
 import LandingGlobalFootprintSection from "./components/LandingGlobalFootprintSection";
 import LandingTestimonialsSection from "./components/LandingTestimonialsSection";
@@ -22,7 +21,6 @@ const LandingPage = () => {
         <StatsSection />
         <ServicesSection />
         <PlatformSection />
-
         <CalculatorSection />
         <LandingGlobalFootprintSection />
         <LandingTestimonialsSection />
