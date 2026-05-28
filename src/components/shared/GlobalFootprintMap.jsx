@@ -1,43 +1,43 @@
-import React from 'react';
+import React from "react";
 
 const DEFAULT_LOCATIONS = [
   {
-    city: 'Tianshui, China',
-    className: 'left-[15%] top-[14%] hidden md:flex',
-    name: 'East Asia Route',
+    city: "Tianshui, China",
+    className: "left-[15%] top-[14%] hidden md:flex",
+    name: "East Asia Route",
   },
   {
-    city: 'Jakarta, Indonesia',
-    className: 'left-[73%] top-[24%] hidden md:flex',
-    name: 'Southeast Asia',
+    city: "Jakarta, Indonesia",
+    className: "left-[73%] top-[24%] hidden md:flex",
+    name: "Southeast Asia",
   },
   {
-    city: 'Madrid, Spain',
-    className: 'left-1/2 top-[40%] z-20',
+    city: "Madrid, Spain",
+    className: "left-1/2 top-[40%] z-20",
     dark: true,
-    name: 'Europe Gateway',
+    name: "Europe Gateway",
   },
   {
-    city: 'Jeddah, Arab',
-    className: 'left-[86%] top-[50%] hidden md:flex',
-    name: 'Middle East Point',
+    city: "Jeddah, Arab",
+    className: "left-[86%] top-[50%] hidden md:flex",
+    name: "Middle East Point",
   },
   {
-    city: 'Brasilia, Brazil',
-    className: 'left-[21%] top-[68%] hidden md:flex',
-    name: 'South America Supply',
+    city: "Brasilia, Brazil",
+    className: "left-[21%] top-[68%] hidden md:flex",
+    name: "South America Supply",
   },
 ];
 
 const MarkerIcon = ({ dark = false }) => (
   <span
     className={`relative flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full ${
-      dark ? 'bg-white/12' : 'bg-[#eef5ff]'
+      dark ? "bg-white/12" : "bg-[#eef5ff]"
     }`}
   >
     <span
       className={`h-[14px] w-[14px] rounded-full border-2 ${
-        dark ? 'border-white bg-[#7fb0ff]' : 'border-[#5a91e5] bg-white'
+        dark ? "border-white bg-[#7fb0ff]" : "border-[#5a91e5] bg-white"
       }`}
     />
     <span className="absolute h-[4px] w-[4px] rounded-full bg-[#5a91e5]" />
@@ -48,16 +48,20 @@ const LocationBadge = ({ city, className, dark = false, name }) => (
   <div
     className={`absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-[10px] rounded-full px-[14px] py-[10px] font-inter shadow-[0px_12px_24px_rgba(24,39,75,0.08),0px_2px_6px_rgba(24,39,75,0.08)] ${
       dark
-        ? 'bg-[#191919] text-white'
-        : 'border border-[#d9e4f7] bg-white text-[#191919]'
+        ? "bg-[#191919] text-white"
+        : "border border-[#d9e4f7] bg-white text-[#191919]"
     } ${className}`}
   >
     <MarkerIcon dark={dark} />
     <div className="flex flex-col whitespace-nowrap">
-      <span className={`text-[13px] font-medium leading-[120%] ${dark ? 'text-white' : 'text-[#222]'}`}>
+      <span
+        className={`text-[13px] font-medium leading-[120%] ${dark ? "text-white" : "text-[#222]"}`}
+      >
         {name}
       </span>
-      <span className={`text-[10px] leading-[120%] ${dark ? 'text-white/60' : 'text-[#9aa3b2]'}`}>
+      <span
+        className={`text-[10px] leading-[120%] ${dark ? "text-white/60" : "text-[#9aa3b2]"}`}
+      >
         {city}
       </span>
     </div>
@@ -74,10 +78,20 @@ const WorldMapGraphic = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <defs>
-      <pattern height="14" id="map-dots-gray" patternUnits="userSpaceOnUse" width="14">
+      <pattern
+        height="14"
+        id="map-dots-gray"
+        patternUnits="userSpaceOnUse"
+        width="14"
+      >
         <circle cx="4" cy="4" fill="#d9dde5" r="2.2" />
       </pattern>
-      <pattern height="14" id="map-dots-blue" patternUnits="userSpaceOnUse" width="14">
+      <pattern
+        height="14"
+        id="map-dots-blue"
+        patternUnits="userSpaceOnUse"
+        width="14"
+      >
         <circle cx="4" cy="4" fill="#9fc2ff" r="2.2" />
       </pattern>
     </defs>
@@ -126,9 +140,14 @@ const WorldMapGraphic = () => (
   </svg>
 );
 
-const GlobalFootprintMap = ({ className = '', locations = DEFAULT_LOCATIONS }) => {
+const GlobalFootprintMap = ({
+  className = "",
+  locations = DEFAULT_LOCATIONS,
+}) => {
   return (
-    <div className={`relative w-full overflow-hidden bg-white font-inter ${className}`}>
+    <div
+      className={`relative w-full overflow-hidden bg-white font-inter ${className}`}
+    >
       <WorldMapGraphic />
 
       {locations.map((location) => (

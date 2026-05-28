@@ -1,11 +1,16 @@
-import React from 'react';
-import image from '../../../assets/image';
+import React from "react";
+import image from "../../../assets/image";
 
 const ServicesGlobalFootprintSection = () => {
   return (
-    <section data-theme="light" className="flex w-full flex-col gap-[74px] bg-[#ffffff] px-4 py-[100px] font-sans text-black md:px-[60px]">
+    <section
+      data-theme="light"
+      className="flex w-full flex-col gap-[74px] bg-[#ffffff] px-4 py-[100px] font-sans text-black md:px-[60px]"
+    >
       <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between gap-[7px]">
-        <span className="whitespace-nowrap text-[20px] font-medium leading-[140%] opacity-60">GLOBAL FOOTPRINT</span>
+        <span className="whitespace-nowrap text-[20px] font-medium leading-[140%] opacity-60">
+          GLOBAL FOOTPRINT
+        </span>
         <div className="h-[1px] flex-1 bg-[#d9d9d9]"></div>
       </div>
 
@@ -14,7 +19,8 @@ const ServicesGlobalFootprintSection = () => {
           Successfully managing supply chains across 50+ countries and counting
         </h2>
         <p className="max-w-[419px] text-[16px] leading-[140%] opacity-60 md:text-[20px]">
-          Quickly calculate your shipping fee by entering the origin, destination, shipment type, weight, and package dimensions
+          Quickly calculate your shipping fee by entering the origin,
+          destination, shipment type, weight, and package dimensions
         </p>
       </div>
 

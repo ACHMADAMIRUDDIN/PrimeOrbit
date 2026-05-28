@@ -1,98 +1,119 @@
-import React from 'react';
-import image from '../../../assets/image';
+import React from "react";
+import image from "../../../assets/image";
 
 const PlatformSection = () => {
   return (
-    <section data-theme="light" className="py-24 bg-white px-4 md:px-6 lg:px-[55px]">
+    <section
+      data-theme="light"
+      className="py-24 bg-white px-4 md:px-6 lg:px-[55px]"
+    >
       <div className="mx-auto w-full max-w-[1540px]">
         <div className="bg-black rounded-[32px] p-8 md:p-12 lg:px-[60px] lg:py-[60px] flex flex-col lg:flex-row gap-12 lg:gap-10 items-stretch justify-between relative overflow-hidden min-h-[620px]">
-
-          {/* Left Content */}
           <div className="lg:w-[58%] flex flex-col justify-between relative z-10 py-1">
-
-            {/* Top Title Group */}
             <div className="mb-10 md:mb-12 lg:mb-14">
               <h2 className="text-[19px] md:text-[26px] lg:text-[34px] font-medium text-white leading-[1.25] tracking-[-0.02em] font-plusJakarta">
                 Movein is a smart logistics <br className="hidden md:block" />
                 platform built for seamless, <br className="hidden md:block" />
                 <span className="text-primary">
-                  efficient, and reliable shipment <br className="hidden md:block" />
+                  efficient, and reliable shipment{" "}
+                  <br className="hidden md:block" />
                   management operations.
                 </span>
               </h2>
             </div>
-            {/* Bottom Group */}
+
             <div className="w-full max-w-[560px] mt-auto">
-
-              {/* Waypoint Status Tracker */}
               <div className="flex items-center justify-between mb-8 text-white w-full">
-                {/* Location 1 */}
                 <div className="flex flex-col items-start text-left">
-                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">Current Location</span>
-                  <span className="text-[16px] font-semibold text-white font-plusJakarta">Indonesia</span>
+                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">
+                    Current Location
+                  </span>
+                  <span className="text-[16px] font-semibold text-white font-plusJakarta">
+                    Indonesia
+                  </span>
                 </div>
 
-                {/* Dot Divider 1 */}
                 <div className="w-1.5 h-1.5 rounded-full bg-white/80 self-end mb-[8px] mx-1"></div>
 
-                {/* Location 2 */}
                 <div className="flex flex-col items-start text-left">
-                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">Departure Waypoint</span>
-                  <span className="text-[16px] font-semibold text-white font-plusJakarta">Australia</span>
+                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">
+                    Departure Waypoint
+                  </span>
+                  <span className="text-[16px] font-semibold text-white font-plusJakarta">
+                    Australia
+                  </span>
                 </div>
 
-                {/* Dot Divider 2 */}
                 <div className="w-1.5 h-1.5 rounded-full bg-white/80 self-end mb-[8px] mx-1"></div>
 
-                {/* Location 3 */}
                 <div className="flex flex-col items-start text-left">
-                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">Arrival Waypoint</span>
-                  <span className="text-[16px] font-semibold text-white font-plusJakarta">Singapore</span>
+                  <span className="text-[11px] text-white/50 font-medium tracking-wide mb-1.5 uppercase">
+                    Arrival Waypoint
+                  </span>
+                  <span className="text-[16px] font-semibold text-white font-plusJakarta">
+                    Singapore
+                  </span>
                 </div>
               </div>
 
-              {/* Button */}
               <button className="w-full bg-primary hover:bg-primary/95 text-dark font-semibold text-[16px] py-[18px] rounded-full transition-colors">
                 Start Shipping
               </button>
-
             </div>
           </div>
 
-          {/* Right Content */}
           <div className="lg:w-[36%] flex flex-col gap-5 relative z-10 w-full max-w-[430px] lg:max-w-none mx-auto lg:mx-0 justify-center">
-
-            {/* Card 1 */}
             <div className="bg-white rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full transition-all duration-300 hover:scale-[1.01]">
-              <img src={image.truck121} alt="Truck" width={24} height={24} className="mb-4 w-6 h-6" />
-              <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">Smart Fleet Management</h3>
+              <img
+                src={image.truck121}
+                alt="Truck"
+                width={24}
+                height={24}
+                className="mb-4 w-6 h-6"
+              />
+              <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">
+                Smart Fleet Management
+              </h3>
               <p className="text-dark/50 text-[14px] font-normal leading-relaxed">
-                Optimize routes in real-time and monitor fuel consumption to reduce operational.
+                Optimize routes in real-time and monitor fuel consumption to
+                reduce operational.
               </p>
             </div>
 
-            {/* Card 2 - FIXED (Struktur Tag Div & P Sudah Diperbaiki Rapi) */}
             <div className="bg-primary rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full relative z-20 hover:scale-[1.01] transition-all duration-300 shadow-md">
-              <img src={image.files21321} alt="Files" width={24} height={24} className="mb-4 w-6 h-6" />
+              <img
+                src={image.files21321}
+                alt="Files"
+                width={24}
+                height={24}
+                className="mb-4 w-6 h-6"
+              />
               <h3 className="text-[18px] font-bold text-dark mb-2 tracking-tight font-plusJakarta">
                 Automated Compliance
               </h3>
               <p className="text-dark/70 text-[14px] font-normal leading-relaxed">
-                Streamline customs documentation and digital bills of lading with AI-powered veri...
+                Streamline customs documentation and digital bills of lading
+                with AI-powered veri...
               </p>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-white rounded-[24px] p-7 md:p-8 flex flex-col items-start w-full transition-all duration-300 hover:scale-[1.01]">
-              <img src={image.alarm1232432432} alt="Alarm" width={24} height={24} className="mb-4 w-6 h-6" />
-              <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">Real-Time Visibility</h3>
+              <img
+                src={image.alarm1232432432}
+                alt="Alarm"
+                width={24}
+                height={24}
+                className="mb-4 w-6 h-6"
+              />
+              <h3 className="text-[18px] font-semibold text-dark mb-2 tracking-tight font-plusJakarta">
+                Real-Time Visibility
+              </h3>
               <p className="text-dark/50 text-[14px] font-normal leading-relaxed">
-                Gain 24/7 end-to-end tracking of your shipments with high-precision IoT sensor...
+                Gain 24/7 end-to-end tracking of your shipments with
+                high-precision IoT sensor...
               </p>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>

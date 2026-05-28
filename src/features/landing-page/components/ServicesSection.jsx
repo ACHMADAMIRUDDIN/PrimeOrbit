@@ -1,6 +1,6 @@
-import React from 'react';
-import image from '../../../assets/image';
-import { Search, ArrowRight, Check } from 'lucide-react';
+import React from "react";
+import image from "../../../assets/image";
+import { Search, ArrowRight, Check } from "lucide-react";
 
 const ServicesSection = () => {
   return (
@@ -9,7 +9,6 @@ const ServicesSection = () => {
       className="bg-white px-4 py-24 font-inter antialiased md:px-6 lg:px-[55px]"
     >
       <div className="mx-auto w-full max-w-[1540px]">
-        {/* HEADER */}
         <div className="mb-[42px] flex flex-col justify-between gap-6 md:flex-row md:items-start">
           <h2 className="text-[34px] font-normal leading-[1.18] tracking-[-0.03em] text-[#303030] md:text-[42px] lg:text-[52px]">
             Smarter Routes,
@@ -18,51 +17,39 @@ const ServicesSection = () => {
           </h2>
 
           <p className="max-w-[340px] pt-4 text-[13px] font-normal leading-[1.45] text-[#333333] md:text-[14px] lg:mr-[80px]">
-            Accelerate your operations with PrimeOrbit advanced logistics infrastructure designed
+            Accelerate your operations with PrimeOrbit advanced logistics
+            infrastructure designed
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid grid-cols-12 gap-[18px]">
-          {/* CARD 1 */}
           <div className="group relative col-span-12 h-[420px] overflow-hidden rounded-[18px] lg:col-span-7">
-            {/* GAMBAR BACKGROUND */}
             <img
               src={image.warehouseOperations}
               alt="Warehouse Management Solutions"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            {/* bg-black/40 dikombinasikan dengan backdrop-blur memberikan efek frosted glass yang solid dari ujung ke ujung */}
             <div className="absolute bottom-0 left-0 right-0 h-[40%] backdrop-blur-[12px] bg-black/40 flex flex-col justify-center px-[30px] pt-4 pb-[28px] border-t border-white/10">
-
-              {/* JUDUL */}
               <h3 className="mb-2 text-[24px] font-semibold tracking-tight text-white leading-tight">
                 Warehouse Management Solutions
               </h3>
 
-              {/* DESKRIPSI */}
               <p className="line-clamp-2 max-w-[96%] text-[14px] leading-[1.5] text-white/80 font-light">
-                Warehouse Management Solutions enables businesses to manage inventory, storage, and
-                warehouse operations efficiently through a ce...
+                Warehouse Management Solutions enables businesses to manage
+                inventory, storage, and warehouse operations efficiently through
+                a ce...
               </p>
-
             </div>
           </div>
 
-          {/* CARD 2 */}
           <div className="relative col-span-12 h-[420px] overflow-hidden rounded-[18px] bg-[#F4F4F4] p-[20px] lg:col-span-5">
-            {/* SEARCH BAR */}
             <div className="flex h-[44px] items-center gap-3 rounded-[10px] bg-white px-4 shadow-sm">
               <Search size={16} strokeWidth={2.4} className="text-[#8f8f8f]" />
               <span className="text-[12px] text-[#aaa]">Search</span>
             </div>
 
-            {/* WHITE CARD CONTAINER */}
-            {/* Kita hilangkan overflow-hidden di sini agar STEPS yang ditarik ke atas bisa terlihat sempurna */}
             <div className="absolute bottom-0 left-[20px] right-[20px] h-[315px] rounded-t-[22px] bg-white px-[26px] pt-[22px] shadow-sm">
-
-              {/* STEPS (Sekarang dipindah ke sini dan ditarik naik menggunakan -mt-[38px]) */}
               <div className="-mt-[46px] mb-[32px] flex items-center gap-[9px] relative z-20">
                 <div className="flex h-[15px] w-[15px] flex-shrink-0 items-center justify-center rounded-full bg-[#4B8DEB] text-white shadow-sm">
                   <Check size={10} strokeWidth={3} />
@@ -84,46 +71,56 @@ const ServicesSection = () => {
                 </span>
               </div>
 
-              {/* TRACKING HEADER */}
               <div className="mb-[22px] flex items-end justify-between">
                 <div>
-                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">Tracking ID</p>
+                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">
+                    Tracking ID
+                  </p>
                   <p className="text-[15px] font-bold text-[#222]">#9876QWER</p>
                 </div>
 
                 <div className="text-right">
-                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">Estimate</p>
+                  <p className="mb-1 text-[10px] font-medium text-[#b7b7b7]">
+                    Estimate
+                  </p>
                   <p className="text-[15px] font-bold text-[#222]">10 days</p>
                 </div>
               </div>
 
-              {/* TIMELINE */}
               <div className="relative ml-1 border-l border-dashed border-[#d9d9d9] pl-7">
                 {[
-                  ['Current Location', 'Indonesia', '12.00'],
-                  ['Departure Waypoint', 'Singapore', '08.00'],
-                  ['Arrival Waypoint', 'Singapore', '03.00'],
-                  ['Current Location', 'Indonesia', '12.00'],
+                  ["Current Location", "Indonesia", "12.00"],
+                  ["Departure Waypoint", "Singapore", "08.00"],
+                  ["Arrival Waypoint", "Singapore", "03.00"],
+                  ["Current Location", "Indonesia", "12.00"],
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`relative mb-[17px] flex justify-between ${index === 3 ? 'opacity-40' : ''
-                      }`}
+                    className={`relative mb-[17px] flex justify-between ${
+                      index === 3 ? "opacity-40" : ""
+                    }`}
                   >
                     <span
-                      className={`absolute -left-[32px] top-[5px] h-[7px] w-[7px] rounded-full ${index === 0
-                        ? 'bg-[#4B8DEB] ring-[4px] ring-blue-100'
-                        : 'bg-[#d6d6d6]'
-                        }`}
+                      className={`absolute -left-[32px] top-[5px] h-[7px] w-[7px] rounded-full ${
+                        index === 0
+                          ? "bg-[#4B8DEB] ring-[4px] ring-blue-100"
+                          : "bg-[#d6d6d6]"
+                      }`}
                     />
 
                     <div>
-                      <p className="text-[9px] font-medium text-[#b8b8b8]">{item[0]}</p>
-                      <p className="text-[11px] font-semibold text-[#505050]">{item[1]}</p>
+                      <p className="text-[9px] font-medium text-[#b8b8b8]">
+                        {item[0]}
+                      </p>
+                      <p className="text-[11px] font-semibold text-[#505050]">
+                        {item[1]}
+                      </p>
                     </div>
 
                     <div className="text-right">
-                      <p className="text-[11px] font-semibold text-[#222]">{item[2]}</p>
+                      <p className="text-[11px] font-semibold text-[#222]">
+                        {item[2]}
+                      </p>
                       <p className="text-[9px] text-[#b8b8b8]">Time</p>
                     </div>
                   </div>
@@ -132,7 +129,6 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* CARD 3 */}
           <div className="col-span-12 flex h-[350px] flex-col justify-between rounded-[18px] bg-[#FFD76B] p-[30px] lg:col-span-5">
             <div>
               <h3 className="mb-[18px] text-[32px] font-semibold leading-[1.12] tracking-[-0.03em] text-black lg:text-[36px]">
@@ -142,15 +138,19 @@ const ServicesSection = () => {
               </h3>
 
               <p className="max-w-[92%] text-[13px] font-bold leading-[1.35] text-black">
-                Provides innovative logistics solutions for modern, efficient, and scalable supply
-                chains — streamlining operations, improving shipment visibility, and enabling
-                smarter logistics management.
+                Provides innovative logistics solutions for modern, efficient,
+                and scalable supply chains — streamlining operations, improving
+                shipment visibility, and enabling smarter logistics management.
               </p>
             </div>
 
             <div className="flex items-center gap-4">
               <button className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-black transition hover:bg-black hover:text-[#FFD76B]">
-                <ArrowRight size={15} strokeWidth={2.4} className="rotate-180" />
+                <ArrowRight
+                  size={15}
+                  strokeWidth={2.4}
+                  className="rotate-180"
+                />
               </button>
 
               <div className="relative h-px flex-1 bg-black/20">
@@ -163,30 +163,23 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* CARD 4 */}
           <div className="group relative col-span-12 h-[350px] overflow-hidden rounded-[18px] lg:col-span-7">
-            {/* GAMBAR BACKGROUND */}
             <img
               src={image.deliveryDocs}
               alt="Logistics Shipment Management"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            {/* OVERLAY TEKS DENGAN BLUR PENUH DI AREA BAWAH */}
-            {/* Menggunakan h-[45%] agar pas dengan tinggi card yang 350px */}
             <div className="absolute bottom-0 left-0 right-0 h-[45%] backdrop-blur-[12px] bg-black/40 flex flex-col justify-center px-[30px] pt-4 pb-[28px] border-t border-white/10">
-
-              {/* JUDUL */}
               <h3 className="mb-2 text-[24px] font-semibold tracking-tight text-white leading-tight">
                 Logistics Shipment Management
               </h3>
 
-              {/* DESKRIPSI */}
               <p className="line-clamp-2 max-w-[96%] text-[14px] leading-[1.5] text-white/80 font-light">
-                Logistics Shipment Management enables businesses to monitor, organize, and control
-                shipments efficiently, providing real-time visibil...
+                Logistics Shipment Management enables businesses to monitor,
+                organize, and control shipments efficiently, providing real-time
+                visibil...
               </p>
-
             </div>
           </div>
         </div>

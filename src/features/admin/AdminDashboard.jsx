@@ -1,13 +1,13 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import AdminSidebar from '../../components/layout/AdminSidebar';
-import AdminTopbar from '../../components/layout/AdminTopbar';
-import DashboardMain from './components/DashboardMain';
-import TrackingView from './components/TrackingView';
-import InventoryView from './components/InventoryView';
-import FleetDriverView from './components/FleetDriverView';
-import AnalyticsView from './components/AnalyticsView';
-import OrderDetailsView from './components/OrderDetailsView';
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import AdminSidebar from "../../components/layout/AdminSidebar";
+import AdminTopbar from "../../components/layout/AdminTopbar";
+import DashboardMain from "./components/DashboardMain";
+import TrackingView from "./components/TrackingView";
+import InventoryView from "./components/InventoryView";
+import FleetDriverView from "./components/FleetDriverView";
+import AnalyticsView from "./components/AnalyticsView";
+import OrderDetailsView from "./components/OrderDetailsView";
 
 const AdminDashboard = () => {
   return (

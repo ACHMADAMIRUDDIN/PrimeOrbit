@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const PlaceholderView = ({ title }) => {
   return (
@@ -8,7 +8,8 @@ const PlaceholderView = ({ title }) => {
       </div>
       <h2 className="text-2xl font-bold text-secondary mb-3">{title} Module</h2>
       <p className="text-gray-500 max-w-md mx-auto mb-8">
-        This module is currently under development. The interface and logic for {title} will be available in the upcoming updates.
+        This module is currently under development. The interface and logic for{" "}
+        {title} will be available in the upcoming updates.
       </p>
       <button className="bg-secondary text-white px-6 py-2.5 rounded-full hover:bg-secondary/90 transition-colors text-sm font-medium">
         Go Back to Dashboard

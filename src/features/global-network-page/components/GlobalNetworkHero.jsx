@@ -1,22 +1,22 @@
-import React from 'react';
-import { ArrowRight, MapPin } from 'lucide-react';
-import image from '../../../assets/image';
+import React from "react";
+import { ArrowRight, MapPin } from "lucide-react";
+import image from "../../../assets/image";
 
 const MAP_BADGES = [
   {
-    city: 'Brasilia, Brazil',
-    className: 'bottom-[72px] left-[27%] hidden md:flex',
-    name: 'South America Supply',
+    city: "Brasilia, Brazil",
+    className: "bottom-[72px] left-[27%] hidden md:flex",
+    name: "South America Supply",
   },
   {
-    city: 'Jakarta, Indonesia',
-    className: 'bottom-[112px] left-[58%] hidden md:flex',
-    name: 'Movein',
+    city: "Jakarta, Indonesia",
+    className: "bottom-[112px] left-[58%] hidden md:flex",
+    name: "Movein",
   },
   {
-    city: 'Jeddah, Arab',
-    className: 'bottom-[104px] right-[4%] hidden lg:flex',
-    name: 'Middle East Point',
+    city: "Jeddah, Arab",
+    className: "bottom-[104px] right-[4%] hidden lg:flex",
+    name: "Middle East Point",
   },
 ];
 
@@ -28,8 +28,12 @@ const LocationBadge = ({ city, className, name }) => (
       <MapPin className="text-[#5b8fdb]" size={13} strokeWidth={2.6} />
     </span>
     <div className="flex flex-col whitespace-nowrap">
-      <span className="font-inter text-[14px] font-medium leading-[115%] text-[#171717]">{name}</span>
-      <span className="font-inter text-[10px] leading-[115%] text-[#9a9fa8]">{city}</span>
+      <span className="font-inter text-[14px] font-medium leading-[115%] text-[#171717]">
+        {name}
+      </span>
+      <span className="font-inter text-[10px] leading-[115%] text-[#9a9fa8]">
+        {city}
+      </span>
     </div>
   </div>
 );
@@ -52,39 +56,112 @@ const MapFogBackground = () => (
         <stop offset="0%" stopColor="#ebe8e0" stopOpacity="0.45" />
         <stop offset="100%" stopColor="#d8d4cb" stopOpacity="0.3" />
       </linearGradient>
-      <radialGradient id="global-fog-1" cx="0" cy="0" gradientTransform="translate(356 148) rotate(44.8) scale(382.527 233.478)" gradientUnits="userSpaceOnUse" r="1">
+      <radialGradient
+        id="global-fog-1"
+        cx="0"
+        cy="0"
+        gradientTransform="translate(356 148) rotate(44.8) scale(382.527 233.478)"
+        gradientUnits="userSpaceOnUse"
+        r="1"
+      >
         <stop offset="0%" stopColor="#ffffff" stopOpacity="0.96" />
         <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
       </radialGradient>
-      <radialGradient id="global-fog-2" cx="0" cy="0" gradientTransform="translate(1010 194) rotate(128.5) scale(421.903 244.962)" gradientUnits="userSpaceOnUse" r="1">
+      <radialGradient
+        id="global-fog-2"
+        cx="0"
+        cy="0"
+        gradientTransform="translate(1010 194) rotate(128.5) scale(421.903 244.962)"
+        gradientUnits="userSpaceOnUse"
+        r="1"
+      >
         <stop offset="0%" stopColor="#ffffff" stopOpacity="0.92" />
         <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
       </radialGradient>
-      <radialGradient id="global-fog-3" cx="0" cy="0" gradientTransform="translate(651 539) rotate(90) scale(236 505)" gradientUnits="userSpaceOnUse" r="1">
+      <radialGradient
+        id="global-fog-3"
+        cx="0"
+        cy="0"
+        gradientTransform="translate(651 539) rotate(90) scale(236 505)"
+        gradientUnits="userSpaceOnUse"
+        r="1"
+      >
         <stop offset="0%" stopColor="#ffffff" stopOpacity="0.48" />
         <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
       </radialGradient>
-      <filter id="global-map-blur" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="920" width="1480" x="-80" y="-80">
+      <filter
+        id="global-map-blur"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="920"
+        width="1480"
+        x="-80"
+        y="-80"
+      >
         <feGaussianBlur stdDeviation="22" />
       </filter>
     </defs>
 
     <rect fill="url(#global-map-base)" height="760" width="1320" />
 
-    <g opacity="0.75" stroke="url(#global-map-stroke)" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M31 212C122 146 191 113 271 93C389 64 497 98 610 119C705 137 769 139 865 112C983 79 1074 50 1196 83C1262 101 1319 128 1360 165" strokeWidth="2.2" />
-      <path d="M-18 289C93 257 171 245 252 253C373 266 460 314 563 320C689 327 794 277 903 267C1014 257 1113 287 1239 315C1288 326 1330 327 1372 321" strokeWidth="1.9" />
-      <path d="M23 369C128 399 191 449 291 466C409 486 516 443 635 430C723 420 810 438 901 451C1023 469 1146 433 1326 407" strokeWidth="1.9" />
-      <path d="M117 577C198 534 303 519 395 524C481 529 535 565 622 579C731 596 858 585 961 545C1058 507 1177 471 1332 489" strokeWidth="2.2" />
-      <path d="M176 86C144 164 137 230 154 300C173 377 227 428 238 500C245 549 233 604 208 664" strokeWidth="1.65" />
-      <path d="M432 40C410 116 402 172 426 239C446 295 493 334 504 392C518 462 486 540 487 637" strokeWidth="1.55" />
-      <path d="M667 36C661 111 646 187 665 252C687 327 733 390 743 450C757 533 731 598 711 697" strokeWidth="1.65" />
-      <path d="M930 63C893 153 891 243 930 323C954 372 1006 416 1020 475C1038 551 1016 612 978 688" strokeWidth="1.55" />
-      <path d="M1112 104C1087 170 1084 242 1101 299C1126 381 1186 436 1198 505C1210 569 1196 627 1160 695" strokeWidth="1.6" />
-      <path d="M92 162C210 174 325 204 435 252C503 281 571 316 648 325C734 335 802 303 878 278C986 242 1128 231 1270 259" strokeWidth="1.3" />
-      <path d="M87 504C181 476 286 445 385 445C495 445 587 505 694 516C790 526 876 488 968 471C1051 457 1148 461 1257 514" strokeWidth="1.3" />
-      <path d="M282 106C341 146 381 205 416 255C446 298 472 337 531 361C594 386 660 376 722 362C774 350 819 333 871 339C932 346 983 382 1033 399" strokeWidth="1.25" />
-      <path d="M197 327C238 344 269 371 305 397C349 428 395 458 449 463C503 469 549 440 599 430C663 417 736 430 789 448" strokeWidth="1.2" />
+    <g
+      opacity="0.75"
+      stroke="url(#global-map-stroke)"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path
+        d="M31 212C122 146 191 113 271 93C389 64 497 98 610 119C705 137 769 139 865 112C983 79 1074 50 1196 83C1262 101 1319 128 1360 165"
+        strokeWidth="2.2"
+      />
+      <path
+        d="M-18 289C93 257 171 245 252 253C373 266 460 314 563 320C689 327 794 277 903 267C1014 257 1113 287 1239 315C1288 326 1330 327 1372 321"
+        strokeWidth="1.9"
+      />
+      <path
+        d="M23 369C128 399 191 449 291 466C409 486 516 443 635 430C723 420 810 438 901 451C1023 469 1146 433 1326 407"
+        strokeWidth="1.9"
+      />
+      <path
+        d="M117 577C198 534 303 519 395 524C481 529 535 565 622 579C731 596 858 585 961 545C1058 507 1177 471 1332 489"
+        strokeWidth="2.2"
+      />
+      <path
+        d="M176 86C144 164 137 230 154 300C173 377 227 428 238 500C245 549 233 604 208 664"
+        strokeWidth="1.65"
+      />
+      <path
+        d="M432 40C410 116 402 172 426 239C446 295 493 334 504 392C518 462 486 540 487 637"
+        strokeWidth="1.55"
+      />
+      <path
+        d="M667 36C661 111 646 187 665 252C687 327 733 390 743 450C757 533 731 598 711 697"
+        strokeWidth="1.65"
+      />
+      <path
+        d="M930 63C893 153 891 243 930 323C954 372 1006 416 1020 475C1038 551 1016 612 978 688"
+        strokeWidth="1.55"
+      />
+      <path
+        d="M1112 104C1087 170 1084 242 1101 299C1126 381 1186 436 1198 505C1210 569 1196 627 1160 695"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M92 162C210 174 325 204 435 252C503 281 571 316 648 325C734 335 802 303 878 278C986 242 1128 231 1270 259"
+        strokeWidth="1.3"
+      />
+      <path
+        d="M87 504C181 476 286 445 385 445C495 445 587 505 694 516C790 526 876 488 968 471C1051 457 1148 461 1257 514"
+        strokeWidth="1.3"
+      />
+      <path
+        d="M282 106C341 146 381 205 416 255C446 298 472 337 531 361C594 386 660 376 722 362C774 350 819 333 871 339C932 346 983 382 1033 399"
+        strokeWidth="1.25"
+      />
+      <path
+        d="M197 327C238 344 269 371 305 397C349 428 395 458 449 463C503 469 549 440 599 430C663 417 736 430 789 448"
+        strokeWidth="1.2"
+      />
     </g>
 
     <g opacity="0.3">
@@ -98,17 +175,43 @@ const MapFogBackground = () => (
       <circle cx="1088" cy="170" fill="#e8e4dc" r="6.5" />
     </g>
 
-    <g fill="#d8d4ca" fontFamily="Inter, sans-serif" fontSize="16" fontWeight="500" opacity="0.55">
-      <text x="211" y="194">Scaggsville</text>
-      <text x="385" y="376">Laurel</text>
-      <text x="566" y="652">Greenbelt</text>
-      <text x="979" y="121">Odenton</text>
-      <text x="1019" y="352">Odenton</text>
-      <text x="744" y="514">Patuxent</text>
-      <text x="712" y="538">Research</text>
-      <text x="826" y="279">Meade</text>
-      <text x="963" y="208">Open</text>
-      <text x="742" y="639">Bowie</text>
+    <g
+      fill="#d8d4ca"
+      fontFamily="Inter, sans-serif"
+      fontSize="16"
+      fontWeight="500"
+      opacity="0.55"
+    >
+      <text x="211" y="194">
+        Scaggsville
+      </text>
+      <text x="385" y="376">
+        Laurel
+      </text>
+      <text x="566" y="652">
+        Greenbelt
+      </text>
+      <text x="979" y="121">
+        Odenton
+      </text>
+      <text x="1019" y="352">
+        Odenton
+      </text>
+      <text x="744" y="514">
+        Patuxent
+      </text>
+      <text x="712" y="538">
+        Research
+      </text>
+      <text x="826" y="279">
+        Meade
+      </text>
+      <text x="963" y="208">
+        Open
+      </text>
+      <text x="742" y="639">
+        Bowie
+      </text>
     </g>
 
     <g filter="url(#global-map-blur)">
@@ -138,18 +241,26 @@ const GlobalNetworkHero = () => {
               </h1>
 
               <div className="flex flex-col items-center gap-[6px] text-[18px] text-[#050505] md:text-[24px]">
-            <div className="flex flex-col items-center gap-[8px] md:flex-row">
-              <span className="leading-[120%] tracking-[-0.02em]">From global forwarding</span>
-              <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2a2a7c] p-[8px] text-white">
-                <img
-                  src={image.warehouse}  alt="Warehouse icon" className="h-[16px] w-[16px] object-contain"/>
+                <div className="flex flex-col items-center gap-[8px] md:flex-row">
+                  <span className="leading-[120%] tracking-[-0.02em]">
+                    From global forwarding
+                  </span>
+                  <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2a2a7c] p-[8px] text-white">
+                    <img
+                      src={image.warehouse}
+                      alt="Warehouse icon"
+                      className="h-[16px] w-[16px] object-contain"
+                    />
+                  </div>
+                  <span className="leading-[120%] tracking-[-0.02em]">
+                    to local distribution
+                  </span>
+                </div>
+                <span className="max-w-[760px] leading-[120%] tracking-[-0.02em]">
+                  we streamline your supply chain with precision and
+                  transparency.
+                </span>
               </div>
-              <span className="leading-[120%] tracking-[-0.02em]">to local distribution</span>
-            </div>
-            <span className="max-w-[760px] leading-[120%] tracking-[-0.02em]">
-              we streamline your supply chain with precision and transparency.
-            </span>
-          </div>
 
               <div className="flex flex-col items-center gap-[14px] pt-[8px] font-sans text-[18px] md:flex-row md:gap-[8px] md:text-[20px]">
                 <button className="rounded-[100px] bg-[#2a2a7c] px-[34px] py-[18px] text-white transition-colors hover:bg-[#2a2a7c]/90">
@@ -181,8 +292,12 @@ const GlobalNetworkHero = () => {
                   <MapPin size={14} strokeWidth={2.4} />
                 </span>
                 <div className="flex flex-col">
-                  <span className="font-inter text-[14px] font-medium leading-[118%]">Heavy-Duty Wingbox</span>
-                  <span className="font-inter text-[11px] leading-[118%] text-white/62">Singapore</span>
+                  <span className="font-inter text-[14px] font-medium leading-[118%]">
+                    Heavy-Duty Wingbox
+                  </span>
+                  <span className="font-inter text-[11px] leading-[118%] text-white/62">
+                    Singapore
+                  </span>
                 </div>
               </div>
 

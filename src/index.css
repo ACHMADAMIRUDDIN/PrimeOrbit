@@ -1,15 +1,15 @@
-@import '@fontsource/work-sans';
-@import '@fontsource/inter';
-@import '@fontsource/poppins';
-@import '@fontsource/inter-tight';
-@import '@fontsource/inter-tight/700.css';
-@import '@fontsource/inter-tight/800.css';
-@import '@fontsource/inter-tight/900.css';
-@import '@fontsource/urbanist';
-@import '@fontsource/plus-jakarta-sans';
-@import '@fontsource/geist-sans';
-@import '@fontsource/figtree';
-@import '@fontsource/gugi';
+@import "@fontsource/work-sans";
+@import "@fontsource/inter";
+@import "@fontsource/poppins";
+@import "@fontsource/inter-tight";
+@import "@fontsource/inter-tight/700.css";
+@import "@fontsource/inter-tight/800.css";
+@import "@fontsource/inter-tight/900.css";
+@import "@fontsource/urbanist";
+@import "@fontsource/plus-jakarta-sans";
+@import "@fontsource/geist-sans";
+@import "@fontsource/figtree";
+@import "@fontsource/gugi";
 
 @tailwind base;
 @tailwind components;
@@ -18,11 +18,10 @@
 @layer base {
   body {
     @apply antialiased text-dark bg-white;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
   }
 }
 
-/* Hide scrollbar for cleaner look if needed */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -32,9 +31,9 @@
   scrollbar-width: none;
 }
 
-/* Premium floating animations for whychooseus hero images */
 @keyframes floatSlow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -43,7 +42,8 @@
 }
 
 @keyframes floatMedium {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
